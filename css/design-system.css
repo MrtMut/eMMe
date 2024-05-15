@@ -1,0 +1,66 @@
+/* Global variables - Design system */
+:root {
+    /* Palette */
+    --clor-black: rgb(0, 0, 0);
+    --color-background: rgb(24, 24, 24);
+    --color-body: rgb(24, 24, 24);
+
+    --color-gris: rgb(128, 128, 128);
+    --color-grisoscuro: rgb(182, 182, 182);
+    --color-grisclaro: rgb(233, 233, 233);
+
+    --color-violeta: rgb(184, 97, 224);
+    --color-violeta-800: rgb(184, 97, 224, 0.8);
+    --color-violeta-500: rgb(184, 97, 224, 0.5);
+    --color-violeta-300: rgb(184, 97, 224, 0.3);
+
+    --color-mora: rgb(113, 113, 226);
+    --color-mora-800: rgb(113, 113, 226, 0.8);
+    --color-mora-500: rgb(113, 113, 226, 0.5);
+    --color-mora-300: rgb(113, 113, 226, 0.3);
+    --font-color-mora-dark: rgb(36, 36, 68);
+
+
+    --color-verde: rgb(31, 193, 174);
+    --color-verde-800: rgb(31, 193, 174, 0.8);
+    --color-verde-500: rgb(31, 193, 174, 0.5);
+    --color-verde-300: rgb(31, 193, 174, 0.3);
+
+    --color-coquenicot: rgb(255, 56, 0);
+    --color-coquenicot-800: rgb(255, 56, 0, 0.8);
+    --color-coquenicot-500: rgb(255, 56, 0, 0.5);
+    --color-coquenicot-300: rgb(255, 56, 0, 0.3);
+
+
+
+    --gradient: linear-gradient(to right, rgb(184, 97, 224), rgb(113, 113, 226));
+    --gradient-invert: linear-gradient(to right, rgb(113, 113, 226), rgb(184, 97, 224));
+
+    /* Typography */
+    --font-roboto: 'Roboto', sans-serif;
+    --font-roboto-mono: 'Roboto Mono', monospace;
+
+    /* Font-colors */
+    --font-color-light: rgb(243, 243, 243);
+    --font-color-dark: rgb(24, 24, 24);
+
+    /* Font-sizes */
+    --font-46: 4.6rem;
+    --font-38: 3.8rem;
+    --font-30: 3.0rem;
+    --font-24: 2.4rem;
+    --font-20: 2rem;
+    --font-16: 1.6rem;
+    --font-14: 1.4rem;
+
+    /* Spacings */
+    --spacing-128: 12.8rem;
+    --spacing-68: 6.8rem;
+    --spacing-36: 3.6rem;
+    --spacing-28: 2.8rem;
+    --spacing-24: 2.4rem;
+    --spacing-20: 2rem;
+    --spacing-16: 1.6rem;
+    --spacing-12: 1.2rem;
+    --spacing-8: 0.8rem;
+}

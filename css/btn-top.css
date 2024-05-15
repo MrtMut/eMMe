@@ -1,0 +1,37 @@
+/* Botón Subir */
+.goTop {
+  border: none;
+  display: flex;
+  cursor: pointer;
+  transition: opacity 0.3s, transform 0.3s;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 9999;
+}
+.goTop:not(.visible) {
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-2rem);
+}
+.goTop svg {
+  stroke-width: 5px;
+  stroke: currentColor;
+  fill: none;
+  width: 28px;
+}
+/* Personalizar */
+.goTop {
+  background-color: var(--color-background);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  padding: 0.75rem;
+  color: rgb(255, 255, 255);
+  border-radius: 50%;
+}
+
+/* -------- MOBILE ==================================================================== -------- */
+@media only screen and (max-width: 599px) {
+  .goTop {
+    bottom: 4rem;
+  }
+}

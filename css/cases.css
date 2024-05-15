@@ -1,0 +1,193 @@
+/* -------- CASES-EXITS-SUCCESS -------- */
+/* ------ DESKTOPS ------ */
+.cases-success-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(217, 217, 217);
+}
+
+.cases-title {
+  color: var(--color-background);
+  font-style: italic;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+.cases-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+}
+
+.cases-slider {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  gap: 15px;
+  margin: 0 10px;
+}
+
+.case-card {
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  border-radius: 20px;
+  position: relative;
+  border: 2px solid var(--color-violeta);
+  padding-top: 45px;
+  padding-bottom: 10px;
+  box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.3);
+}
+
+.case-item-text {
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(217, 217, 217);
+  margin-top: 10px;
+  font-style: italic;
+  position: absolute;
+  left: 10%;
+  bottom: 2%;
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 30px;
+  padding: 10px;
+  z-index: 99;
+}
+
+.case-item-text::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 30px;
+  left: 0;
+  bottom: 2%;
+  backdrop-filter: blur(10px) brightness(0.6);
+  z-index: -5;
+}
+
+.case-item {
+  width: 90%;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+}
+
+.case-item-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(217, 217, 217);
+  font-style: italic;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: var(--color-mora-800);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 5px;
+  z-index: 99;
+}
+
+
+/* -------- TABLET ==================================================================== -------- */
+@media only screen and (max-width: 769px) {
+  body {
+      background-color: rgb(24, 24, 24);
+  }
+
+  .cases-container {
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    position: relative;
+    scroll-snap-align: center;
+  }
+
+  .cases-slider {
+    display: flex;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    gap: 15px;
+    margin: 0 10px;
+  }
+
+  .case-card {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    width: 320px;
+    height: 400px;
+    border: 2px solid var(--color-violeta);
+  }
+
+  .case-item {
+    width: fit-content;
+    height: 200px;
+    padding: 0 10px;
+    border-radius: 40px;
+  }
+
+    .cases-title {
+    margin-top: 1rem;
+    margin-bottom: -20px;
+  }
+
+  .case-item-text {
+    position: absolute;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-style: italic;
+    left: 19px;
+    top: 190px;
+    width: 201px;
+    height: max-content;
+    border-radius: 40px;
+    padding: 10px;
+    z-index: 99;
+  }
+
+  .case-item-text::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 40px;
+    left: 0;
+    bottom: 0;
+    backdrop-filter: blur(30px) brightness(0.6);
+    z-index: -5;
+  }
+}
+
+/* -------- MOBILE ==================================================================== -------- */
+@media only screen and (max-width: 599px) {
+  .case-card {
+    height: 390px;
+  }
+
+  .case-item-text {
+    left: 10px;
+    top: 175px;
+  }
+
+  .case-item-text::before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 40px;
+    left: 0;
+    bottom: 2%;
+    backdrop-filter: blur(2px) brightness(0.8);
+    z-index: -5;
+  }
+}

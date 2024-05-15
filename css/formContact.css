@@ -1,0 +1,155 @@
+/* This file contains the styling for the contact form */
+.section_contact{
+    width: 100%;
+    margin-top: 0;
+    background: var(--gradient);
+}
+
+form{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5px;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 100%;
+    background: var(--color-background);
+}
+
+.contact_container{
+    width:100%;
+}
+
+.form_container_options {
+    display: flex;
+}
+
+.form_container_options{
+    color: rgb(240, 248, 255);
+    padding: 5px;
+}
+
+.contact_title{
+    color: rgb(240, 248, 255);
+    padding: 5px;
+    font-weight: bold;
+    text-shadow: 0 0 80px rgb(0, 0, 0);
+}
+
+.section_contact h2{
+    margin-left: 10px;
+    color: var(--color-verde);
+}
+
+.contact_suscribe{
+    margin-left: 20px;
+    font-size: 12px;
+    color: var(--font-color-light);
+}
+
+.contact_checkbox{
+    height: 14px;
+    width: 14px;
+    border-radius: 15px;
+}
+
+.contact_checkbox:hover{
+    cursor: pointer;
+    background-color: rgba(86, 35, 182, 0.7);
+    transition: background-color 0.5s;
+}
+
+.contact_group{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.contact_group_name {
+    margin-top: 1rem;
+}
+
+.contact_link_terms {
+    color: rgb(113, 113, 226, 0.8);
+    font-weight: bold;
+}
+
+.contact_link_terms:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.contact_input{
+    padding: 5px 5px 5px 10px;
+    border-color: var(--color-violeta);
+    border-width: 1px;
+    background: none ;
+    border-style: solid;
+}
+
+.input-radius {
+    display: block;
+    width: 60%;
+    border-radius: 10px;
+    font-family: var(--font-roboto-mono);
+    font-size: 1.6rem;
+    color: var(--color-grisclaro);
+}
+
+textarea {
+    border-color: var(--color-violeta);
+    border-width: 1px;
+    background: none ;
+    border-style: solid;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.form_send_container {
+    display: inline-flex;
+    margin-left: 10px;
+}
+
+.form_send{
+    display: flex;
+    border-radius: 10px;
+    padding: 15px 20px;
+    transition: all 0.5s ease-in-out;
+    border: 1px solid var(--color-verde-300);
+    background-color: var(--color-verde-800);
+    color: var(--font-color-light);
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 1px;
+    box-shadow: 4px 4px 10px rgb(184, 97, 224, 0.3);
+    text-shadow: 0 0 25px rgb(0, 0, 0);
+    align-items: center;
+    gap: 5px;
+}
+
+.form_send:hover{
+    cursor: pointer;
+    background-color: var(--color-violeta-800);
+    color: rgb(255, 255, 255);
+    transition: all 0.8s;
+}
+
+.form_send_img {
+    width: 20px;
+    fill: rgb(255, 255, 255);
+}
+
+.error{
+    display: none;
+} 
+
+.name{
+    display: none;
+}
+
+.phone{
+    display: none;
+}
+
+.error > h5{
+    color: rgb(255, 95, 95);
+}
