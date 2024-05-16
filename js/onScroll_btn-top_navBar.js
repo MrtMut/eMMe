@@ -14,8 +14,11 @@ let goTop = () => {
             ]("visible");
         if (document.documentElement.scrollTop > 1) {
             header_shadow.classList.remove("header_shadow_Mini");
+            document.querySelector('.title_h1').style.fontSize = "3.5rem";
         } else {
             header_shadow.classList.add("header_shadow_Mini");
+            document.querySelector('.title_h1').style.fontSize = "5rem";
+
         }
         if (document.documentElement.scrollTop > 1) {
             nav_menu_items[0].style.top = "30px";
@@ -30,38 +33,38 @@ let goTop = () => {
         })
     }
 
-if(window.innerWidth < 770){
+    if(window.innerWidth < 770){
 
-    let menuShow = () => {
-        menu_burguer.addEventListener("click", () => {
-            menu_burguer.style.visibility = "hidden";
-            menu_equ.style.visibility = "visible";
-            nav_menu.style.visibility = "visible";
-        });
-    }
-    menuShow();
+            let menuShow = () => {
+                menu_burguer.addEventListener("click", () => {
+                    menu_burguer.style.visibility = "hidden";
+                    menu_equ.style.visibility = "visible";
+                    nav_menu.style.visibility = "visible";
+                });
+            }
+            menuShow();
 
-    let menuClickedNoShow = () => {
-        nav_menu_items.forEach(item => {
-            item.addEventListener("click", () => {
-                menu_equ.style.visibility = "hidden";
-                menu_burguer.style.visibility = "visible";
-                nav_menu.style.visibility = "hidden";
-                if (menu_input.checked == true) {
-                    menu_input.checked = false;
-                }
-            });
-        });
-    }
-    menuClickedNoShow();
+            let menuClickedNoShow = () => {
+                nav_menu_items.forEach(item => {
+                    item.addEventListener("click", () => {
+                        menu_equ.style.visibility = "hidden";
+                        menu_burguer.style.visibility = "visible";
+                        nav_menu.style.visibility = "hidden";
+                        if (menu_input.checked == true) {
+                            menu_input.checked = false;
+                        }
+                    });
+                });
+            }
+            menuClickedNoShow();
 
-    let equShow = () => {
-        menu_equ.addEventListener("click", () => {
-            menu_burguer.style.visibility = "visible";
-        })
+            let equShow = () => {
+                menu_equ.addEventListener("click", () => {
+                    menu_burguer.style.visibility = "visible";
+                })
+            }
+            equShow();
     }
-    equShow();
-};
 };
 
 goTop();
