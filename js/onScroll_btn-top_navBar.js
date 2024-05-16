@@ -30,6 +30,8 @@ let goTop = () => {
         })
     }
 
+if(window.innerWidth < 770){
+
     let menuShow = () => {
         menu_burguer.addEventListener("click", () => {
             menu_burguer.style.visibility = "hidden";
@@ -59,6 +61,7 @@ let goTop = () => {
         })
     }
     equShow();
+};
 };
 
 goTop();
