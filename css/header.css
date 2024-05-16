@@ -25,9 +25,9 @@ header::before {
     z-index: -5;
 }
 
-.header_shadow_Mini {
+.header_Top_Max {
     box-shadow: none;
-    height: 110px;
+    height: 100px;
     transition: 0.5s all ease-in-out;
 }
 
@@ -246,7 +246,7 @@ header::before {
         height: 80px;
     }
 
-    .header_shadow_Mini {
+    .header_Top_Max {
         box-shadow: none;
         height: 100px;
         transition: 0.5s all ease-in-out;
@@ -273,7 +273,7 @@ header::before {
         justify-content: center;
     }
 
-    .header_shadow_Mini {
+    .header_Top_Max {
         box-shadow: none;
         height: 100px;
         transition: 0.5s all ease-in-out;

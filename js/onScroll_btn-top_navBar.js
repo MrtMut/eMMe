@@ -13,18 +13,21 @@ let goTop = () => {
             (document.documentElement.scrollTop > 300) ? "add" : "remove"
             ]("visible");
         if (document.documentElement.scrollTop > 1) {
-            header_shadow.classList.remove("header_shadow_Mini");
+            header_shadow.classList.remove("header_Top_Max");
             document.querySelector('.title_h1').style.fontSize = "3.5rem";
         } else {
-            header_shadow.classList.add("header_shadow_Mini");
+            header_shadow.classList.add("header_Top_Max");
             document.querySelector('.title_h1').style.fontSize = "5rem";
 
         }
+
+
         if (document.documentElement.scrollTop > 1) {
             nav_menu_items[0].style.top = "30px";
         } else {
             nav_menu_items[0].style.top = "50px";
         }
+
     }
 
     button.onclick = () => {
