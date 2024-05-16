@@ -45,14 +45,17 @@ const phoneValidators = () => {
 
 document.querySelector('#contactForm').addEventListener('submit', function (event) {
     event.preventDefault();
-    var completeName = document.getElementById('completeName').value;
+    let completeName = document.getElementById('completeName').value;
     const name = document.querySelector(".name");
     const email = document.getElementById("email").value;
     const errEmail = document.querySelector('.email');
     const form_send = document.querySelector(".form_send");
     const phoneInput = document.querySelector("#phone").value;
     const phone = document.querySelector(".phone");
-    
+    const formCheck = document.querySelector(".contact_checkbox");
+    const errorFormCheck = document.querySelector(".errorForm-check");
+
+
     if (completeName.trim() === '') {
         name.style.display = 'block';
         completeName.focus();
@@ -60,14 +63,18 @@ document.querySelector('#contactForm').addEventListener('submit', function (even
         errEmail.style.display = 'block';
     } else if (phoneInput.trim() === '') {
         phone.style.display = 'block';
-    }else{
+    } else if (formCheck.checked === false) {
+        errorFormCheck.style.display = 'block';
+    } else {
         form_send.setAttribute('data-bs-toggle', 'modal');
-        form_send.setAttribute('data-bs-target', '#exampleModal');
+        form_send.setAttribute('data-bs-target', '#formModal');
         // this.submit();
     }
-   
-});
 
+
+
+
+});
 
 contactValidators();
 emailValidators();

@@ -164,6 +164,10 @@ textarea {
     color: rgb(255, 95, 95);
 }
 
+.errorForm-check {
+    display: none;
+}
+
 .modal-terms-content {
     background: rgb(30, 30, 30);
     color: var(--color-grisclaro);
