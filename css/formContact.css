@@ -30,6 +30,7 @@ form{
     color: rgb(240, 248, 255);
     padding: 5px;
     font-weight: bold;
+    font-style: italic;
     text-shadow: 0 0 80px rgb(0, 0, 0);
 }
 
@@ -94,6 +95,15 @@ form{
     color: var(--color-grisclaro);
 }
 
+.input-radius:focus {
+    background: black;
+    color: var(--color-grisclaro);
+}
+
+.input-radius::placeholder {
+    color: var(--color-gris);
+}
+
 textarea {
     border-color: var(--color-violeta);
     border-width: 1px;
@@ -152,4 +162,33 @@ textarea {
 
 .error > h5{
     color: rgb(255, 95, 95);
+}
+
+.modal-terms-content {
+    background: rgb(30, 30, 30);
+    color: var(--color-grisclaro);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.modal-terms-header {
+    background: rgb(30, 30, 30);
+    border-bottom: 2px solid var(--color-verde-300);
+}
+.modal-terms-text{
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.modal-terms-footer {
+    border-top: 2px solid var(--color-verde-300);
+
+}
+.btn-close {
+    background-color: var(--color-verde);
+    border-radius: 50%;
+}
+.btn-terms-close {
+    background-color: var(--color-verde-500);
 }
