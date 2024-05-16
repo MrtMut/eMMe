@@ -3,6 +3,7 @@ let goTop = () => {
     const button = document.getElementById("goTop");
     const header_shadow = document.getElementById("headerId");
     let nav_menu_items = document.querySelectorAll(".nav_menu_items");
+    let nav_menu_items1 = document.querySelector(".nav_menu_items");
     let menu_input = document.querySelector("#menu-input");
     let menu_burguer = document.querySelector(".menu-burguer");
     let menu_equ = document.querySelector(".menu-equ");
@@ -36,7 +37,10 @@ let goTop = () => {
         })
     }
 
-    if(window.innerWidth < 770){
+
+    const menus = () => {
+
+        if (window.innerWidth < 770) {
 
             let menuShow = () => {
                 menu_burguer.addEventListener("click", () => {
@@ -67,7 +71,16 @@ let goTop = () => {
                 })
             }
             equShow();
+        } else {
+            nav_menu.style.visibility = "visible";
+
+            nav_menu_items1.style.display = "flex";
+            nav_menu_items1.style.visibility = "visible";
+
+        }
     }
+    menus();
+
 };
 
 goTop();
