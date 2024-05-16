@@ -81,7 +81,7 @@ form{
     padding: 5px 5px 5px 10px;
     border-color: var(--color-violeta);
     border-width: 1px;
-    background: none ;
+    background: none;
     border-style: solid;
 }
 
@@ -97,7 +97,7 @@ form{
 textarea {
     border-color: var(--color-violeta);
     border-width: 1px;
-    background: none ;
+    background: none;
     border-style: solid;
     padding-left: 10px;
     padding-top: 5px;
