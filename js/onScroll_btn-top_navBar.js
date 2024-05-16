@@ -30,10 +30,6 @@ let goTop = () => {
         })
     }
 
-    console.log('ANCHO', window.innerWidth);
-
-    if (window.innerWidth < 769) {
-
     let menuShow = () => {
         menu_burguer.addEventListener("click", () => {
             menu_burguer.style.visibility = "hidden";
