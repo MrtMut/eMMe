@@ -65,10 +65,15 @@ document.querySelector('#contactForm').addEventListener('submit', function (even
         phone.style.display = 'block';
     } else if (formCheck.checked === false) {
         errorFormCheck.style.display = 'block';
-    } else {
+    } /*else {
+        // form_send.setAttribute('data-bs-toggle', 'modal');
+        // form_send.setAttribute('data-bs-target', '#formModal');
+        // this.submit();
+    }*/
+
+    if (completeName.trim() === '' || email.trim() === '' || phoneInput.trim() === '' || formCheck.checked === false) {
         form_send.setAttribute('data-bs-toggle', 'modal');
         form_send.setAttribute('data-bs-target', '#formModal');
-        // this.submit();
     }
 
 
