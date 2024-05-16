@@ -16,8 +16,16 @@ body{
     height: 100%;
     border: 0 solid var(--color-mora);
 }
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
 
-.container {
+
+}
+
+.container_custom {
     max-width: 1400px;
     margin: 0 auto;
 }
