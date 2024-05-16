@@ -30,9 +30,7 @@ let goTop = () => {
         })
     }
 
-    console.log('ANCHO', window.innerWidth);
-
-    if (window.innerWidth < 769) {
+if(window.innerWidth < 770){
 
     let menuShow = () => {
         menu_burguer.addEventListener("click", () => {
@@ -63,6 +61,7 @@ let goTop = () => {
         })
     }
     equShow();
+};
 };
 
 goTop();
