@@ -90,7 +90,7 @@ header::before {
         justify-content: flex-end;
     }
 
-/* Burguer */
+/* Burguer -----------------------------------------------------------------------*/
     [type="checkbox"] {
         box-sizing: border-box;
         padding: 0;
@@ -116,9 +116,8 @@ header::before {
             visibility: hidden;
     }
 
-
 /* TABLETs ========================================================================= */
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 861px) {
     /* Hambur Menu */    
     .menu-burguer {
         display: flex;
@@ -221,7 +220,6 @@ header::before {
         font-weight: bold;
     }
 
-
     .nav_menu_link:hover {
         background-color: var(--color-coquenicot-500);
     }
@@ -252,7 +250,6 @@ header::before {
         transition: 0.5s all ease-in-out;
     }
 }
-
 
 /* Mobile ===============================================================================================-------- */
 @media only screen and (max-width: 599px) {

@@ -1,7 +1,3 @@
-/* ::-webkit-scrollbar {
-    display: none;
-} */
-
 .tecno_container{
     width: 100%;
     display: grid;
@@ -67,7 +63,7 @@
 }
 
 /* mobile tablet =================================================================================================== */
-@media only screen and (min-width: 319px) and (max-width: 780px) {
+@media only screen and (min-width: 319px) and (max-width: 861px) {
 
     .tecno_container{
         width: 100%;

@@ -31,8 +31,6 @@
     --color-coquenicot-500: rgb(255, 56, 0, 0.5);
     --color-coquenicot-300: rgb(255, 56, 0, 0.3);
 
-
-
     --gradient: linear-gradient(to right, rgb(184, 97, 224), rgb(113, 113, 226));
     --gradient-invert: linear-gradient(to right, rgb(113, 113, 226), rgb(184, 97, 224));
 

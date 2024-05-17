@@ -1,4 +1,3 @@
-
 /* -------- CASES-EXITS-SUCCESS -------- */
 /* ------ DESKTOPS ------ */
 .cases-success-container {
@@ -97,9 +96,8 @@
   z-index: 99;
 }
 
-
 /* -------- TABLET ==================================================================== -------- */
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 861px) {
   body {
     background-color: rgb(24, 24, 24);
   }

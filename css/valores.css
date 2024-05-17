@@ -48,7 +48,6 @@
 }
 
 .valoresTitle{
-    color: var(--color-background);
     color: rgb(24, 24, 24, 0.7);
     font-size: 3rem;
     text-align: center;
@@ -79,7 +78,7 @@
 }
 
 /* TABLETS =============================================================================================*/
-@media (max-width: 769px) {
+@media (max-width: 861px) {
     .valores {
         display: block;
         position: relative;

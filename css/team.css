@@ -29,7 +29,6 @@
 }
 
 .contImagenesEquipo {
-    /*position: relative;*/
     top: 5rem;
     display: flex;
     justify-content: space-evenly;
@@ -60,9 +59,8 @@
 }
 
 /* TABLET ===============================================================================================*/
-@media (max-width: 769px) {
+@media (max-width: 861px) {
     .contImagenesEquipo {
-        /*position: relative;*/
         top: 5rem;
         display: flex;
         justify-content: space-evenly;
