@@ -3,14 +3,15 @@
     width: 100%;
     margin-top: 0;
     background: var(--gradient);
+    padding: 50px 0;
 }
 
 form{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 5px;
     border-top-right-radius: 50%;
     border-bottom-right-radius: 100%;
     background: var(--color-background);
+    padding: 20px 5px;
 }
 
 .contact_container{
@@ -19,6 +20,7 @@ form{
 
 .form_container_options {
     display: flex;
+    margin-bottom: 20px;
 }
 
 .form_container_options{
