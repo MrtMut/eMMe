@@ -1,12 +1,12 @@
 // Scroll to top button
 let goTop = () => {
-    const button = document.getElementById("goTop");
+    const buttonGoTop = document.getElementById("goTop");
     const headerId = document.getElementById("headerId");
-    const nav_menu_items = document.querySelectorAll(".nav_menu_items");
+    const nav_menu_items = document.querySelector(".nav_menu_items");
     const anchor  = document.querySelector(".anchor");
 
     window.onscroll = () => {
-        button.classList[
+        buttonGoTop.classList[
             (document.documentElement.scrollTop > 300) ? "add" : "remove"
             ]("visible");
         if (document.documentElement.scrollTop > 1) {
@@ -18,19 +18,16 @@ let goTop = () => {
         }
 
         if (document.documentElement.scrollTop === 0) {
-            document.styleSheets[0].addRule(".anchor:before", 'height: ' + '96px' + ';');
-            document.styleSheets[0].addRule(".anchor:before", 'margin-top: ' + '-96px' + ';');
-         }
-            // else {
-        //     document.styleSheets[0].addRule(".anchor:before", 'height: ' + '80px' + '!important;');
-        //     document.styleSheets[0].addRule(".anchor:before", 'margin-top: ' + '-80px' + '!important;');
-        // }
-
+                document.styleSheets[0].addRule(".anchor:before", 'height: ' + '96px' + ';');
+                document.styleSheets[0].addRule(".anchor:before", 'margin-top: ' + '-96px' + ';');
+                } else {
+                document.styleSheets[0].addRule(".anchor:before", 'height: ' + '76px' + ';');
+                document.styleSheets[0].addRule(".anchor:before", 'margin-top: ' + '-76px' + ';');
+        }
         console.log('SCROLL', window.scrollY)
-
     }
 
-    button.onclick = () => {
+    buttonGoTop.onclick = () => {
         window.scrollTo({
             top: 0, behavior: "smooth"
         })
@@ -38,13 +35,16 @@ let goTop = () => {
 };
 
 const menuBpMobiles = () => {
-    let nav_menu_items = document.querySelectorAll(".nav_menu_items");
+    let nav_menu_items = document.querySelector(".nav_menu_items");
+    let nav_menu_item = document.querySelectorAll(".nav_menu_item");
     let menu_input = document.querySelector("#menu-input");
     let menu_burguer = document.querySelector(".menu-burguer");
     let menu_equ = document.querySelector(".menu-equ");
     let nav_menu = document.querySelector(".nav_menu");
 
-    if (window.innerWidth < 770) {
+    if (window.innerWidth < 862) {
+        nav_menu_item[0].style.top = "30px" + "!important";
+
         let menuShow = () => {
             menu_burguer.addEventListener("click", () => {
                 menu_burguer.style.visibility = "hidden";
@@ -55,7 +55,7 @@ const menuBpMobiles = () => {
         menuShow();
 
         let menuClickedNoShow = () => {
-            nav_menu_items.forEach(item => {
+            nav_menu_item.forEach(item => {
                 item.addEventListener("click", () => {
                     menu_equ.style.visibility = "hidden";
                     menu_burguer.style.visibility = "visible";
@@ -75,15 +75,23 @@ const menuBpMobiles = () => {
         }
         equShow();
 
-        nav_menu_items.style.top = "30px";
+        if (document.documentElement.scrollTop === 0) {
+            nav_menu_items.style.top = "50px";
+
+        } else {
+            nav_menu_items.style.top = "30px";
+        }
+
     }
+    // nav_menu_items.style.top = "30px";
+
 }
 
 const menuBpDesktop = () => {
     let nav_menu = document.querySelector(".nav_menu");
     let nav_menu_items1 = document.querySelector(".nav_menu_items");
 
-    if (window.innerWidth >= 770) {
+    if (window.innerWidth >= 862) {
         nav_menu.style.visibility = "visible";
         nav_menu_items1.style.display = "flex";
         nav_menu_items1.style.visibility = "visible";

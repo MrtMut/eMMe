@@ -1,7 +1,7 @@
 .tecno_container{
     width: 100%;
     display: grid;
-    grid-template-rows: 10% 90%;
+    grid-template-rows: 15% 90%;
     scroll-behavior: smooth; 
     padding: 10px 15px 10px 15px;
 }
