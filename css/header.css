@@ -49,17 +49,17 @@ header::before {
     transition: 0.5s all ease-in-out;
 }
 
-    nav{
-        width: 100%;  
-    }
+nav{
+        width: 100%;
+}
 
-    ul{
+ul{
         display: flex;
         gap: 10px;
         width: 100%;
-    }
+}
 
-    .nav_menu_link {
+.nav_menu_link {
         display: inline-block;
         border-radius: 10px;
         padding: 10px 20px;
@@ -70,25 +70,25 @@ header::before {
         font-weight: bold;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
         text-shadow: 0 0 25px rgb(0, 0, 0);
-    }
+}
 
-    .nav_menu_link:hover {
+.nav_menu_link:hover {
         background-color: rgb(255, 56, 0, 0.2);
-    }
+}
 
-    li > a{
+li > a{
         font-size: 1.6rem;
-    }
+}
 
-    .title_container{
+.title_container{
         display: flex;
         justify-content: center;
-    }
+}
 
-    .nav_menu_items {
+.nav_menu_items {
         display: flex;
         justify-content: flex-end;
-    }
+}
 
 /* Burguer -----------------------------------------------------------------------*/
     [type="checkbox"] {
