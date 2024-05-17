@@ -17,10 +17,10 @@ let goTop = () => {
             document.querySelector('.title_h1').style.fontSize = "5rem";
         }
 
-      /*  if (document.documentElement.scrollTop === 0) {
-            document.styleSheets[0].addRule(".anchor:before", 'height: ' + '100px' + ';');
-            document.styleSheets[0].addRule(".anchor:before", 'margin-top: ' + '-100px' + ';');
-         }*/
+        if (document.documentElement.scrollTop === 0) {
+            document.styleSheets[0].addRule(".anchor:before", 'height: ' + '96px' + ';');
+            document.styleSheets[0].addRule(".anchor:before", 'margin-top: ' + '-96px' + ';');
+         }
             // else {
         //     document.styleSheets[0].addRule(".anchor:before", 'height: ' + '80px' + '!important;');
         //     document.styleSheets[0].addRule(".anchor:before", 'margin-top: ' + '-80px' + '!important;');
@@ -74,6 +74,8 @@ const menuBpMobiles = () => {
             })
         }
         equShow();
+
+        nav_menu_items.style.top = "30px";
     }
 }
 
@@ -90,7 +92,7 @@ const menuBpDesktop = () => {
 
 window.addEventListener("resize", () => {
     menuBpDesktop();
-    menuBpMobiles();
 });
 
+menuBpMobiles();
 goTop();
