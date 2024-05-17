@@ -1,4 +1,3 @@
-
 const contactValidators = () => {
     const name = document.querySelector(".name");
     const completeName = document.querySelector("#completeName");
@@ -26,7 +25,6 @@ const emailValidators = () => {
             errEmail.style.display = 'none';
         }
     });
-
 }
 
 const phoneValidators = () => {
@@ -55,7 +53,6 @@ document.querySelector('#contactForm').addEventListener('submit', function (even
     const formCheck = document.querySelector(".contact_checkbox");
     const errorFormCheck = document.querySelector(".errorForm-check");
 
-
     if (completeName.trim() === '') {
         name.style.display = 'block';
         completeName.focus();
@@ -65,20 +62,20 @@ document.querySelector('#contactForm').addEventListener('submit', function (even
         phone.style.display = 'block';
     } else if (formCheck.checked === false) {
         errorFormCheck.style.display = 'block';
-    } /*else {
-        // form_send.setAttribute('data-bs-toggle', 'modal');
-        // form_send.setAttribute('data-bs-target', '#formModal');
-        // this.submit();
-    }*/
+    } 
+
+    let modalDialog = document.querySelector(".modal-dialog");
+    const myModal = new bootstrap.Modal(document.querySelector("#formModal"))
 
     if (completeName.trim() === '' || email.trim() === '' || phoneInput.trim() === '' || formCheck.checked === false) {
+        
         form_send.setAttribute('data-bs-toggle', 'modal');
-        form_send.setAttribute('data-bs-target', '#formModal');
+        form_send.setAttribute('data-bs-target', '#formModal');     
+
+        setTimeout(() => {
+            myModal.hide();
+        }, "5000"); 
     }
-
-
-
-
 });
 
 contactValidators();
