@@ -41,7 +41,7 @@ const phoneValidators = () => {
     });
 }
 
-document.querySelector('#contactForm').addEventListener('submit', function (event) {
+const submit = () => { document.querySelector('#contactForm').addEventListener('submit', function (event) {
     event.preventDefault();
     let completeName = document.getElementById('completeName').value;
     const name = document.querySelector(".name");
@@ -52,6 +52,8 @@ document.querySelector('#contactForm').addEventListener('submit', function (even
     const phone = document.querySelector(".phone");
     const formCheck = document.querySelector(".contact_checkbox");
     const errorFormCheck = document.querySelector(".errorForm-check");
+    const btn_close_modal_form = document.querySelector(".btn_close_modal_form")
+    const myModal = new bootstrap.Modal(document.querySelector("#formModal"))
 
     if (completeName.trim() === '') {
         name.style.display = 'block';
@@ -64,20 +66,32 @@ document.querySelector('#contactForm').addEventListener('submit', function (even
         errorFormCheck.style.display = 'block';
     } 
 
-    let modalDialog = document.querySelector(".modal-dialog");
-    const myModal = new bootstrap.Modal(document.querySelector("#formModal"))
-
-    if (completeName.trim() === '' || email.trim() === '' || phoneInput.trim() === '' || formCheck.checked === false) {
-        
+    
+    
+    if (completeName.trim() === '' || email.trim() === '' || phoneInput.trim() === '' || formCheck.checked == true) {
         form_send.setAttribute('data-bs-toggle', 'modal');
-        form_send.setAttribute('data-bs-target', '#formModal');     
+        form_send.setAttribute('data-bs-target', '#formModal');
 
         setTimeout(() => {
             myModal.hide();
-        }, "5000"); 
+            }, "5000"); 
+        
+        setTimeout(() => {
+            location.reload();  
+                }, "5000");   
+                
+               
     }
-});
+
+    btn_close_modal_form.addEventListener("click", () => {
+        myModal.hide();
+        location.reload();  
+    })
+
+})};
 
 contactValidators();
 emailValidators();
 phoneValidators();
+submit();
+

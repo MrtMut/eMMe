@@ -164,6 +164,8 @@ textarea {
 
 .error > h5{
     color: rgb(255, 95, 95);
+    margin-left: 20px;
+    margin-bottom: 10px;
 }
 
 .errorForm-check {
