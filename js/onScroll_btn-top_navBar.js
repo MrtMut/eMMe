@@ -22,7 +22,6 @@ let goTop = () => {
                 document.styleSheets[0].addRule(".anchor:before", 'height: ' + '76px' + ';');
                 document.styleSheets[0].addRule(".anchor:before", 'margin-top: ' + '-76px' + ';');
         }
-        console.log('SCROLL', window.scrollY)
     }
 
     buttonGoTop.onclick = () => {
