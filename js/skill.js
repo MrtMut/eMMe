@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const circles = document.querySelectorAll('.circle_skill');
     const circles_colorous = document.querySelectorAll('.circles_colorous');

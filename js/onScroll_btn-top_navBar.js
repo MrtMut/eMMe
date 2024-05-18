@@ -2,8 +2,6 @@
 let goTop = () => {
     const buttonGoTop = document.getElementById("goTop");
     const headerId = document.getElementById("headerId");
-    const nav_menu_items = document.querySelector(".nav_menu_items");
-    const anchor  = document.querySelector(".anchor");
 
     window.onscroll = () => {
         buttonGoTop.classList[

@@ -4,7 +4,7 @@ const contactValidators = () => {
 
     completeName.addEventListener('input', (event) => {
         let valueInput = event.target.value
-        if (valueInput.length == 0) {
+        if (valueInput.length === 0) {
             name.style.display = 'none';
         } else if (valueInput.length < 3 || valueInput.length > 40) {
             name.style.display = 'block';
@@ -35,7 +35,7 @@ const phoneValidators = () => {
 
     phoneInput.addEventListener('input', (event) => {
         let valueInput = event.target.value
-        if (valueInput.length == 0) {
+        if (valueInput.length === 0) {
             phone.style.display = 'none';
         } else if (valueInput.length < 7 || valueInput.length > 15) {
             phone.style.display = 'block';
@@ -50,7 +50,6 @@ const submit = () => { document.querySelector('#contactForm').addEventListener('
     const name = document.querySelector(".name");
     const email = document.getElementById("email").value;
     const errEmail = document.querySelector('.email');
-    const form_send = document.querySelector(".form_send");
     const phoneInput = document.querySelector("#phone").value;
     const phone = document.querySelector(".phone");
     const formCheck = document.querySelector("#accept_terms");
@@ -70,13 +69,11 @@ const submit = () => { document.querySelector('#contactForm').addEventListener('
     } else if (completeName.trim() !== '' && email.trim() !== '' && phoneInput.trim() !== '' && formCheck.checked === true) {
             // form_send.setAttribute('data-bs-toggle', 'modal');
             // form_send.setAttribute('data-bs-target', '#formModal');
-
             myModal.show();
 
             setTimeout(() => {
                 myModal.hide();
                 }, "5000");
-
             setTimeout(() => {
                 location.reload();
                     }, "5000");
@@ -87,7 +84,6 @@ const submit = () => { document.querySelector('#contactForm').addEventListener('
         location.reload();  
     })
 })};
-
 contactValidators();
 emailValidators();
 phoneValidators();

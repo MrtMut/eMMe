@@ -93,8 +93,6 @@
         grid-column: 1;
         width: 60px;
         height: 60px;
-        justify-self: center;
-        align-self: center;
         padding-top: 46%;
         border-radius: 50%; 
         border-bottom: 2px solid rgba(255, 255, 255, 0.911);
