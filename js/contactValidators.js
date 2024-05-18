@@ -1,6 +1,7 @@
 const contactValidators = () => {
     const name = document.querySelector(".name");
     const completeName = document.querySelector("#completeName");
+
     completeName.addEventListener('input', (event) => {
         let valueInput = event.target.value
         if (valueInput.length == 0) {
@@ -15,6 +16,7 @@ const contactValidators = () => {
 const emailValidators = () => {
     const email = document.getElementById("email");
     const errEmail = document.querySelector('.email');
+
     email.addEventListener('input', (event) => {
         valueEmail = event.target.value
         const validatorsEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -30,6 +32,7 @@ const emailValidators = () => {
 const phoneValidators = () => {
     const phone = document.querySelector(".phone");
     const phoneInput = document.querySelector("#phone");
+
     phoneInput.addEventListener('input', (event) => {
         let valueInput = event.target.value
         if (valueInput.length == 0) {
@@ -43,14 +46,14 @@ const phoneValidators = () => {
 
 const submit = () => { document.querySelector('#contactForm').addEventListener('submit', function (event) {
     event.preventDefault();
-    let completeName = document.getElementById('completeName').value;
+    const completeName = document.getElementById('completeName').value;
     const name = document.querySelector(".name");
     const email = document.getElementById("email").value;
     const errEmail = document.querySelector('.email');
     const form_send = document.querySelector(".form_send");
     const phoneInput = document.querySelector("#phone").value;
     const phone = document.querySelector(".phone");
-    const formCheck = document.querySelector(".contact_checkbox");
+    const formCheck = document.querySelector("#accept_terms");
     const errorFormCheck = document.querySelector(".errorForm-check");
     const btn_close_modal_form = document.querySelector(".btn_close_modal_form")
     const myModal = new bootstrap.Modal(document.querySelector("#formModal"))
@@ -64,34 +67,28 @@ const submit = () => { document.querySelector('#contactForm').addEventListener('
         phone.style.display = 'block';
     } else if (formCheck.checked === false) {
         errorFormCheck.style.display = 'block';
-    } 
+    } else if (completeName.trim() !== '' && email.trim() !== '' && phoneInput.trim() !== '' && formCheck.checked === true) {
+            // form_send.setAttribute('data-bs-toggle', 'modal');
+            // form_send.setAttribute('data-bs-target', '#formModal');
 
+            myModal.show();
+
+            setTimeout(() => {
+                myModal.hide();
+                }, "5000"); 
+            
+            setTimeout(() => {
+                location.reload();  
+                    }, "5000");
+    }  
     
-    
-    if (completeName.trim() === '' || email.trim() === '' || phoneInput.trim() === '' || formCheck.checked == true) {
-        form_send.setAttribute('data-bs-toggle', 'modal');
-        form_send.setAttribute('data-bs-target', '#formModal');
-
-        setTimeout(() => {
-            myModal.hide();
-            }, "5000"); 
-        
-        setTimeout(() => {
-            location.reload();  
-                }, "5000");   
-                
-               
-    }
-
     btn_close_modal_form.addEventListener("click", () => {
         myModal.hide();
         location.reload();  
     })
-
 })};
 
 contactValidators();
 emailValidators();
 phoneValidators();
 submit();
-
