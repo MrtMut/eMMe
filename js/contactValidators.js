@@ -73,13 +73,13 @@ const submit = () => { document.querySelector('#contactForm').addEventListener('
 
             myModal.show();
 
-            // setTimeout(() => {
-            //     myModal.hide();
-            //     }, "5000");
-            //
-            // setTimeout(() => {
-            //     location.reload();
-            //         }, "5000");
+            setTimeout(() => {
+                myModal.hide();
+                }, "5000");
+
+            setTimeout(() => {
+                location.reload();
+                    }, "5000");
     }  
     
     btn_close_modal_form.addEventListener("click", () => {
