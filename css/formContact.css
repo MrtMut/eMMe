@@ -42,7 +42,7 @@ form{
 }
 
 .contact_suscribe{
-    margin-left: 20px;
+    margin-left: 15px;
     font-size: 12px;
     color: var(--font-color-light);
 }
@@ -66,9 +66,22 @@ form{
     gap: 10px;
 }
 
-.contact_group_name {
-    margin-top: 1rem;
+.contact_check_suscribe {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
+
+.contact_check_accept {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+/*.contact_group_name {
+    margin-top: 1rem;
+}*/
 
 .contact_link_terms {
     color: rgb(113, 113, 226, 0.8);
@@ -131,7 +144,6 @@ textarea {
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 10px;
-    margin-left: 1px;
     box-shadow: 4px 4px 10px rgb(184, 97, 224, 0.3);
     text-shadow: 0 0 25px rgb(0, 0, 0);
     align-items: center;
@@ -163,8 +175,13 @@ textarea {
 }
 
 .error > h5{
-    color: rgb(255, 95, 95);
-    margin-left: 20px;
+    color: rgb(31, 193, 174);
+    background-color: rgb(31, 193, 174, 0.1);
+    border: 1px solid rgb(31, 193, 174);
+    border-radius: 15px;
+    padding: 0 10px;
+    width: 50%;
+    margin-left: 10px;
     margin-bottom: 10px;
 }
 
@@ -173,14 +190,14 @@ textarea {
 }
 
 .modal-terms-content {
-    background: rgb(30, 30, 30);
+    background: rgb(55, 55, 55);
     color: var(--color-grisclaro);
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
 }
 
 .modal-terms-header {
-    background: rgb(30, 30, 30);
+    background: rgb(55, 55, 55);
     border-bottom: 2px solid var(--color-verde-300);
 }
 .modal-terms-text{
@@ -196,6 +213,9 @@ textarea {
 .btn-close {
     background-color: var(--color-verde);
     border-radius: 50%;
+    width: 16px;
+
+    height: 16px;
 }
 .btn-terms-close {
     background-color: var(--color-verde-500);

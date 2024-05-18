@@ -4,7 +4,7 @@
     --clor-black: rgb(0, 0, 0);
     --color-background: rgb(24, 24, 24);
     --color-body: rgb(24, 24, 24);
-
+    --color-gris-modal: rgb(55, 55, 55);
     --color-gris: rgb(128, 128, 128);
     --color-grisoscuro: rgb(182, 182, 182);
     --color-grisclaro: rgb(233, 233, 233);
@@ -25,6 +25,8 @@
     --color-verde-800: rgb(31, 193, 174, 0.8);
     --color-verde-500: rgb(31, 193, 174, 0.5);
     --color-verde-300: rgb(31, 193, 174, 0.3);
+    --color-verde-100: rgb(31, 193, 174, 0.1);
+
 
     --color-coquenicot: rgb(255, 56, 0);
     --color-coquenicot-800: rgb(255, 56, 0, 0.8);
