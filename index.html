@@ -255,7 +255,7 @@
 
                 <div class="contact_group">
                     <label class="contact_label" for="phone"></label>
-                    <input class="contact_input input-radius" type="number" name="phone" id="phone"
+                    <input class="contact_input input-radius form-control" type="number" name="phone" id="phone"
                            placeholder="Teléfono"/>
                 </div>
 
@@ -263,10 +263,22 @@
                     <h5>Mínimo 7 caracteres</h5>
                 </div>
 
+                <div class="content-select">
+                    <label class="contact_label" for="contact_select"></label>
+                    <select class="contact_select_input" id="contact_select" name="subject">
+                        <option value="consulta">Consulta</option>
+                        <option value="disenio">Diseño</option>
+                        <option value="desarrollo">Desarrollo</option>
+                        <option value="mantenimiento">Mantenimiento</option>
+                    </select>
+<!--                    <i></i>-->
+
+                </div>
+
                 <div class="contact_group contact_group_message">
                     <label class="contact_label_message" for="message"></label>
                     <textarea
-                            class="contact_textarea input-radius" cols="22" rows="4"
+                            class="contact_textarea input-radius form-control contact_input" cols="22" rows="4"
                             name="message"
                             id="message"
                             placeholder="Ingrese su consulta"

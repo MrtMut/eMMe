@@ -31,9 +31,10 @@ form{
 .contact_title{
     color: rgb(240, 248, 255);
     padding: 5px;
+    font-size: 3rem;
     font-weight: bold;
     font-style: italic;
-    text-shadow: 0 0 80px rgb(0, 0, 0);
+    text-shadow: 0 0 25px rgb(0, 0, 0);
 }
 
 .section_contact h2{
@@ -101,6 +102,11 @@ form{
     border-style: solid;
 }
 
+.contact_input:focus{
+    outline: none;
+    border-color: var(--color-verde-300);
+}
+
 .input-radius {
     display: block;
     width: 60%;
@@ -118,6 +124,82 @@ form{
 .input-radius::placeholder {
     color: var(--color-gris);
 }
+
+
+/*SELECT STYLES*/
+
+
+/*.content-select select::-ms-expand {*/
+/*    display: none;*/
+/*    */
+/*}*/
+
+.content-select{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+    max-width: 260px;
+    position: relative;
+}
+
+.content-select select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    cursor: pointer;
+    padding: 0 10px;
+    outline: 0;
+    overflow: hidden;
+    background: rgb(55, 55, 55);
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: rgb(243, 243, 243);
+    border: 1px solid var(--color-violeta);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.content-select select:hover{
+    cursor: pointer;
+    background: rgb(31, 193, 174, 0.1);
+}
+
+.content-select select option {
+    background-color: rgb(55, 55, 55);
+    color: var(--font-color-light);
+    padding: 5px 10px;
+    margin: 0 5px;
+    font-weight:normal;
+
+}
+
+.content-select select:focus {
+    border-color: var(--color-verde-300);
+    box-shadow: 0 0 1px 3px var(--color-verde-300);
+    color: var(--font-color-light);
+    outline: none;
+}
+
+.content-select i{
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    width: 18px;
+    height: 18px;
+    display: block;
+    border-left:6px solid rgb(24, 24, 24);
+    border-bottom:6px solid rgb(24, 24, 24);
+    transform: rotate(-45deg); /* Giramos el cuadrado */
+    transition: all 0.3s ease;
+}
+
+.content-select:hover i{
+    margin-top: 3px;
+}
+
+
 
 textarea {
     border-color: var(--color-violeta);
