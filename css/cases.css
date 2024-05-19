@@ -18,14 +18,13 @@
 .cases-container {
   display: flex;
   justify-content: space-evenly;
-  width: 100%;
+  width: 99%;
   margin-top: 2rem;
   flex-direction: column;
 }
 
 .cases-slider {
   display: flex;
-  width: 100%;
   justify-content: space-evenly;
   gap: 15px;
   margin: 0 10px;

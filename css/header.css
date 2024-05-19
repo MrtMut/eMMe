@@ -1,5 +1,5 @@
 /* This file is used to style the header of the website */
-header {
+.header_small {
     position: sticky;
     top: 0;
     height: 80px;
@@ -10,13 +10,13 @@ header {
     background: var(--gradient);
     z-index: 900;
     width: 100%;
-    transition: 0.5s all ease-in-out;
+    transition: 0.3s all ease-out;
 }
 
-header::before { 
+.header_small::before {
     content: ''; 
     width: 100%;
-    max-height: 120px;
+    max-height: 80px;
     position: absolute;
     top: 0;
     left: 0;
@@ -25,9 +25,23 @@ header::before {
     z-index: -5;
 }
 
-.header_Top_Max {
+.header_Big {
     box-shadow: none;
-    height: 100px;
+    height: 120px;
+    background: var(--gradient);
+    width: 100%;
+    padding: 0 10px;
+}
+.header_Big::before {
+    box-shadow: none;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: var(--gradient);
+    z-index: 900;
+    width: 100%;
     transition: 0.3s all ease-in-out;
 }
 
@@ -88,6 +102,7 @@ li > a{
 .nav_menu_items {
         display: flex;
         justify-content: flex-end;
+        z-index: 99999;
 }
 
 /* Burguer -----------------------------------------------------------------------*/
@@ -240,13 +255,9 @@ li > a{
         font-size: 5rem;
     }
 
-    header {
-        height: 80px;
-    }
-
-    .header_Top_Max {
+    .header_Big {
         box-shadow: none;
-        height: 100px;
+        height: 120px;
         transition: 0.3s all ease-in-out;
     }
 }
@@ -255,10 +266,6 @@ li > a{
 @media only screen and (max-width: 599px) {
     body {
         background-color: var(--color-background);
-    }
-
-    header {
-        height: 80px;
     }
 
     .container_nav {
@@ -270,9 +277,9 @@ li > a{
         justify-content: center;
     }
 
-    .header_Top_Max {
+    .header_Big {
         box-shadow: none;
-        height: 100px;
+        height: 120px;
         transition: 0.3s all ease-in-out;
     }
 }

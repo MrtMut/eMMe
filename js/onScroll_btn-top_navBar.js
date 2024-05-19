@@ -2,41 +2,34 @@
 let goTop = () => {
     const buttonGoTop = document.getElementById("goTop");
     const headerId = document.getElementById("headerId");
+    let nav_menu_items = document.querySelector(".nav_menu_items");
 
     window.onscroll = () => {
         buttonGoTop.classList[
             (document.documentElement.scrollTop > 300) ? "add" : "remove"
             ]("visible");
-        if (document.documentElement.scrollTop > 1) {
-            headerId.classList.remove("header_Top_Max");
+        if (document.documentElement.scrollTop > 0) {
+            headerId.classList.remove("header_Big");
+            headerId.classList.add("header_small");
             document.querySelector('.title_h1').style.fontSize = "3.5rem";
+            nav_menu_items.style.top = "30px";
         } else {
-            headerId.classList.add("header_Top_Max");
+            headerId.classList.remove("header_small");
+            headerId.classList.add("header_Big");
             document.querySelector('.title_h1').style.fontSize = "5rem";
-        }
-
-        if (document.documentElement.scrollTop === 0) {
-                document.styleSheets[0].addRule(".anchor:before", 'height: ' + '96px' + ';');
-                document.styleSheets[0].addRule(".anchor:before", 'margin-top: ' + '-96px' + ';');
-                } else {
-                document.styleSheets[0].addRule(".anchor:before", 'height: ' + '76px' + ';');
-                document.styleSheets[0].addRule(".anchor:before", 'margin-top: ' + '-76px' + ';');
+            nav_menu_items.style.top = "40px";
         }
     }
 
     buttonGoTop.onclick = () => {
         window.scrollTo({
             top: 0,
-            left: 0,
             behavior: "smooth",
-
-
         })
     }
 };
 
 const menuBpMobiles = () => {
-    let nav_menu_items = document.querySelector(".nav_menu_items");
     let nav_menu_item = document.querySelectorAll(".nav_menu_item");
     let menu_input = document.querySelector("#menu-input");
     let menu_burguer = document.querySelector(".menu-burguer");
@@ -75,17 +68,7 @@ const menuBpMobiles = () => {
             })
         }
         equShow();
-
-        if (document.documentElement.scrollTop === 0) {
-            nav_menu_items.style.top = "50px";
-
-        } else {
-            nav_menu_items.style.top = "30px";
-        }
-
     }
-    // nav_menu_items.style.top = "30px";
-
 }
 
 const menuBpDesktop = () => {
