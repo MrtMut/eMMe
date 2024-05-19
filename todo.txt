@@ -1,8 +1,6 @@
 
 // TODO: un select en el formulario
-
 // TODO: validar los check del formulario
-
-# btnTop queda sobre modal
-# tamaño box select
-# tamaño no error
+// TODO: btnTop queda sobre modal
+// TODO: tamaño box select
+// TODO: tamaño no error

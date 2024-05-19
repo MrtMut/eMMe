@@ -192,7 +192,12 @@
                     <p class="case-item-text">{{caseText[index]}}</p>
                 </div>
             </div>
+            <div class="container_cases_more_clients">
+                <button class="cases_more_clients" @click="fetchData(url)">&#10094;&#10094; Mas éxitos</button>
+            </div>
         </article>
+
+
     </section>
 
     <!-- SHARE - Buttons, Copy this to your Page Article ------------------------------------------->
@@ -242,7 +247,7 @@
                     <label class="contact_label" for="email"></label>
                     <input
                             class="contact_input form-control input-radius"
-                            type="email"
+                            type="text"
                             name="email"
                             id="email"
                             placeholder="Email"
@@ -354,7 +359,7 @@
                 <div class="modal-header modal-terms-header">
                     <button type="button" class="btn-close btn_close_modal_form" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body text-center modal-terms-body modal-terms-text" >
+                <div class="modal-body text-center modal-terms-body modal-submit-text" >
                     <p>Gracias por contactarnos, en breve nos comunicaremos con usted.</p>
                     <br>
                 </div>
