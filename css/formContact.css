@@ -263,6 +263,7 @@ textarea {
     width: 50%;
     margin-left: 10px;
     margin-bottom: 10px;
+    font-size: 1.1rem ;
 }
 
 .errorForm-check {
