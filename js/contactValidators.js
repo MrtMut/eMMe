@@ -83,6 +83,12 @@ const submit = () => { document.querySelector('#contactForm').addEventListener('
         myModal.hide();
         location.reload();  
     })
+
+    formCheck.addEventListener('change', function () {
+        if (formCheck.checked ) {
+            errorFormCheck.style.display = 'none';
+        }
+    });
 })};
 contactValidators();
 emailValidators();
