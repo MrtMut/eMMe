@@ -47,6 +47,7 @@ const phoneValidators = () => {
 const submit = () => { document.querySelector('#contactForm').addEventListener('submit', function (event) {
     event.preventDefault();
     const completeName = document.getElementById('completeName').value;
+    const nameInput = document.getElementById('completeName');
     const name = document.querySelector(".name");
     const email = document.getElementById("email").value;
     const errEmail = document.querySelector('.email');
@@ -59,7 +60,7 @@ const submit = () => { document.querySelector('#contactForm').addEventListener('
 
     if (completeName.trim() === '') {
         name.style.display = 'block';
-        completeName.focus();
+        nameInput.focus();
     } else if (email.trim() === '') {
         errEmail.style.display = 'block';
     } else if (phoneInput.trim() === '') {
