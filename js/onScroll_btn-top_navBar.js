@@ -14,10 +14,10 @@ let goTop = () => {
             document.querySelector('.title_h1').style.fontSize = "3.5rem";
             nav_menu_items.style.top = "25px";
         } else {
-            // headerId.classList.remove("header_small");
+            headerId.classList.remove("header_small");
             headerId.classList.add("header_Big");
             document.querySelector('.title_h1').style.fontSize = "5rem";
-            nav_menu_items.style.top = "50px";
+            nav_menu_items.style.top = "40px";
         }
     }
 
