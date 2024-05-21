@@ -15,7 +15,6 @@
 .tecno{
     display: flex;
     justify-content: center;
-    grid-row: 2;
     width: 95%;
     margin: 0 auto;
     padding: 8px;
@@ -31,19 +30,15 @@
 }
 
 .circle{
-    grid-row: 2;
     width: 50%;
-    justify-self: center;
     align-self: center;
     padding-top: 46%;
-    border-radius: 50%; 
-    border-bottom: 2px solid rgba(255, 255, 255, 0.911);
-    border-top: 2px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    border-bottom: 0 solid rgba(255, 255, 255, 0.9);    border-top: 2px solid rgb(0, 0, 0);
     overflow: hidden; 
     position: relative;
-    background: radial-gradient(circle, rgba(253,254,253,0.6979166666666667) 6%, rgba(141,142,141,1) 52%, rgba(116,117,116,1) 62%, rgba(20,20,20,1) 77%); 
-    transform: scale(1); 
-    animation: press 1s infinite alternate;  
+    background: radial-gradient(circle, rgba(253,254,253,0.69) 6%, rgba(141,142,141,1) 52%, rgba(116,117,116,1) 62%, rgba(20,20,20,1) 77%);
+    animation: press 5s infinite alternate;
 }
 
 @keyframes press {
@@ -51,13 +46,13 @@
       transform:  scale(1);
     }
     100% {
-      transform: scale(1.02);
+      transform: scale(1.2);
     }
 }
 
 .image_user{
     position: absolute; 
-    width: 60%;
+    width: 65%;
     top: 50%;
     left: 50%; 
     transform: translate(-50%, -50%)
@@ -75,6 +70,7 @@
 
     .tecnos {
         display: flex;
+        margin: 1px;
     }
 
     .tecno{
@@ -90,17 +86,7 @@
     }
 
     .circle{
-        grid-column: 1;
-        width: 60px;
-        height: 60px;
-        padding-top: 46%;
-        border-radius: 50%; 
-        border-bottom: 2px solid rgba(255, 255, 255, 0.911);
-        border-top: 2px solid rgb(0, 0, 0);
-        overflow: hidden; 
-        position: relative;
-        background: radial-gradient(circle, rgba(253,254,253,0.6979166666666667) 6%, rgba(141,142,141,1) 52%, rgba(116,117,116,1) 62%, rgba(20,20,20,1) 77%); 
-        transform: scale(1); 
-        animation: press 1s infinite alternate;  
+        width: 65px;
+        height: 65px;
     }
 }
