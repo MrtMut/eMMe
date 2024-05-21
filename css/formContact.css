@@ -124,7 +124,6 @@ form{
     color: var(--color-gris);
 }
 
-
 /*SELECT STYLES ==================================================*/
 .content-select{
     display: flex;
@@ -287,11 +286,13 @@ textarea {
 .modal-terms-text{
     font-size: 15px;
     line-height: 1.5;
+    font-weight: 500;
     margin-bottom: 20px;
 }
 .modal-submit-text {
     font-size: 20px;
     line-height: 1.5;
+    font-weight: bold;
     margin-bottom: 20px;
 }
 
@@ -303,7 +304,6 @@ textarea {
     background-color: var(--color-verde);
     border-radius: 50%;
     width: 16px;
-
     height: 16px;
 }
 .btn-terms-close {

@@ -2,18 +2,19 @@
     width: 100%;
     display: grid;
     grid-template-rows: 15% 90%;
-    scroll-behavior: smooth; 
-    padding: 10px 15px 10px 15px;
+    scroll-behavior: smooth;
+    padding: 25px 0 20px 0;
+    align-content: center;
 }
 .tecnos{
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 18%;
+    display: flex;
     overflow-x: auto;
     scrollbar-width: none;
 }
 
 .tecno{
+    display: flex;
+    justify-content: center;
     grid-row: 2;
     width: 95%;
     margin: 0 auto;
@@ -64,13 +65,12 @@
 
 /* mobile tablet =================================================================================================== */
 @media only screen and (min-width: 319px) and (max-width: 861px) {
-
     .tecno_container{
         width: 100%;
         height: auto;
         display: flex;
         flex-direction: column;
-        padding: 1rem;
+        padding: 20px 0 30px 0;
     }
 
     .tecnos {

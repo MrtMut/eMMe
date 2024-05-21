@@ -1,5 +1,4 @@
 /* -------- CASES-EXITS-SUCCESS -------- */
-/* ------ DESKTOPS ------ */
 .cases-success-container {
   display: flex;
   flex-direction: column;
@@ -28,6 +27,7 @@
   justify-content: space-evenly;
   gap: 15px;
   margin: 0 10px;
+  scrollbar-width: none;
 }
 
 .case-card {

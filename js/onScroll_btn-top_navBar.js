@@ -33,8 +33,6 @@ let goTop = () => {
             menuBurger.style.marginTop = "20px";
             menuEqu.style.marginTop = "20px";
         }
-
-
     }
 
     buttonGoTop.onclick = () => {
@@ -46,7 +44,6 @@ let goTop = () => {
 };
 
 const menuBpMobiles = () => {
-    const nav_menu_items = document.querySelector(".nav_menu_items");
     const nav_menu_item = document.querySelectorAll(".nav_menu_item");
     const menu_input = document.querySelector("#menu-input");
     const menu_burguer = document.querySelector(".menu-burguer");
@@ -54,13 +51,6 @@ const menuBpMobiles = () => {
     const nav_menu = document.querySelector(".nav_menu");
 
     if (window.innerWidth < 862) {
-
-      /*  window.onscroll = () => {
-            if (document.documentElement.scrollTop > 10) {
-                nav_menu_items.style.top = "75x !important";
-            }
-        }*/
-
         let menuShow = () => {
             menu_burguer.addEventListener("click", () => {
                 menu_burguer.style.visibility = "hidden";
