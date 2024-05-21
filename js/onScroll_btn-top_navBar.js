@@ -1,24 +1,40 @@
 // Scroll to top button
 let goTop = () => {
     const buttonGoTop = document.getElementById("goTop");
-    const headerId = document.getElementById("headerId");
-    let nav_menu_items = document.querySelector(".nav_menu_items");
+    const nav_menu_items = document.querySelector(".nav_menu_items");
+    const title_h1 = document.querySelector(".title_h1");
+    const headerAdd = document.querySelector(".headerAdd");
+    const menuBurger = document.querySelector(".menu-burguer");
+    const menuEqu = document.querySelector(".menu-equ");
 
     window.onscroll = () => {
         buttonGoTop.classList[
             (document.documentElement.scrollTop > 300) ? "add" : "remove"
             ]("visible");
-        if (document.documentElement.scrollTop > 50) {
-            headerId.classList.remove("header_Big");
-            headerId.classList.add("header_small");
-            document.querySelector('.title_h1').style.fontSize = "3.5rem";
-            nav_menu_items.style.top = "25px";
-        } else {
-            headerId.classList.remove("header_small");
-            headerId.classList.add("header_Big");
-            document.querySelector('.title_h1').style.fontSize = "5rem";
-            nav_menu_items.style.top = "40px";
+
+        if (window.innerWidth < 862 && document.documentElement.scrollTop > 10) {
+            if (document.documentElement.scrollTop > 10) {
+                nav_menu_items.style.top = '75px';
+            }
         }
+
+        if (document.documentElement.scrollTop > 10) {
+            nav_menu_items.style.marginTop = "0px";
+            title_h1.style.marginTop = "0px";
+            title_h1.style.fontSize = "3.5rem";
+            headerAdd.style.transform = "translateY(-25px)";
+            menuBurger.style.marginTop = "0px";
+            menuEqu.style.marginTop = "0px";
+        } else {
+            nav_menu_items.style.marginTop = "20px";
+            title_h1.style.marginTop = "20px";
+            title_h1.style.fontSize = "5rem";
+            headerAdd.style.transform = "translateY(0px)";
+            menuBurger.style.marginTop = "20px";
+            menuEqu.style.marginTop = "20px";
+        }
+
+
     }
 
     buttonGoTop.onclick = () => {
@@ -30,14 +46,20 @@ let goTop = () => {
 };
 
 const menuBpMobiles = () => {
-    let nav_menu_item = document.querySelectorAll(".nav_menu_item");
-    let menu_input = document.querySelector("#menu-input");
-    let menu_burguer = document.querySelector(".menu-burguer");
-    let menu_equ = document.querySelector(".menu-equ");
-    let nav_menu = document.querySelector(".nav_menu");
+    const nav_menu_items = document.querySelector(".nav_menu_items");
+    const nav_menu_item = document.querySelectorAll(".nav_menu_item");
+    const menu_input = document.querySelector("#menu-input");
+    const menu_burguer = document.querySelector(".menu-burguer");
+    const menu_equ = document.querySelector(".menu-equ");
+    const nav_menu = document.querySelector(".nav_menu");
 
     if (window.innerWidth < 862) {
-        nav_menu_item[0].style.top = "30px" + "!important";
+
+      /*  window.onscroll = () => {
+            if (document.documentElement.scrollTop > 10) {
+                nav_menu_items.style.top = "75x !important";
+            }
+        }*/
 
         let menuShow = () => {
             menu_burguer.addEventListener("click", () => {
@@ -72,8 +94,8 @@ const menuBpMobiles = () => {
 }
 
 const menuBpDesktop = () => {
-    let nav_menu = document.querySelector(".nav_menu");
-    let nav_menu_items1 = document.querySelector(".nav_menu_items");
+    const nav_menu = document.querySelector(".nav_menu");
+    const nav_menu_items1 = document.querySelector(".nav_menu_items");
 
     if (window.innerWidth >= 862) {
         nav_menu.style.visibility = "visible";

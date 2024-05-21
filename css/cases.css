@@ -57,7 +57,7 @@
   background-color: rgba(255, 255, 255, 0);
   border-radius: 30px;
   padding: 10px;
-  z-index: 99;
+  z-index: 5;
 }
 
 .case-item-text::before {
@@ -92,7 +92,7 @@
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   padding: 5px;
-  z-index: 99;
+  z-index: 5;
 }
 
 .container_cases_more_clients{
@@ -183,7 +183,6 @@
     height: max-content;
     border-radius: 40px;
     padding: 10px;
-    z-index: 99;
   }
 
   .case-item-text::before {
@@ -203,8 +202,6 @@
     margin-bottom: 0;
   }
 }
-
-
 
 /* -------- MOBILE ==================================================================== -------- */
 @media only screen and (max-width: 599px) {

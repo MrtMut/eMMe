@@ -14,6 +14,9 @@ body{
     width: 100%;
     height: 100%;
     border: 2px solid var(--color-mora);
+    position: relative;
+    max-width: 1442px;
+    margin: 0 auto;
 }
 
 *, *::before, *::after {
@@ -23,6 +26,7 @@ body{
 }
 
 .container_custom {
+    position: relative;
     max-width: 1440px;
     margin: 0 auto;
 }
