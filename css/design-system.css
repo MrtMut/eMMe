@@ -1,7 +1,7 @@
 /* Global variables - Design system */
 :root {
     /* Palette */
-    --clor-black: rgb(0, 0, 0);
+    --color-black: rgb(0, 0, 0);
     --color-background: rgb(24, 24, 24);
     --color-body: rgb(24, 24, 24);
     --color-gris-modal: rgb(55, 55, 55);

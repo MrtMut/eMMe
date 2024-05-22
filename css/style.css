@@ -29,6 +29,7 @@ body{
     position: relative;
     max-width: 1440px;
     margin: 0 auto;
+    background-color: var(--color-grisclaro);
 }
 
 .text-center {
@@ -71,4 +72,14 @@ h6{
 
 section {
     width: 100%;
-}
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  section.in-view {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+
+  
