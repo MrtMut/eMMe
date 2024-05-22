@@ -7,6 +7,10 @@
     padding: 20px;
 }
 
+.share-buttons-container >h5{
+    text-align: center;
+}
+
 .share-buttons-row{
     height: 40px;
     justify-content: center;
