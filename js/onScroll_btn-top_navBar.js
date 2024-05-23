@@ -25,7 +25,9 @@ let goTop = () => {
             headerAdd.style.transform = "translateY(-25px)";
             menuBurger.style.marginTop = "0px";
             menuEqu.style.marginTop = "0px";
+            headerAdd.style.visibility = "hidden";
         } else {
+            headerAdd.style.visibility = "visible";
             nav_menu_items.style.marginTop = "20px";
             title_h1.style.marginTop = "20px";
             title_h1.style.fontSize = "5rem";

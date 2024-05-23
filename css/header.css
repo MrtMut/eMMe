@@ -12,11 +12,13 @@
 }
 
 .headerAdd {
+    display: flex;
+    justify-content: center;
     position: fixed;
     width: 100%;
+    max-width: 1400px;
     top: 70px;
     height: 30px;
-    display: flex;
     background: var(--gradient);
     z-index: 19;
     transition: 1.2s all ease-in, 0.3s ease-out;
@@ -96,8 +98,8 @@ li > a{
 .anchor::before {
     content: "";
     display: block;
-    height: 75px;
-    margin-top: -75px;
+    height: 74.5px;
+    margin-top: -74.5px;
     visibility: hidden;
 }
 

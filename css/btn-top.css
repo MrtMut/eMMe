@@ -1,4 +1,4 @@
-/* Botón Subir */
+/* Button to go up */
 .goTop {
   border: none;
   display: flex;
@@ -20,8 +20,9 @@
   fill: none;
   width: 28px;
 }
-/* Personalizar */
+/* Customize the button */
 .goTop {
+  position: absolute;
   background-color: var(--color-background);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
   padding: 0.75rem;
