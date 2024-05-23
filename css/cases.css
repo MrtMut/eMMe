@@ -18,14 +18,14 @@
   display: flex;
   justify-content: space-evenly;
   width: 99%;
-  margin-top: 2rem;
+  margin-top: 1rem;
   flex-direction: column;
 }
 
 .cases-slider {
   display: flex;
   justify-content: space-evenly;
-  gap: 15px;
+  gap: 20px;
   margin: 0 10px;
   scrollbar-width: none;
 }
@@ -134,7 +134,7 @@
 
   .cases-container {
     margin-bottom: 3rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
     position: relative;
     scroll-snap-align: center;
   }

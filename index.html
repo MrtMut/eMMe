@@ -26,12 +26,13 @@
 </head>
 
 <body class="body">
-<button title="goTop" class="goTop" id="goTop">
-    <svg viewBox="0 0 24 24">
-        <path d="m4 16 8-8 8 8"></path>
-    </svg>
-</button>
-
+<div class="container_button_goTop">
+    <button title="goTop" class="goTop" id="goTop">
+        <svg viewBox="0 0 24 24">
+            <path d="m4 16 8-8 8 8"></path>
+        </svg>
+    </button>
+</div>
 <!--Header------------------------------------------------------------------------------------------------>
 <a class="anchor" id="inicio"></a>
 <header id="headerId" class="header container_custom">
@@ -185,7 +186,7 @@
     <!-- Success cases ------------------------------------------------------------------------->
     <a class="anchor" id="cases"></a>
     <section class="cases-success-container">
-        <h2 class="cases-title">Nuestros clientes</h2>
+        <h2 class="cases-title">Nos eligen:</h2>
         <article id="app" class="cases-container" data-v-app>
             <div v-for="elemento in datos" class="cases-slider">
                 <div v-for="(items, index) in elemento" class="case-card">
@@ -198,13 +199,11 @@
                 <button class="cases_more_clients" @click="fetchData(url)">&#10094;&#10094; Mas éxitos</button>
             </div>
         </article>
-
-
     </section>
 
     <!-- SHARE - Buttons, Copy this to your Page Article ------------------------------------------->
     <section class="share-buttons-container">
-        <h5>Compartir en:</h5>
+        <h5>Compartí en:</h5>
         <!-- Buttons, Copy this to your Page Article -->
         <div class="share-buttons-row">
             <!--Facebook's Button -->
@@ -224,7 +223,7 @@
     <a class="anchor" id="contacto"></a>
     <section class="section_contact">
         <div class="form_container_options">
-            <h2 class="contact_title">Consultanos</h2>
+            <h2 class="contact_title">¿Comenzamos?</h2>
             <!--                    <h2 class="contact_wizard">Presupuesto</h2>-->
         </div>
 
@@ -372,18 +371,20 @@
 
 <!-- Footer ----------------------------------------------------------------------------------->
 <footer class="container_footer container_custom">
-    <!--Links a redes-->
+    <section>
+            <!--Links a redes-->
 
-    <h3 class="title_social">Buscanos en</h3>
-    <ul class="footer_social_links">
-        <li class="links_social"><a class="anchor_social" href="https://www.linkedin.com/" target="_blank"
-                                    rel="noopener"><img class="logo_social" src="./assets/svg/linkedin.svg"
-                                                        alt="logo linkedin"/></a></li>
-        <li class="links_social"><a class="anchor_social" href="https://instagram.com/" target="_blank"
-                                    rel="noopener"><img class="logo_social" src="./assets/svg/instagram.svg"
-                                                        alt="logo instagram"/></a></li>
-    </ul>
-    <p class="copy"> &copy;Copyright {eMMe} <span id="year"></span> | <span>v024.0523.1304</span></p>
+            <h3 class="title_social">Buscanos en</h3>
+            <ul class="footer_social_links">
+                <li class="links_social"><a class="anchor_social" href="https://www.linkedin.com/" target="_blank"
+                                            rel="noopener"><img class="logo_social" src="./assets/svg/linkedin.svg"
+                                                                alt="logo linkedin"/></a></li>
+                <li class="links_social"><a class="anchor_social" href="https://instagram.com/" target="_blank"
+                                            rel="noopener"><img class="logo_social" src="./assets/svg/instagram.svg"
+                                                                alt="logo instagram"/></a></li>
+            </ul>
+            <p class="copy"> &copy;Copyright {eMMe} <span id="year"></span> | <span>v024.0523.1304</span></p>
+    </section>
 </footer>
 
 <script src="./js/bootstrap.bundle.min.js"></script>
