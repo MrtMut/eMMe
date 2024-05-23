@@ -9,7 +9,7 @@ let goTop = () => {
 
     window.onscroll = () => {
         buttonGoTop.classList[
-            (document.documentElement.scrollTop > 300) ? "add" : "remove"
+            (document.documentElement.scrollTop > 250) ? "add" : "remove"
             ]("visible");
 
         if (window.innerWidth < 862 && document.documentElement.scrollTop > 10) {

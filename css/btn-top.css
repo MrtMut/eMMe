@@ -9,7 +9,7 @@
   cursor: pointer;
   transition: opacity 0.3s, transform 0.3s;
   position: fixed;
-  right: 1%;
+  margin-left: 1%;
   bottom: 2%;
   z-index: 99;
   /* Customize the button */
