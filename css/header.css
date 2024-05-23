@@ -98,8 +98,8 @@ li > a{
 .anchor::before {
     content: "";
     display: block;
-    height: 74.5px;
-    margin-top: -74.5px;
+    height: 74px;
+    margin-top: -74px;
     visibility: hidden;
 }
 
