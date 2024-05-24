@@ -28,13 +28,14 @@ html {
     max-width: 100%;
     width: 100%;
     margin: 0 auto;
+    background: black;
 }
 
 .container_custom {
     position: relative;
     max-width: 100%;
     margin: 0 auto;
-    background-color: var(--color-grisclaro);
+    background-color: black;
 }
 
 .text-center {
