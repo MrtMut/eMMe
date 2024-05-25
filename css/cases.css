@@ -221,6 +221,12 @@
     height: 390px;
   }
 
+  .case-card:hover{
+    transform: translateX(-10px) translateY(-10px) scale(1.05);
+    box-shadow: 1px 2px 16px 10px rgb(184, 97, 224);
+    margin: 10px 40px;
+  }
+
   .case-item-text {
     left: 10px;
     top: 175px;
