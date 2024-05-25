@@ -41,7 +41,7 @@
   border-radius: 20px;
   height: 400px;
   position: relative;
-  border: 2px solid var(--color-violeta);
+  /* border: 2px solid var(--color-violeta); */
   padding-top: 45px;
   padding-bottom: 10px;
   margin: 10px 10px;
@@ -49,10 +49,14 @@
   transition: all ease 300ms;
 }
 
+.case-card.hover,
 .case-card:hover{
   transform: translateX(-10px) translateY(-10px) scale(1.05);
   box-shadow: 1px 2px 16px 10px rgb(184, 97, 224);
   margin: 10px 40px;
+}
+.case-card.first {
+  transform: scale(1.05);
 }
 
 .case-item-text {

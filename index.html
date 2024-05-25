@@ -190,7 +190,7 @@
     <section class="cases-success-container">
         <h2 class="cases-title">Nos eligen:</h2>
         <article id="app" class="cases-container" data-v-app>
-            <div v-for="elemento in datos" class="cases-slider">
+            <div v-for="elemento in datos"  class="cases-slider">
                 <div v-for="(items, index) in elemento" class="case-card">
                     <img :src="items.picture.large" alt="imagen de caso de exito" class="case-item">
                     <p class="case-item-name">{{items.name.first + ' ' + items.name.last}}</p>
@@ -399,6 +399,7 @@
 <script src="./js/casesVue.js"></script>
 <script src="./js/contactValidators.js"></script>
 <script src="./js/style.js"></script>
+<script src="./js/cards.js"></script>
 </div>
 </body>
 </html>
