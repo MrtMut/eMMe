@@ -53,8 +53,18 @@
   transform: translateX(0px) translateY(-5px) scale(1.05);
   box-shadow: 0 0 20px 3px rgb(31, 193, 174);
 }
-.case-card.first {
-  transform: scale(1.05);
+
+/* :first-child select primer hijo */
+.case-card:first-child {
+  margin-left: 20px;
+}
+/* :first-child select ultimo hijo */
+.case-card:last-child {
+  margin-right: 20px;
+}
+
+.case-card:active {
+  background: rgb(182, 182, 182);
 }
 
 .case-item-text {
@@ -140,6 +150,11 @@
   border: 4px solid var(--color-mora-800);
 }
 
+.cases_more_clients:active {
+  background: rgb(113, 113, 226, 0.5);
+  border: 4px solid rgb(31, 193, 174);
+}
+
 /* -------- TABLET ==================================================================== -------- */
 @media only screen and (max-width: 861px) {
   body {
@@ -160,6 +175,7 @@
     scroll-snap-type: x proximity;
     height: 480px;
     align-items: center;
+    gap: 20px;
   }
 
   .case-card {
@@ -171,10 +187,10 @@
     height: 400px;
   }
 
-  .case-item {
+ .case-item {
     width: fit-content;
     height: 155px;
-    margin: -6px 10px 0 10px;
+    margin: -6px 20px 0 20px;
     border-radius: 50%;
   }
 
@@ -213,7 +229,7 @@
 /* -------- MOBILE ==================================================================== -------- */
 @media only screen and (max-width: 599px) {
   .case-card {
-    height: 390px;
+    width: 350px;
   }
 
   .case-item-text {

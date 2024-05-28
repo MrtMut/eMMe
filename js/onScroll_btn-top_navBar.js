@@ -15,7 +15,7 @@ let goTop = () => {
 
         if (window.innerWidth < 862 && document.documentElement.scrollTop > 10) {
             if (document.documentElement.scrollTop > 10) {
-                nav_menu_items.style.top = '74px';
+                nav_menu_items.style.top = '72px';
             }
         }
 
