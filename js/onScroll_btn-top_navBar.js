@@ -6,6 +6,7 @@ let goTop = () => {
     const headerAdd = document.querySelector(".headerAdd");
     const menuBurger = document.querySelector(".menu-burguer");
     const menuEqu = document.querySelector(".menu-equ");
+    const title_container = document.querySelector(".title_container");
 
     window.onscroll = () => {
         buttonGoTop.classList[
@@ -14,12 +15,13 @@ let goTop = () => {
 
         if (window.innerWidth < 862 && document.documentElement.scrollTop > 10) {
             if (document.documentElement.scrollTop > 10) {
-                nav_menu_items.style.top = '75px';
+                nav_menu_items.style.top = '74px';
             }
         }
 
         if (document.documentElement.scrollTop > 10) {
             nav_menu_items.style.marginTop = "0px";
+            title_container.style.marginTop = "1px";
             title_h1.style.marginTop = "0px";
             title_h1.style.fontSize = "3.5rem";
             headerAdd.style.transform = "translateY(-25px)";
@@ -28,9 +30,10 @@ let goTop = () => {
             headerAdd.style.visibility = "hidden";
         } else {
             headerAdd.style.visibility = "visible";
+            title_container.style.marginTop = "4px";
             nav_menu_items.style.marginTop = "20px";
             title_h1.style.marginTop = "20px";
-            title_h1.style.fontSize = "5rem";
+            title_h1.style.fontSize = "5.5rem";
             headerAdd.style.transform = "translateY(0px)";
             menuBurger.style.marginTop = "20px";
             menuEqu.style.marginTop = "20px";

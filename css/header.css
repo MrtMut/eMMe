@@ -40,7 +40,7 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    font-size: 5rem;
+    font-size: 5.5rem;
     font-family: var(--font-roboto);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     transition: 0.7s all ease-in, 0.5s ease-out;
@@ -83,6 +83,7 @@ li > a{
 .title_container{
     display: flex;
     justify-content: center;
+    margin-top: 4px;
     z-index: 21;
 }
 
