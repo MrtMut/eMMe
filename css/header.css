@@ -93,14 +93,13 @@ li > a{
     transition: 0.5s all ease;
     margin-top: 20px;
     z-index: 21;
-
 }
 
 .anchor::before {
     content: "";
     display: block;
-    height: 74px;
-    margin-top: -74px;
+    height: 73px;
+    margin-top: -73px;
     visibility: hidden;
 }
 
@@ -240,7 +239,7 @@ li > a{
     }
 
     .title_h1 {
-        font-size: 5rem;
+        font-size: 5.5rem;
     }
 }
 
