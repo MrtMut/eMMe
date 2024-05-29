@@ -4,12 +4,12 @@ setTimeout(() => {
     const leftButton = document.querySelector('.left-button');
     const rightButton = document.querySelector('.right-button');
 
-    const media = !window.matchMedia('(min-width: 900px)').matches
-    if(media){
-        scrollButton.forEach(element =>{
-            element.style.display = 'none'
-        })
-    }
+    // const media = !window.matchMedia('(min-width: 900px)').matches
+    // if(media){
+    //     scrollButton.forEach(element =>{
+    //         element.style.display = 'none'
+    //     })
+    // }
     leftButton.addEventListener('click', () => {
         container.scrollLeft -= 200;
     });
