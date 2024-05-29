@@ -63,11 +63,11 @@
 
 /* :first-child select primer hijo */
 .case-card:first-child {
-  margin-left: 30px;
+  margin-left: 60px;
 }
 /* :first-child select ultimo hijo */
 .case-card:last-child {
-  margin-right: 30px;
+  margin-right: 60px;
 }
 
 .case-card:active {
