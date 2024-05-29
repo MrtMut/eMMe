@@ -29,10 +29,14 @@
 
 .cases-slider {
   display: flex;
-  position: relative;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
   justify-content: space-evenly;
   scrollbar-width: none;
   max-height: 100%;
+  align-items: center;
+
   gap: 20px;
 }
 
@@ -155,6 +159,7 @@
 .cases_more_clients:active {
   background: rgb(113, 113, 226, 0.5);
   border: 4px solid rgb(31, 193, 174);
+  transition: all 1s linear;
 }
 
 /* -------- TABLET ==================================================================== -------- */
