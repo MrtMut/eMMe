@@ -19,6 +19,7 @@ createApp({
         }
         const jsonData = await response.json();
         datos.value = jsonData;
+        
         const media = !window.matchMedia('(min-width: 900px)').matches
         console.log(media)
         if(media){
