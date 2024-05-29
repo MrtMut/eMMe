@@ -54,6 +54,7 @@ form{
 .section_contact h2{
     margin-left: 10px;
     color: var(--color-verde);
+    letter-spacing: 3px;
 }
 
 .contact_suscribe{
