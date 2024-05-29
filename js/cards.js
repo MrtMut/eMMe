@@ -1,27 +1,62 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const cards = document.querySelectorAll('.case-card');
-    const observerOptions = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.5 // Ajusta esto según sea necesario
-    };
-  
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('hover');
-        } else {
-          entry.target.classList.remove('hover');
-        }
-      });
-    }, observerOptions);
-  
-    cards.forEach(card => {
-      observer.observe(card);
-    });
-  
-    // Agregar la clase 'first' a la primera tarjeta
-    if (cards.length > 0) {
-      cards[0].classList.add('first');
-    }
-  });
+
+
+
+
+
+// document.addEventListener('DOMContentLoaded', function () {
+// const slider = document.querySelector('.cases-slider');
+//   const slides = document.querySelectorAll('.case-card');
+
+// // Clonar las secciones
+// slides.forEach(slide => {
+//     const clone = slide.cloneNode(true);
+//     slider.appendChild(clone);
+// });
+
+// const checkCenterSlide = () => {
+
+//   const center = slider.scrollLeft + slider.clientWidth / 2;
+
+//   slides.forEach(slide => {
+//     const slideCenter = slide.offsetLeft + slide.clientWidth / 2;
+//     const distance = Math.abs(center - slideCenter);
+//     if (distance < slide.clientWidth / 2) {
+//       slide.classList.add('hover');
+//     } else {
+//       slide.classList.remove('hover');
+//     }
+//   });
+// };
+
+
+
+
+// slider.addEventListener('scroll', checkCenterSlide());
+
+// });
+// const slider = document.querySelector('.cases-slider');
+//   const slides = document.querySelectorAll('.case-card');
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   const container = document.querySelector('.cases-slider');
+//   const cards = document.querySelectorAll('.case-card');
+//   console.log(container)
+//   container.addEventListener('scroll', () => {
+//     let center = container.scrollLeft + container.offsetWidth / 2;
+    
+//     cards.forEach(card => {
+//       let cardCenter = card.offsetLeft + card.offsetWidth / 2;
+//       let distance = Math.abs(center - cardCenter);
+//       console.log('aca')
+//       if (distance < card.offsetWidth / 2) {
+      
+//         card.classList.add('hover');
+//       } else {
+//         card.classList.remove('hover');
+//       }
+//     });
+//   });
+
+//   // Inicializar el estado en caso de que ya haya una tarjeta en el centro al cargar la página
+//   container.dispatchEvent(new Event('scroll'));
+// });
