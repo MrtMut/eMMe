@@ -19,8 +19,9 @@ createApp({
         }
         const jsonData = await response.json();
         datos.value = jsonData;
-
-     
+        const media = !window.matchMedia('(min-width: 900px)').matches
+        console.log(media)
+        if(media){
         setTimeout(() => {
           const container = document.querySelector('.cases-slider');
           const cards = document.querySelectorAll('.case-card');
@@ -44,7 +45,7 @@ createApp({
                container.dispatchEvent(new Event('scroll'));
           }
         }, 1000); 
-   
+      }
       } catch (error) {
         console.error(error);
       }

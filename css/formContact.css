@@ -7,6 +7,7 @@
 }
 
 form{
+    width:50%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     border-top-right-radius: 50%;
     border-bottom-right-radius: 100%;
@@ -15,7 +16,7 @@ form{
 }
 
 .contact_container{
-    width:100%;
+    width:80%;
 }
 
 .form_container_options {
@@ -310,7 +311,12 @@ textarea {
     background-color: var(--color-verde-500);
 }
 
+@media only screen and (max-width:535px){
 
-@media (max-width:566px){
-    
+    form{
+        width:100%;
+    }
+    .contact_container{
+        width:100%;
+    }
 }
