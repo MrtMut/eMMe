@@ -309,3 +309,8 @@ textarea {
 .btn-terms-close {
     background-color: var(--color-verde-500);
 }
+
+
+@media (max-width:566px){
+    
+}
