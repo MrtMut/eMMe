@@ -3,7 +3,7 @@
     width: 100%;
     margin-top: 0;
     background: var(--gradient);
-    padding: 50px 0 30px 0;
+    padding: 15px 0 30px 0;
 }
 
 form{
@@ -54,6 +54,7 @@ form{
 .section_contact h2{
     margin-left: 10px;
     color: var(--color-verde);
+    letter-spacing: 3px;
 }
 
 .contact_suscribe{
