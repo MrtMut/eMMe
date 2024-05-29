@@ -32,6 +32,8 @@
   position: relative;
   justify-content: space-evenly;
   scrollbar-width: none;
+  scroll-behavior: smooth;
+  overflow-x: auto;
   max-height: 100%;
   gap: 20px;
 }
@@ -157,6 +159,28 @@
   border: 4px solid rgb(31, 193, 174);
 }
 
+.scroll-button {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 40px; 
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  z-index: 900;
+}
+
+.left-button {
+  left: 0;
+}
+
+.right-button {
+  right: 0;
+}
+
 /* -------- TABLET ==================================================================== -------- */
 @media only screen and (max-width: 861px) {
   body {
@@ -278,5 +302,9 @@
   /* :first-child select ultimo hijo */
   .case-card:last-child {
     margin-right: calc(52% - 111px);
+  }
+
+  .scroll-button{
+    display: none;
   }
 }
