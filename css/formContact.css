@@ -8,6 +8,7 @@
 
 form{
     width:50%;
+    position: relative;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     border-top-right-radius: 50%;
     border-bottom-right-radius: 100%;
@@ -33,10 +34,22 @@ form{
     color: rgb(240, 248, 255);
     padding: 5px;
     font-size: 3rem;
+    border-right: 5px solid black; 
     font-weight: bold;
     font-style: italic;
     text-shadow: 0 0 25px rgb(0, 0, 0);
+    animation: blink-caret 0.75s step-end infinite;
+    display: inline-block;
 }
+
+@keyframes blink-caret {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: black;
+    }
+  }
 
 .section_contact h2{
     margin-left: 10px;
@@ -245,6 +258,8 @@ textarea {
     fill: rgb(255, 255, 255);
 }
 
+
+
 .error{
     display: none;
 } 
@@ -272,6 +287,8 @@ textarea {
 .errorForm-check {
     display: none;
 }
+
+/* =====modal======= */
 
 .modal-terms-content {
     background: rgb(55, 55, 55);
@@ -310,7 +327,11 @@ textarea {
 .btn-terms-close {
     background-color: var(--color-verde-500);
 }
-
+/* ===tablets==== */
+@media only screen and (max-width:856){
+    
+}
+/* =====mobile===== */
 @media only screen and (max-width:535px){
 
     form{
@@ -319,4 +340,6 @@ textarea {
     .contact_container{
         width:100%;
     }
+
+  
 }
