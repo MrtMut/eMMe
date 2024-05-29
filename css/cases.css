@@ -3,15 +3,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(34, 34, 36);
+  background-color: rgb(217, 217, 217);
   max-height: 100%;
 }
 
 .cases-title {
-  color: aliceblue;
+  color: var(--color-background);
   font-style: italic;
   font-size: 3rem;
   font-weight: bold;
+  margin-bottom: -2rem;
   margin-top: 2rem;
 }
 
@@ -26,18 +27,13 @@
 
 }
 
-
-
 .cases-slider {
   display: flex;
   position: relative;
   justify-content: space-evenly;
   scrollbar-width: none;
-  scroll-behavior: smooth;
   max-height: 100%;
-  gap: 10px;
-  overflow-x: auto;
-
+  gap: 20px;
 }
 
 .case-card {
@@ -49,30 +45,23 @@
   position: relative;
   padding-top: 40px;
   padding-bottom: 10px;
-  margin: 10px 10px;
+  margin: 40px 10px;
   box-shadow: 0 0 10px 5px rgb(55, 55, 55);
   transition: all ease 300ms;
 }
 
-
-
 .case-card:hover{
-  transform: translateX(0px) translateY(-5px) scale(1.05);
-  box-shadow: 0 0 20px 3px rgb(31, 193, 174);
+  transform: translateX(0px) translateY(-5px) scale(1.08);
+  box-shadow: 0 0 15px 3px rgb(31, 193, 174);
 }
-
-.hover{
-  transform: scale(1.01);
-  box-shadow: 0 0 20px 3px rgb(31, 193, 174);
-  }
 
 /* :first-child select primer hijo */
 .case-card:first-child {
-  margin-left: 20px;
+  margin-left: 30px;
 }
 /* :first-child select ultimo hijo */
 .case-card:last-child {
-  margin-right: 20px;
+  margin-right: 30px;
 }
 
 .case-card:active {
@@ -92,6 +81,7 @@
   bottom: 1%;
   width: 96%;
   background-color: rgba(255, 255, 255, 0);
+  border-radius: 20px;
   padding: 8px 5px 0 5px;
   z-index: 5;
 }
@@ -109,10 +99,11 @@
 }
 
 .case-item {
-  width: auto;
-  height: 60%;
+  width: fit-content;
+  height: 155px;
+  margin: 2px 25px 0 25px;
   border-radius: 50%;
-  margin: 0px 20px 20px 20px;
+  border: 4px solid var(--color-mora-800);
 }
 
 .case-item-name {
@@ -131,12 +122,11 @@
   z-index: 5;
 }
 
-.container_cases_more_clients{
+.container_cases_more_clients {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2rem;
-  margin-top: 1rem;
+  margin-bottom: 3rem;
 }
 
 .cases_more_clients {
@@ -167,28 +157,6 @@
   border: 4px solid rgb(31, 193, 174);
 }
 
-.scroll-button {
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 40px; 
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  z-index: 900;
-}
-
-.left-button {
-  left: 0;
-}
-
-.right-button {
-  right: 0;
-}
-
 /* -------- TABLET ==================================================================== -------- */
 @media only screen and (max-width: 861px) {
   body {
@@ -213,49 +181,51 @@
   }
 
   .case-card {
-    display: flex;
+    margin-top: 30px;
     justify-content: flex-start;
     flex-direction: column;
     align-items: center;
-    width: 350px;
+    width: 320px;
     height: 400px;
-    transition: all ease 300ms;
+    transition: all ease 500ms;
   }
 
   .hover{
-    transform: scale(1.09);
+    transform: scale(1.08);
+    box-shadow: 0 0 15px 3px rgb(31, 193, 174);
     }
 
  .case-item {
     width: fit-content;
     height: 155px;
-    margin: -6px 25px 0 25px;
+    margin: 2px 25px 0 25px;
     border-radius: 50%;
+    border: 4px solid var(--color-mora-800);
   }
 
   .cases-title {
-    margin-bottom: -40px;
+    margin-bottom: -30px;
   }
 
   .case-item-text {
-    position: absolute;
     font-size: 1.3rem;
+    bottom: 1%;
     font-weight: bold;
     text-align: center;
     color: rgb(255, 255, 255);
     font-style: italic;
-    height: 49%;
-    padding: 8px;
+    height: 45%;
+    padding: 10px;
   }
 
   .case-item-text::before {
     content: '';
-    width: 100%;
+    width: 98%;
     height: 100%;
     position: absolute;
-    left: 0;
-    bottom: 0;
-    backdrop-filter: blur(30px) brightness(0.6);
+    left: 1%;
+    bottom: 1%;
+    backdrop-filter: blur(2px) brightness(0.6);
     z-index: -5;
   }
 
@@ -263,11 +233,25 @@
     margin-top: 0;
     margin-bottom: 0;
   }
+
+  /* :first-child select primer hijo */
+  .case-card:first-child {
+    margin-left: calc(52% - 111px);;
+  }
+  /* :first-child select ultimo hijo */
+  .case-card:last-child {
+    margin-right: calc(52% - 111px);
+  }
+
+  .case-card:hover{
+    transform: translateX(0px) translateY(0px) scale(1);
+  }
 }
 
 /* -------- MOBILE ==================================================================== -------- */
-@media only screen and (max-width: 556px) {
+@media only screen and (max-width: 599px) {
   .case-card {
+    margin-top: 30px;
     width: 350px;
     transition: all ease 300ms;
   }
@@ -287,7 +271,12 @@
     z-index: -5;
   }
 
-  .hover{
-    transform: scale(1.05);
-    }
+  /* :first-child select primer hijo */
+  .case-card:first-child {
+    margin-left: calc(52% - 111px);;
+  }
+  /* :first-child select ultimo hijo */
+  .case-card:last-child {
+    margin-right: calc(52% - 111px);
+  }
 }
