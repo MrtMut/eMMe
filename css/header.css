@@ -1,0 +1,273 @@
+/* This file is used to style the header of the website */
+.header {
+    position: sticky;
+    top: 0;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: var(--gradient);
+    width: 100%;
+}
+
+.headerAdd {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    max-width: 1400px;
+    top: 70px;
+    height: 30px;
+    background: var(--gradient);
+    z-index: 19;
+    transition: 1.2s all ease-in, 0.3s ease-out;
+}
+
+.headerAdd2 {
+    display: flex;
+    visibility: hidden;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    max-width: 1400px;
+    top: 70px;
+    height: 40px;
+    background: var(--gradient);
+    z-index: 19;
+}
+
+#headerId {
+    z-index: 20;
+}
+
+.container_nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.title_h1 {
+    font-weight: bold;
+    background: linear-gradient(90deg, rgb(221, 160, 221) 0%, rgb(31, 193, 174) 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size: 5rem;
+    font-family: var(--font-roboto);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: 0.7s all ease-in, 0.5s ease-out;
+    margin-top: 20px;
+    z-index: 21;
+}
+
+nav{
+    width: 100%;
+}
+
+ul{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.nav_menu_link {
+    display: inline-block;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: all 0.5s ease-in-out;
+    border: 1px solid var(--color-verde-300);
+    background-color: var(--color-verde-800);
+    color: var(--font-color-light);
+    font-weight: bold;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 0 25px rgb(0, 0, 0);
+    z-index: 21;
+}
+
+.nav_menu_link:hover {
+    background-color: rgb(255, 56, 0, 0.2);
+}
+
+li > a{
+    font-size: 1.6rem;
+}
+
+.title_container{
+    display: flex;
+    justify-content: center;
+    margin-top: 4px;
+    z-index: 21;
+}
+
+.nav_menu_items {
+    display: flex;
+    justify-content: flex-end;
+    transition: 0.5s all ease;
+    margin-top: 20px;
+    z-index: 21;
+}
+
+.anchor::before {
+    content: "";
+    display: block;
+    height: 75px;
+    margin-top: -75px;
+    visibility: hidden;
+}
+
+/* Burguer -----------------------------------------------------------------------*/
+[type="checkbox"] {
+    box-sizing: border-box;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 5px;
+}
+.menu-burguer {
+    display: none;
+}
+.menu-equ{
+    display: none;
+}
+#menu-input {
+    display: none;
+}
+
+/* TABLETs ========================================================================= */
+@media only screen and (max-width: 861px) {
+    /* Hambur Menu */
+    .menu-burguer {
+        display: flex;
+        color: rgb(221, 160, 221);
+        border-radius: 10px;
+        font-size: 4ch;
+        justify-content: center;
+        align-items: center;
+        width: 45px;
+        height: 45px;
+        margin: 25px 0 0 8px;
+        padding: 0;
+        cursor: pointer;
+        top: 0.5%;
+        left: 5px;
+        font-weight: bold;
+        box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu-equ{
+        display:none;             
+    }
+    .nav_menu {
+        display: none;
+    }
+    
+    #menu-input:checked  ~ .nav_menu{
+        display:flex;
+        color: rgb(255, 255, 255);
+        text-align: start;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+    #menu-input:checked  ~ .menu-burguer{
+        visibility: hidden;   
+    }
+    #menu-input:checked  ~ .menu-equ{
+        display: inline-flex;
+        color: rgb(221, 160, 221);
+        padding: 0;
+        margin: 20px 0 0;
+        border: none;
+        cursor: pointer;      
+        text-align: center;
+        position: absolute;
+        left: 19px;
+        font-size: 4ch;
+        justify-content: center;
+        align-items: center;
+        width: 45px;
+        height: 45px;
+        transition: all 0.5s ease-in;
+        font-weight: bold;
+        box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    #menu-input {
+        display: none;        
+    }
+
+    #menu-input:checked ~ .title_container{
+        display:flex;
+        justify-content: flex-end;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .nav_menu_items {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        top: 98px;
+        left: 0;
+        gap: 0;
+        transition: all 0.7s ease-in-out;
+    }
+
+    .nav_menu_item {
+        width: 100%;
+        margin: 0;
+        border: 1px solid rgb(55, 55, 55);
+        transition: all 0.7s ease-in-out;
+    }
+
+    .nav_menu_link {
+        display: inline-block;
+        width: 100%;
+        border-radius: 0;
+        border: none;
+        background-color: rgb(184, 97, 224, 0.95);
+        font-size: 2.5rem;
+        color: var(--font-color-light);
+        font-weight: bold;
+        transition: all 0.7s ease-in-out;
+    }
+
+    .nav_menu_link:hover {
+        background-color: var(--color-coquenicot-500);
+        transition: all 0.2s ease-in-out;
+    }
+
+    .container_nav {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .title_container{
+        display: flex;
+        justify-content: center;
+    }
+
+    .title_h1 {
+        font-size: 5rem;
+    }
+}
+
+/* Mobile ===============================================================================================-------- */
+@media only screen and (max-width: 599px) {
+    body {
+        background-color: var(--color-background);
+    }
+
+    .container_nav {
+        display: flex;
+    }
+
+    .title_container{
+        display: flex;
+        justify-content: center;
+    }
+}

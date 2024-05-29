@@ -1,0 +1,137 @@
+/* This file contains the styles for the values section */
+.valores {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(217, 217, 217);
+    padding: 0;
+    height: 500px;
+    margin-top: -30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.valoresImage{
+    width: 100%;
+    height: auto;
+}
+
+.imgValoresImage {
+    max-height: 100%;
+}
+
+.valores-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 5%;
+    width: 90%;
+    padding: 1rem;
+    height: auto;
+    position: absolute;
+    bottom: 2%;
+    z-index: 10;
+    margin: 0;
+}
+
+.valores-container::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 30px;
+    background-color: rgba(217, 217, 217, 0.56);
+    bottom: 0;
+    backdrop-filter: blur(15px) ;
+    z-index: -5;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+}
+
+.valoresTitle{
+    color: rgb(24, 24, 24, 0.7);
+    font-size: 3rem;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.valoresText{
+    color: var(--color-background);
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.valores_gradient {
+    background: linear-gradient(90deg, rgb(184, 97, 224) 0%, rgb(113, 113, 226) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text2{
+    color: var(--color-background);
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* TABLETS =============================================================================================*/
+@media (max-width: 861px) {
+    .valores {
+        display: block;
+        position: relative;
+        height: 500px;
+    }
+
+    .valoresImage{
+        width: 100%;
+        padding: 0;
+    }
+
+    .imgValoresImage {
+        height: 100%;
+    }
+
+    .valores-container{
+        width: 96%;
+        position: absolute;
+        padding: 1rem;
+        bottom: 2%;
+        left: 2%;
+        z-index: 10;
+    }
+
+    .valores-container::before {
+        left: 0;
+        bottom: 0;
+    }
+}
+
+/* MOBILE ==========================================================================================================*/
+@media (max-width: 599px) {
+    .valores {
+        display: block;
+        position: relative;
+        height: 550px;
+    }
+    .valores-container{
+        position: absolute;
+        width: 96%;
+        bottom: 2%;
+        left: 0;
+        margin: 0 2%;
+    }
+    .valoresText{
+        color: var(--color-background);
+        font-style: italic;
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    .text2{
+        color: var(--color-background);
+        font-size: 1.4rem;
+        text-align: center;
+    }
+}

@@ -1,0 +1,109 @@
+.tecno_container{
+    width: 100%;
+    display: grid;
+    grid-template-rows: 15% 90%;
+    scroll-behavior: smooth;
+    padding: 25px 0 20px 0;
+    align-content: center;
+    background-color: rgb(15, 15, 15);
+}
+.tecnos{
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.tecno{
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    margin: 0 auto;
+    padding: 8px;
+}
+
+.tecno_title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-style: italic;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 1s ease-out 300ms forwards;
+}
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+.circle{
+    width: 50%;
+    align-self: center;
+    padding-top: 46%;
+    border-radius: 50%;
+    border-bottom: 0 solid rgba(255, 255, 255, 0.9);    border-top: 2px solid rgb(0, 0, 0);
+    overflow: hidden; 
+    position: relative;
+    background: radial-gradient(circle, rgba(253,254,253,0.69) 6%, rgba(141,142,141,1) 52%, rgba(116,117,116,1) 62%, rgba(20,20,20,1) 77%);
+    animation: press 5s infinite alternate;
+}
+
+@keyframes press {
+    0% {
+      transform:  scale(1);
+    }
+    100% {
+      transform: scale(1.2);
+    }
+}
+
+.image_user{
+    position: absolute; 
+    width: 65%;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%)
+}
+
+
+
+/* mobile tablet =================================================================================================== */
+@media only screen and (min-width: 319px) and (max-width: 861px) {
+    .tecno_container{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0 30px 0;
+    }
+
+    .tecnos {
+        display: flex;
+        margin: 1px;
+    }
+
+    .tecno{
+        width: 100%;
+    }
+
+    .tecno_title {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .circle{
+        width: 65px;
+        height: 65px;
+    }
+}

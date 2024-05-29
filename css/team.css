@@ -1,0 +1,92 @@
+/* This file contains the styles for the team section */
+.equipo {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-grisoscuro);
+    padding-bottom: 1rem;
+    height: auto;
+}
+
+.equipo h2 {
+    display: flex;
+    position: relative;
+    text-align: center;
+    font-family: 'Roboto Mono', sans-serif; ;
+    width: 340px;
+    height: 54px;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    font-weight: 700;
+    font-size: 48px;
+    font-style: italic;
+    background: linear-gradient(90deg, rgb(184, 97, 224) 0%, rgb(113, 113, 226) 48.96%, rgb(31, 193, 174) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+}
+
+.contImagenesEquipo {
+    top: 5rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.img_equipo {
+    width: 190px;
+}
+
+.img_equipo:hover {
+    transform: scale(1.05);
+    transition: all 0.5s cubic-bezier(0, 0, 0, 4);
+}
+
+.nosotros {
+    display: flex;
+    width: 190px;
+    height: auto;
+    letter-spacing: 0.1em;
+    text-align: center;
+    justify-content: space-evenly;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+}
+
+.actividad {
+    text-align: center;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+}
+
+/* TABLET ===============================================================================================*/
+@media (max-width: 861px) {
+    .contImagenesEquipo {
+        top: 5rem;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+    }
+    .equipo-img-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 150px;
+    }
+    .img_equipo {
+        width: 100px;
+    }
+
+    .actividad {
+        font-size: 16px;
+    }
+
+    .equipo h2 {
+        font-size: 4rem;
+    }
+}

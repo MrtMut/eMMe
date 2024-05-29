@@ -1,0 +1,316 @@
+/* This file contains the styling for the contact form */
+.section_contact{
+    width: 100%;
+    margin-top: 0;
+    background: var(--gradient);
+    padding: 50px 0 30px 0;
+}
+
+form{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 100%;
+    background: var(--color-background);
+    padding: 20px 5px;
+}
+
+.contact_container{
+    width:100%;
+}
+
+.form_container_options {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.form_container_options{
+    color: rgb(240, 248, 255);
+    padding: 5px;
+}
+
+.contact_title{
+    color: rgb(240, 248, 255);
+    padding: 5px;
+    font-size: 3rem;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 0 0 25px rgb(0, 0, 0);
+}
+
+.section_contact h2{
+    margin-left: 10px;
+    color: var(--color-verde);
+}
+
+.contact_suscribe{
+    margin-left: 15px;
+    font-size: 12px;
+    color: var(--font-color-light);
+}
+
+.contact_checkbox{
+    display: flex;
+    height: 14px;
+    width: 14px;
+    border-radius: 15px;
+}
+
+.contact_checkbox:hover{
+    cursor: pointer;
+    background-color: rgba(86, 35, 182, 0.7);
+    transition: background-color 0.5s;
+}
+
+.contact_group{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.contact_check_suscribe {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 5px;
+    gap: 10px;
+}
+
+.contact_check_accept {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    gap: 10px;
+    padding-bottom: 5px;
+}
+
+.contact_link_terms {
+    color: rgb(113, 113, 226, 0.8);
+    font-weight: bold;
+}
+
+.contact_link_terms:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.contact_input{
+    padding: 5px 5px 5px 10px;
+    border-color: var(--color-violeta);
+    border-width: 1px;
+    background: none;
+    border-style: solid;
+}
+
+.contact_input:focus{
+    outline: none;
+    border-color: var(--color-verde-300);
+}
+
+.input-radius {
+    display: block;
+    width: 67%;
+    border-radius: 10px;
+    font-family: var(--font-roboto-mono);
+    font-size: 1.6rem;
+    color: var(--color-grisclaro);
+}
+
+.input-radius:focus {
+    background: black;
+    color: var(--color-grisclaro);
+}
+
+.input-radius::placeholder {
+    color: var(--color-gris);
+}
+
+/*SELECT STYLES ==================================================*/
+.content-select{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+    max-width: 200px;
+    position: relative;
+}
+
+.content-select select{
+    display: block;
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 34px;
+    cursor: pointer;
+    padding: 0 10px;
+    outline: none;
+    overflow: hidden;
+    background: rgb(55, 55, 55);
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(243, 243, 243);
+    border: 1px solid var(--color-violeta);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.content-select select:hover{
+    cursor: pointer;
+    background: rgb(31, 193, 174, 0.1);
+}
+
+.content-select select option {
+    display: flex;
+    align-items: center;
+    padding: 10px 10px;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: rgb(55, 55, 55);
+    color: var(--font-color-light);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.content-select select option:hover {
+    background-color: red;
+    color: var(--font-color-light);
+}
+
+.content-select select option::before {
+    content: '\25BC';
+    margin-right: 10px;
+}
+
+.content-select select:focus {
+    border-color: var(--color-verde-300);
+    box-shadow: 0 0 1px 3px var(--color-verde-300);
+    color: var(--font-color-light);
+    outline: none;
+    background-color: var(--color-background);
+}
+
+.content-select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: var(--color-violeta);
+}
+
+
+textarea {
+    border-color: var(--color-violeta);
+    border-width: 1px;
+    background: none;
+    border-style: solid;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.form_send_container {
+    display: inline-flex;
+    margin-left: 10px;
+}
+
+.form_send{
+    display: flex;
+    border-radius: 10px;
+    padding: 15px 20px;
+    transition: all 0.5s ease-in-out;
+    border: 1px solid var(--color-verde-300);
+    background-color: var(--color-verde-800);
+    color: var(--font-color-light);
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+    box-shadow: 4px 4px 10px rgb(184, 97, 224, 0.3);
+    text-shadow: 0 0 25px rgb(0, 0, 0);
+    align-items: center;
+    gap: 5px;
+}
+
+.form_send:hover{
+    cursor: pointer;
+    background-color: var(--color-violeta-800);
+    color: rgb(255, 255, 255);
+    transition: all 0.8s;
+}
+
+.form_send_img {
+    width: 20px;
+    fill: rgb(255, 255, 255);
+}
+
+.error{
+    display: none;
+} 
+
+.name{
+    display: none;
+}
+
+.phone{
+    display: none;
+}
+
+.error > h5{
+    color: rgb(31, 193, 174);
+    background-color: rgb(31, 193, 174, 0.1);
+    border: 1px solid rgb(31, 193, 174);
+    border-radius: 15px;
+    padding: 1px 10px;
+    width: fit-content;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-size: 1.2rem ;
+}
+
+.errorForm-check {
+    display: none;
+}
+
+.modal-terms-content {
+    background: rgb(55, 55, 55);
+    color: var(--color-grisclaro);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.modal-terms-header {
+    background: rgb(55, 55, 55);
+    border-bottom: 2px solid var(--color-verde-300);
+}
+.modal-terms-text{
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.modal-submit-text {
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.modal-terms-footer {
+    border-top: 2px solid var(--color-verde-300);
+
+}
+.btn-close {
+    background-color: var(--color-verde);
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+}
+.btn-terms-close {
+    background-color: var(--color-verde-500);
+}
+
+
+@media (max-width:566px){
+    
+}
