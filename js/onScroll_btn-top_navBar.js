@@ -15,7 +15,7 @@ let goTop = () => {
 
         if (window.innerWidth < 862 && document.documentElement.scrollTop > 10) {
             if (document.documentElement.scrollTop > 10) {
-                nav_menu_items.style.top = '72px';
+                nav_menu_items.style.top = '80px';
             }
         }
 
@@ -33,10 +33,10 @@ let goTop = () => {
             title_container.style.marginTop = "4px";
             nav_menu_items.style.marginTop = "20px";
             title_h1.style.marginTop = "20px";
-            title_h1.style.fontSize = "5.5rem";
+            title_h1.style.fontSize = "5rem";
             headerAdd.style.transform = "translateY(0px)";
-            menuBurger.style.marginTop = "20px";
-            menuEqu.style.marginTop = "20px";
+            menuBurger.style.marginTop = "25px";
+            menuEqu.style.marginTop = "25px";
         }
     }
 
@@ -54,6 +54,7 @@ const menuBpMobiles = () => {
     const menu_burguer = document.querySelector(".menu-burguer");
     const menu_equ = document.querySelector(".menu-equ");
     const nav_menu = document.querySelector(".nav_menu");
+    const headerAdd2 = document.querySelector(".headerAdd2");
 
     if (window.innerWidth < 862) {
         let menuShow = () => {
@@ -61,6 +62,7 @@ const menuBpMobiles = () => {
                 menu_burguer.style.visibility = "hidden";
                 menu_equ.style.visibility = "visible";
                 nav_menu.style.visibility = "visible";
+                headerAdd2.style.visibility = "visible";
             });
         }
         menuShow();
@@ -73,6 +75,7 @@ const menuBpMobiles = () => {
                     nav_menu.style.visibility = "hidden";
                     if (menu_input.checked === true) {
                         menu_input.checked = false;
+
                     }
                 });
             });
@@ -82,6 +85,7 @@ const menuBpMobiles = () => {
         let equShow = () => {
             menu_equ.addEventListener("click", () => {
                 menu_burguer.style.visibility = "visible";
+                headerAdd2.style.visibility = "hidden";
             })
         }
         equShow();

@@ -2,13 +2,18 @@ const { createApp, ref, onMounted } = Vue;
 
 createApp({
   setup() {
-    const url = "https://randomuser.me/api/?results=10&nat=es&inc=gender,name,dob,picture&noinfo";
+    const url = "https://randomuser.me/api/?results=6&nat=es&inc=gender,name,dob,picture&noinfo";
     const datos = ref([]);
     const error = false;
     const caseText = [
-      'Equipo de trabajo muy profesional, responsable y comprometido con el proyecto. Diseño muy bueno, la experiencia del usuario es excelente y el producto es de calidad.',
-      'El equipo de eMMe es muy profesional. Gran diseño, la experiencia del usuario es fenomenal y el producto es de gran calidad. Me encantó la atención y la calidad del producto.',
-      'Excelente diseño, muy profesional y responsable. El equipo de trabajo es muy amable y comprometido con el proyecto. Me encantó la atención y la calidad del producto.'
+      '"Equipo de trabajo muy profesional, responsable y comprometido con el proyecto. Diseño muy bueno, la experiencia del usuario es excelente y el producto es de calidad."',
+      '"El equipo de eMMe es muy profesional. Gran diseño, la experiencia del usuario es fenomenal y el producto es de gran calidad. Me encantó la atención y la calidad del producto."',
+      '"Excelente diseño, muy profesional y responsable. El equipo de trabajo es muy amable y comprometido con el' +
+      ' proyecto. Me encantó la atención y la calidad del producto."', '"Excelente servicio, entregaron mi aplicación' +
+      ' web a tiempo y con todas las funcionalidades que pedí. Muy profesionales y atentos a cada detalle. Altamente' +
+      ' recomendados."', '"Desarrollaron nuestro sitio de e-commerce perfectamente. Soporte rápido y siempre' +
+      ' disponibles para ayudar. ¡Gran equipo de fullstack!"', '"Entrega rápida y de alta calidad. La comunicación fue' +
+      ' excelente durante todo el proyecto. Recomendados 100%."'
     ];
 
     const fetchData = async () => {

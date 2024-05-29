@@ -32,8 +32,7 @@
   justify-content: space-evenly;
   scrollbar-width: none;
   max-height: 100%;
-  gap: 10px;
-
+  gap: 20px;
 }
 
 .case-card {
@@ -45,28 +44,23 @@
   position: relative;
   padding-top: 40px;
   padding-bottom: 10px;
-  margin: 10px 10px;
+  margin: 30px 10px;
   box-shadow: 0 0 10px 5px rgb(55, 55, 55);
   transition: all ease 300ms;
 }
 
 .case-card:hover{
   transform: translateX(0px) translateY(-5px) scale(1.05);
-  box-shadow: 0 0 20px 3px rgb(31, 193, 174);
+  box-shadow: 0 0 15px 3px rgb(31, 193, 174);
 }
-
-.hover{
-  transform: scale(1.05);
-  box-shadow: 0 0 20px 3px rgb(31, 193, 174);
-  }
 
 /* :first-child select primer hijo */
 .case-card:first-child {
-  margin-left: 20px;
+  margin-left: 30px;
 }
 /* :first-child select ultimo hijo */
 .case-card:last-child {
-  margin-right: 20px;
+  margin-right: 30px;
 }
 
 .case-card:active {
@@ -106,6 +100,7 @@
 .case-item {
   width: auto;
   height: 50%;
+  margin: 0 25px;
   border-radius: 50%;
 }
 
@@ -185,24 +180,26 @@
   }
 
   .case-card {
-    display: flex;
+    margin-top: 30px;
     justify-content: flex-start;
     flex-direction: column;
     align-items: center;
     width: 320px;
     height: 400px;
-    transition: all ease 300ms;
+    transition: all ease 500ms;
   }
 
   .hover{
-    transform: scale(1.2);
+    transform: scale(1.08);
+    box-shadow: 0 0 15px 3px rgb(31, 193, 174);
     }
 
  .case-item {
     width: fit-content;
     height: 155px;
-    margin: -6px 25px 0 25px;
+    margin: 2px 25px 0 25px;
     border-radius: 50%;
+    border: 4px solid var(--color-mora-800);
   }
 
   .cases-title {
@@ -210,24 +207,24 @@
   }
 
   .case-item-text {
-    position: absolute;
     font-size: 1.3rem;
+    bottom: 1%;
     font-weight: bold;
     text-align: center;
     color: rgb(255, 255, 255);
     font-style: italic;
-    height: 49%;
-    padding: 8px;
+    height: 45%;
+    padding: 10px;
   }
 
   .case-item-text::before {
     content: '';
-    width: 100%;
+    width: 98%;
     height: 100%;
     position: absolute;
-    left: 0;
-    bottom: 0;
-    backdrop-filter: blur(30px) brightness(0.6);
+    left: 1%;
+    bottom: 1%;
+    backdrop-filter: blur(2px) brightness(0.6);
     z-index: -5;
   }
 
@@ -235,11 +232,21 @@
     margin-top: 0;
     margin-bottom: 0;
   }
+
+  /* :first-child select primer hijo */
+  .case-card:first-child {
+    margin-left: calc(52% - 111px);;
+  }
+  /* :first-child select ultimo hijo */
+  .case-card:last-child {
+    margin-right: calc(52% - 111px);
+  }
 }
 
 /* -------- MOBILE ==================================================================== -------- */
 @media only screen and (max-width: 599px) {
   .case-card {
+    margin-top: 30px;
     width: 350px;
     transition: all ease 300ms;
   }
@@ -259,7 +266,12 @@
     z-index: -5;
   }
 
-  .hover{
-    transform: scale(1.2);
-    }
+  /* :first-child select primer hijo */
+  .case-card:first-child {
+    margin-left: calc(52% - 111px);;
+  }
+  /* :first-child select ultimo hijo */
+  .case-card:last-child {
+    margin-right: calc(52% - 111px);
+  }
 }
