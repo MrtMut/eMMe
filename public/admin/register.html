@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Funkoshop</title>
+    <link rel="icon" type="image/png" href="../../img/branding/isotype.svg"/>
+    <link rel="stylesheet" href="../../CSS/normalize.css" />
+    <link rel="stylesheet" href="../../CSS/coco-style.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="nav-coco container-coco">
+        <picture class="picture-nav-coco">
+          <a href="../../index.html">
+            <img src="../../img/branding/logo_light_horizontal.svg" 
+            alt="Isologotipo de la Marca Funkoshop"/>
+          </a>
+        </picture>
+        <ul class="enlaces-nav-coco">
+          <li><a class="enlaces-coco" href="../shop/shop.html">VER TIENDA</a></li>
+          <li><a class="enlaces-coco" href="../admin/login.html">ADMIN</a></li>
+          <li><a class="enlaces-coco" href= "../../index.html">SALIR</a></li>
+        </ul> 
+      </nav>
+    </header>
+
+    <main class="container-coco">
+      <article class="article-form-coco">
+        <h3>CREA TU CUENTA</h3>
+        <P>Completa el formulario para ser parte del mundo de los Funkos</P>
+      </article>
+      <section class="contenedor-formulario">
+        <form id="limpiar" action="/admin/register" method="POST" class="formulario-coco" >
+          <label for="nombre">Nombre:</label>
+          <input id="nombre" type="text" name="nombre" placeholder="Ingresar nombre" required>
+          <br>
+          <label for="apellido">Apellido:</label>
+          <input id="apellido" type="text" name="apellido" placeholder="Ingresar apellido" required>
+          <br>
+          <label for="email">Email:</label>
+          <input id="email" type="email" name="email" placeholder="Ingresar email" required>
+          <br>
+          <label for="password">Contraseña:</label>
+          <input id="password" type="password" name="password" placeholder="" required>
+          <br>
+          <label for="password2" >Repita Contraseña:</label>
+          <input id="password2" type="password" name="password2" placeholder="" required>
+          <div class="contenedor-registrar">
+              <input class="enviarForm" type="submit"></input> <!-- button responde a action="" y el method="" --> 
+            <div class="terminos">
+              <input id="checkbox" type="checkbox" name="checkbox" required>
+              <label for="acepto">Acepto <a href="#">Términos y Condiciones</a></label>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer-coco">
+      <nav class="nav-coco container-coco">
+        <ul>
+          <li><a class="footer-coco__enlaces" href="../shop/shop.html">Shop</a></li>
+          <li><a class="footer-coco__enlaces" href="../admin/register.html">Registrarse</a></li>
+          <li><a class="footer-coco__enlaces" href="../admin/login.html">Ingresar</a></li>
+          <li><a class="footer-coco__enlaces" href="#">Contacto</a></li>
+        </ul>
+        <picture><img src="../../img/branding/isotype.svg" alt="isotipo"/></picture>
+      </nav>
+      <p class="footer-coco__copy">All rights reserved 2023 - Funkoshop</p>
+    </footer>
+  </body>
+</html>

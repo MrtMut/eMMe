@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar</title>
+    <link rel="stylesheet" href="./../../CSS/normalize.css">
+    <link rel="stylesheet" href="./../../CSS/seba-header-footer.css">
+    <link rel="stylesheet" href="./../../CSS/seba-edit.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>        
+        <nav class="nabvar container">
+            <picture class="nabvar__logo">
+                <a href="./../../index.html">
+                    <img src="./../../img/branding/logo_light_horizontal.svg" alt="isologotico de la marca funkoshop">
+                </a>
+            </picture> 
+            <ul class="nabvar__menu">
+                <li class="nabvar__item with-submenu">
+                    <a class="nabvar__link with-icon" href="./../shop/shop.html">VER TIENDA</a>
+                </li>
+                <li class="nabvar__item">
+                    <a class="nabvar__link" href="./../shop/contacto.html">ADMIN</a>
+                </li>
+                <li class="nabvar__item">
+                    <a class="nabvar__link" href="./../shop/login.html">SALIR</a>
+                </li>
+        </ul>
+        </nav>
+    </header>
+<!-- Fin HEADER -->
+
+<main class="container">
+    <form action="">
+        <h3 class="edit-title">EDITAR ITEM</h3>
+        <fieldset>
+            <span class="edit-cat-lic__container">
+                <label class="edit-categoria-label" for="categoria">Categoria</label>
+                    <select class="categoria-select" name="categoria" id="categoria">
+                        <option value="figuras">Figuras</option>
+                        <option value="muñecos">Muñecos</option>
+                    </select>
+                <label class="edit-categoria-label" for="licencia">Licencia</label>
+                    <select name="licencia" id="licencia">
+                        <option value="pokemon">Pokemon</option>
+                        <option value="star">Star Ward</option>
+                        <option value="naruto">Naruto</option>
+                    </select>
+            </span>
+        </fieldset>
+        <fieldset>
+            <span class="edit-name__container">
+                <h4 class="edit-name__name">Nombre del producto:</h4>
+                <input class="edit-name__input" type="text" name="name" id="name" placeholder="Kakashi Hatake Shippuden Saga">
+            </span>
+        </fieldset>
+        <fieldset>
+            <textarea name="descripcion" id="descripcion" cols="70%" rows="6" placeholder="Descripcion"></textarea>
+        </fieldset>
+        <fieldset class="sku-price-stock__container">
+            <span class="sku-sku">
+                <label class="sku-price-stock__sku" for="sku">SKU:</label>
+                <input class="sku-price-stock__input" type="text" name="sku" id="sku">
+            </span>
+            <span class="sku-price">
+                <label class="sku-price-stock__sku" for="precio">Precio:</label>
+                <input class="sku-price-stock__input" type="text" name="precio" id="precio">
+            </span>
+            <span class="sku-stock">
+                <label class="sku-price-stock__sku" for="stock">Stock:</label>
+                <input class="sku-price-stock__stock" type="number" name="stock" id="stock">
+            </span>
+        </fieldset>
+        <fieldset class="edit-promo__container">
+            <span class="edit-promo__descuento">
+                <label class="edit-promo__descuento-title" for="descuento">Descuento:</label>
+                <input class="edit-promo__descuento__input" type="text" name="descuento" id="descuento">
+            </span>
+            <span class="edit-promo__cuotas">
+                <label class="edit-promo__cuotas-title" for="cuotas">Cuotas:</label>
+                <select class="edit-promo-select" name="cuotas" id="cuotas">
+                    <option value="3sininteres">3 sin interés</option>
+                    <option value="6sininteres">6 sin interés</option>
+                    <option value="12sininteres">12 sin interés</option>
+                </select>
+            </span>
+        </fieldset>
+        <fieldset class="edit-img__container">
+            <span>
+                <label class="edit-img" for="imagenes">Imagenes:</label>
+                <input class="edit-img__att" type="file" name="imagenes" id="imagenes" value="imagenes">
+            </span>
+            <picture>
+                <div>
+                    <img src="./../../img/kakashi_hatake_front.png" alt="Frente de la imagen">
+                    <p>Frente</p>
+                </div>
+                <div>
+                    <img src="./../../img/kakashi_hatake_back.png" alt="Dorso de la imagen">
+                    <p>Dorso</p>
+                </div>
+            </picture>
+        </fieldset>
+        <fieldset class="edit-submit">
+            <input type="submit" value="Modificar Producto">
+        </fieldset>
+    
+    </form>
+</main>
+
+
+
+
+
+
+
+
+<!-- FOOTER -->
+<footer class="footer"> 
+    <nav class="nabvar container">
+      <ul class="nabvar__item">
+        <li class="nabvar__item">
+            <a class="nabvar__link" href="">SHOP</a>
+        </li>
+        <li class="nabvar__item">
+            <a class="nabvar__link" href="">INGRESAR</a>
+        </li>
+        <li class="nabvar__item">
+            <a class="nabvar__link" href="">CONTACTO</a>
+        </li>
+      </ul>
+      <picture>
+        <img src="./../../img/branding/isotype.svg" alt="isotipo de funkoshop">
+    </picture>
+    </nav>            
+<p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
+</footer>   <!-- Fin FOOTER -->
+<!-- JAVASCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+    <script src="./JS/seba-carrito.js"></script>
+</body>
+</html>
