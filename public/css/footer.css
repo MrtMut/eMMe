@@ -46,11 +46,29 @@
     transition: all 0.5s;
 }
 
+.admin_link {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 14px;
+    background: var(--color-gris-modal);
+    color: var(--font-color-light);
+    border-radius: 10px;
+    padding: 3px 10px;
+    transition: all 0.5s;
+}
+
 /* -------- MOBILE ==================================================================== -------- */
 @media only screen and (max-width: 861px) {
     .copy{
         margin: 10px 0 0;
         font-weight: bold;
         text-shadow: -1px 0 30px rgb(0, 0, 0);
+    }
+
+    .admin_link {
+        bottom: 0;
+        right: 0;
+        padding: 3px 10px;
     }
 }
