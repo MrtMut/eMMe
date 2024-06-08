@@ -46,7 +46,7 @@ h1{
     border: 5px solid var(--color-violeta);
     border-radius: 20px;
     font-family: var(--font-roboto-mono), monospace;
-    font-size: 5rem;
+    font-size: 3.5rem;
     padding: 0 5px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -87,5 +87,3 @@ section {
     opacity: 1;
     transform: translateY(0); 
   }
-
-  
