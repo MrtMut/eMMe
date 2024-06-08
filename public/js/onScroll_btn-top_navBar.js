@@ -1,43 +1,11 @@
 // Scroll to top button
 let goTop = () => {
     const buttonGoTop = document.getElementById("goTop");
-    const nav_menu_items = document.querySelector(".nav_menu_items");
-    const title_h1 = document.querySelector(".title_h1");
-    const headerAdd = document.querySelector(".headerAdd");
-    const menuBurger = document.querySelector(".menu-burguer");
-    const menuEqu = document.querySelector(".menu-equ");
-    const title_container = document.querySelector(".title_container");
 
     window.onscroll = () => {
         buttonGoTop.classList[
             (document.documentElement.scrollTop > 250) ? "add" : "remove"
             ]("visible");
-
-        if (window.innerWidth < 862 && document.documentElement.scrollTop > 10) {
-            if (document.documentElement.scrollTop > 10) {
-                nav_menu_items.style.top = '80px';
-            }
-        }
-
-        if (document.documentElement.scrollTop > 10) {
-            nav_menu_items.style.marginTop = "0px";
-            title_container.style.marginTop = "1px";
-            title_h1.style.marginTop = "0px";
-            title_h1.style.fontSize = "3.5rem";
-            headerAdd.style.transform = "translateY(-25px)";
-            menuBurger.style.marginTop = "0px";
-            menuEqu.style.marginTop = "0px";
-            headerAdd.style.visibility = "hidden";
-        } else {
-            headerAdd.style.visibility = "visible";
-            title_container.style.marginTop = "4px";
-            nav_menu_items.style.marginTop = "20px";
-            title_h1.style.marginTop = "20px";
-            title_h1.style.fontSize = "5rem";
-            headerAdd.style.transform = "translateY(0px)";
-            menuBurger.style.marginTop = "25px";
-            menuEqu.style.marginTop = "25px";
-        }
     }
 
     buttonGoTop.onclick = () => {
@@ -54,7 +22,6 @@ const menuBpMobiles = () => {
     const menu_burguer = document.querySelector(".menu-burguer");
     const menu_equ = document.querySelector(".menu-equ");
     const nav_menu = document.querySelector(".nav_menu");
-    const headerAdd2 = document.querySelector(".headerAdd2");
 
     if (window.innerWidth < 862) {
         let menuShow = () => {
@@ -62,7 +29,6 @@ const menuBpMobiles = () => {
                 menu_burguer.style.visibility = "hidden";
                 menu_equ.style.visibility = "visible";
                 nav_menu.style.visibility = "visible";
-                headerAdd2.style.visibility = "visible";
             });
         }
         menuShow();
@@ -85,7 +51,6 @@ const menuBpMobiles = () => {
         let equShow = () => {
             menu_equ.addEventListener("click", () => {
                 menu_burguer.style.visibility = "visible";
-                headerAdd2.style.visibility = "hidden";
             })
         }
         equShow();
