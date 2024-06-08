@@ -14,4 +14,6 @@
 @import url("./team.css");
 @import url("./footer.css");
 @import url('./cases.css');
-@import url('./footer_admin.css');
+@import url('./admin_footer.css');
+@import url('./admin_main.css');
+@import url('./admin_root.css');

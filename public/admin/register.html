@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="language" content="Spanish"/>
@@ -23,82 +23,79 @@
     <meta name="theme-color" content="#ffffff"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
     <link rel="shortcut icon" href="../assets/favicon/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="../css/all.css"/>
-  </head>
+</head>
 
-  <body class="body">
-  <div class="container_all">
+<body class="body">
 
-  <header id="headerId" class="header container_custom">
+<header id="headerId" class="header header_admin container_custom">
 
     <!--NavBar--------------------------------------------------------------->
-    <div class="container_nav">
-      <input type="checkbox" id="menu-input"/>
-      <label class="menu-burguer" for="menu-input">&#9776;</label>
-      <label class="menu-equ" for="menu-input">X</label>
-      <div class="title_container">
-        <a href="#inicio">
-          <h1 class="title_h1">{eMMe}</h1>
-        </a>
-      </div>
-      <nav class="nav_menu">
-        <ul class="nav_menu_items">
-          <li class="nav_menu_item"><a class="nav_menu_link" href="./login.html">Login</a></li>
-          <li class="nav_menu_item"><a class="nav_menu_link" href="./register.html" >Register</a></li>
-          <li class="nav_menu_item"><a class="nav_menu_link" href="./edit.html">Edit</a></li>
-          <li class="nav_menu_item"><a class="nav_menu_link" href="./create.html">Create</a></li>
-        </ul>
-      </nav>
+    <div class="container_nav container_nav_admin">
+        <input type="checkbox" id="menu-input"/>
+        <label class="menu-burguer" for="menu-input">&#9776;</label>
+        <label class="menu-equ" for="menu-input">X</label>
+        <div class="title_container">
+            <a href="../index.html">
+                <h1 class="title_h1 title_h1_admin">{eMMe}</h1>
+            </a>
+        </div>
+        <nav class="nav_menu">
+            <ul class="nav_menu_items">
+                <li class="nav_menu_item"><a class="nav_menu_link nav_menu_link_admin" href="./login.html">Login</a></li>
+                <li class="nav_menu_item"><a class="nav_menu_link nav_menu_link_admin" href="./register.html">Register</a></li>
+                <li class="nav_menu_item"><a class="nav_menu_link nav_menu_link_admin" href="./edit.html">Edit</a></li>
+                <li class="nav_menu_item"><a class="nav_menu_link nav_menu_link_admin" href="./create.html">Create</a></li>
+            </ul>
+        </nav>
     </div>
-  </header>
+</header>
 
-    <main class="container">
-      <article class="article-form">
-        <h3>CREA TU CUENTA</h3>
+<main class="container main_admin">
+    <section class="container_form_admin">
+        <h2 class="admin_form_title">Crea tu cuenta</h2>
         <P>Completa el formulario</P>
-      </article>
-      <section class="contenedor-formulario">
-        <form id="limpiar" action="" method="POST" class="formulario" >
-          <label for="nombre">Nombre:</label>
-          <input id="nombre" type="text" name="nombre" placeholder="Ingresar nombre" >
-          <br>
-          <label for="apellido">Apellido:</label>
-          <input id="apellido" type="text" name="apellido" placeholder="Ingresar apellido" >
-          <br>
-          <label for="email">Email:</label>
-          <input id="email" type="email" name="email" placeholder="Ingresar email" >
-          <br>
-          <label for="password">Contraseña:</label>
-          <input id="password" type="password" name="password" placeholder="" >
-          <br>
-          <label for="password2" >Repita Contraseña:</label>
-          <input id="password2" type="password" name="password2" placeholder="" >
-          <div class="contenedor-registrar">
-              <input class="enviarForm" type="submit">
-            <div class="terminos">
-              <label for="checkbox"></label><input id="checkbox" type="checkbox" name="checkbox">
-              <label for="acepto">Acepto <a href="#" id="acepto">Términos y Condiciones</a></label>
+        <form id="limpiar" class="form_admin" action="" method="post" enctype="multipart/form-data">
+            <label for="nombre">Nombre:</label>
+            <input id="nombre" type="text" name="nombre" placeholder="Ingresar nombre">
+            <br>
+            <label for="apellido">Apellido:</label>
+            <input id="apellido" type="text" name="apellido" placeholder="Ingresar apellido">
+            <br>
+            <label for="email">Email:</label>
+            <input id="email" type="email" name="email" placeholder="Ingresar email">
+            <br>
+            <label for="password">Contraseña:</label>
+            <input id="password" type="password" name="password" placeholder="">
+            <br>
+            <label for="password2">Repita Contraseña:</label>
+            <input id="password2" type="password" name="password2" placeholder="">
+            <div class="contenedor-registrar">
+                <input class="enviarForm" type="submit">
+                <div class="terminos">
+                    <label for="checkbox"></label><input id="checkbox" type="checkbox" name="checkbox">
+                    <label for="acepto">Acepto <a href="#" id="acepto">Términos y Condiciones</a></label>
+                </div>
             </div>
-          </div>
         </form>
-      </section>
-    </main>
+    </section>
+</main>
 
-    <footer class="container_footer container_custom">
-      <div class="footer_section_links">
+<footer class="container_footer container_custom">
+    <div class="footer_section_links">
         <ul>
-          <li class="admin_links"><a href="./login.html">Login</a></li>
-          <li class="admin_links"><a href="./register.html">Register</a></li>
-          <li class="admin_links"><a href="./edit.html">Edit</a></li>
-          <li class="admin_links"><a href="./create.html">Create</a></li>
+            <li class="admin_links"><a href="./login.html">Login</a></li>
+            <li class="admin_links"><a href="./register.html">Register</a></li>
+            <li class="admin_links"><a href="./edit.html">Edit</a></li>
+            <li class="admin_links"><a href="./create.html">Create</a></li>
         </ul>
-      </div>
-      <p class="copy"> &copy; Copyright {eMMe} <span id="year"></span> - <span>v 1.0</span></p>
-    </footer>
-    <!-- Fin FOOTER -->
-  </div>
+    </div>
+    <p class="copy"> &copy; Copyright {eMMe} <span id="year"></span> - <span>v 1.0</span></p>
+</footer>
+<!-- Fin FOOTER -->
 
-  </body>
+</body>
 </html>

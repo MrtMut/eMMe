@@ -23,81 +23,82 @@
     <meta name="theme-color" content="#ffffff"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
     <link rel="shortcut icon" href="../assets/favicon/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="../css/all.css"/>
 </head>
 <body class="body">
-<div class="container_all">
 
-    <!-- HEADER -->
-    <header id="headerId" class="header container_custom">
+<!-- HEADER -->
+<header id="headerId" class="header header_admin container_custom">
 
-        <!--NavBar--------------------------------------------------------------->
-        <div class="container_nav">
-            <input type="checkbox" id="menu-input"/>
-            <label class="menu-burguer" for="menu-input">&#9776;</label>
-            <label class="menu-equ" for="menu-input">X</label>
-            <div class="title_container">
-                <a href="#inicio">
-                    <h1 class="title_h1">{eMMe}</h1>
-                </a>
-            </div>
-            <nav class="nav_menu">
-                <ul class="nav_menu_items">
-                    <li class="nav_menu_item"><a class="nav_menu_link" href="./login.html">Login</a></li>
-                    <li class="nav_menu_item"><a class="nav_menu_link" href="./register.html" >Register</a></li>
-                    <li class="nav_menu_item"><a class="nav_menu_link" href="./edit.html">Edit</a></li>
-                    <li class="nav_menu_item"><a class="nav_menu_link" href="./create.html">Create</a></li>
-                </ul>
-            </nav>
+    <!--NavBar--------------------------------------------------------------->
+    <div class="container_nav container_nav_admin">
+        <input type="checkbox" id="menu-input"/>
+        <label class="menu-burguer" for="menu-input">&#9776;</label>
+        <label class="menu-equ" for="menu-input">X</label>
+        <div class="title_container">
+            <a href="../index.html">
+                <h1 class="title_h1 title_h1_admin">{eMMe}</h1>
+            </a>
         </div>
-    </header>
+        <nav class="nav_menu">
+            <ul class="nav_menu_items">
+                <li class="nav_menu_item"><a class="nav_menu_link nav_menu_link_admin" href="./login.html">Login</a></li>
+                <li class="nav_menu_item"><a class="nav_menu_link nav_menu_link_admin" href="./register.html">Register</a></li>
+                <li class="nav_menu_item"><a class="nav_menu_link nav_menu_link_admin" href="./edit.html">Edit</a></li>
+                <li class="nav_menu_item"><a class="nav_menu_link nav_menu_link_admin" href="./create.html">Create</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 <!-- Fin HEADER -->
 
-<main class="container">
-    <form action="">
-        <h3 class="edit-title">EDITAR PROYECTO</h3>
-        <fieldset>
+<main class="container main_admin">
+    <section class="container_form_admin">
+        <h2 class="admin_form_title">Editar proyecto</h2>
+        <form class="form_admin" action="" method="post" enctype="multipart/form-data">
+            <fieldset>
             <span class="edit-category__container">
-                <h4 class="edit-category__name">Categoría:</h4>
+                <label class="edit-category__name">Categoría:</label>
             </span>
-        </fieldset>
-        <fieldset>
+            </fieldset>
+            <fieldset>
             <span class="edit-name__container">
-                <h4 class="edit-name__name">Nombre del producto:</h4>
+                <label class="edit-name__name" for="name">Nombre del producto:</label>
                 <input class="edit-name__input" type="text" name="name" id="name">
             </span>
-        </fieldset>
-        <fieldset>
-            <textarea name="descripcion" id="descripcion" cols="70%" rows="6" placeholder="Descripcion"></textarea>
-        </fieldset>
-        <fieldset class="edit-img__container">
+
+                <label for="descripcion"></label>
+                <textarea name="descripcion" id="descripcion" cols="70%" rows="6" placeholder="Descripcion"></textarea>
+            </fieldset>
+            <fieldset class="edit-img__container">
             <span>
                 <label class="edit-img" for="imagenes">Imagenes:</label>
                 <input class="edit-img__att" type="file" name="imagenes" id="imagenes" value="imagenes">
             </span>
-        </fieldset>
-        <fieldset class="edit-submit">
-            <input type="submit" value="Modificar Proyecto">
-        </fieldset>
-    
-    </form>
+            </fieldset>
+            <fieldset class="edit-submit">
+                <input type="submit" value="Modificar Proyecto">
+            </fieldset>
+        </form>
+    </section>
+
 </main>
 
-    <footer class="container_footer container_custom">
-        <div class="footer_section_links">
-            <ul>
-                <li class="admin_links"><a href="./login.html">Login</a></li>
-                <li class="admin_links"><a href="./register.html">Register</a></li>
-                <li class="admin_links"><a href="./edit.html">Edit</a></li>
-                <li class="admin_links"><a href="./create.html">Create</a></li>
-            </ul>
-        </div>
-        <p class="copy"> &copy; Copyright {eMMe} <span id="year"></span> - <span>v 1.0</span></p>
-    </footer>
-    <!-- Fin FOOTER -->
-</div>
+<footer class="container_footer container_custom">
+    <div class="footer_section_links">
+        <ul>
+            <li class="admin_links"><a href="./login.html">Login</a></li>
+            <li class="admin_links"><a href="./register.html">Register</a></li>
+            <li class="admin_links"><a href="./edit.html">Edit</a></li>
+            <li class="admin_links"><a href="./create.html">Create</a></li>
+        </ul>
+    </div>
+    <p class="copy"> &copy; Copyright {eMMe} <span id="year"></span> - <span>v 1.0</span></p>
+</footer>
+<!-- Fin FOOTER -->
 
 </body>
 </html>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="language" content="Spanish"/>
     <meta name="description" content="Sitio de desarrollo web"/>
     <meta name="keywords" content="dev, web, web development"/>
@@ -23,108 +23,107 @@
     <meta name="theme-color" content="#ffffff"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
     <link rel="shortcut icon" href="../assets/favicon/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="../css/all.css"/>
-  </head>
-  <body class="body">
-  <div class="container_all">
+</head>
+<body class="body">
 
-  <header id="headerId" class="header container_custom">
+<header id="headerId" class="header header_admin container_custom">
 
     <!--NavBar--------------------------------------------------------------->
-    <div class="container_nav">
-      <input type="checkbox" id="menu-input"/>
-      <label class="menu-burguer" for="menu-input">&#9776;</label>
-      <label class="menu-equ" for="menu-input">X</label>
-      <div class="title_container">
-        <a href="#inicio">
-          <h1 class="title_h1">{eMMe}</h1>
-        </a>
-      </div>
-      <nav class="nav_menu">
-        <ul class="nav_menu_items">
-          <li class="nav_menu_item"><a class="nav_menu_link" href="./login.html">Login</a></li>
-          <li class="nav_menu_item"><a class="nav_menu_link" href="./register.html" >Register</a></li>
-          <li class="nav_menu_item"><a class="nav_menu_link" href="./edit.html">Edit</a></li>
-          <li class="nav_menu_item"><a class="nav_menu_link" href="./create.html">Create</a></li>
-        </ul>
-      </nav>
+    <div class="container_nav container_nav_admin">
+        <input type="checkbox" id="menu-input"/>
+        <label class="menu-burguer" for="menu-input">&#9776;</label>
+        <label class="menu-equ" for="menu-input">X</label>
+        <div class="title_container">
+            <a href="../index.html">
+                <h1 class="title_h1 title_h1_admin">{eMMe}</h1>
+            </a>
+        </div>
+        <nav class="nav_menu">
+            <ul class="nav_menu_items">
+                <li class="nav_menu_item"><a class="nav_menu_link nav_menu_link_admin" href="./login.html">Login</a></li>
+                <li class="nav_menu_item"><a class="nav_menu_link nav_menu_link_admin" href="./register.html">Register</a></li>
+                <li class="nav_menu_item"><a class="nav_menu_link nav_menu_link_admin" href="./edit.html">Edit</a></li>
+                <li class="nav_menu_item"><a class="nav_menu_link nav_menu_link_admin" href="./create.html">Create</a></li>
+            </ul>
+        </nav>
     </div>
-  </header>
-    <main>
-      <h2>crear nuevo proyecto</h2>
-      <form>
-        <section>
-          <label for="">
-            Categoria:
-            <select name="" id="">
-              <option value="">Seleccione una categoria</option>
-              <option value="">Diseño</option>
-              <option value="">Programación</option>
-              <option value="">Marketing</option>
-            </select>
-          </label>
-          <label for="">
-            Tipo:
-            <select name="" id="">
-              <option value="">Seleccione un tipo</option>
-              <option value="">Web</option>
-              <option value="">Aplicación</option>
-              <option value="">Móvil</option>
-            </select>
-          </label>
-        </section>
-        <section>
-          <label
-            >Nombre del proyecto
-            <input type="text" />
-          </label>
-        </section>
-        <section>
-          <textarea
-            placeholder="Descripcion del proyecto"
-            name=""
-            id=""
-            cols="30"
-            rows="10"
-          ></textarea>
-        </section>
-        <section>
-          <label for="">
-            Precio
-            <input type="text" />
-          </label>
-          <label for="">
-            Stock
-            <input type="text" />
-          </label>
-        </section>
-        <section>
-          <label for="">
-            Imágenes
-            <input type="file" />
-          </label>
-        </section>
-        <section>
-          <button>Agregar proyecto</button>
-          <button>Limpiar</button>
-        </section>
-      </form>
-    </main>
-    <footer class="container_footer container_custom">
-      <div class="footer_section_links">
-        <ul>
-          <li class="admin_links"><a href="./login.html">Login</a></li>
-          <li class="admin_links"><a href="./register.html">Register</a></li>
-          <li class="admin_links"><a href="./edit.html">Edit</a></li>
-          <li class="admin_links"><a href="./create.html">Create</a></li>
-        </ul>
-      </div>
-      <p class="copy"> &copy; Copyright {eMMe} <span id="year"></span> - <span>v 1.0</span></p>
-    </footer>
-    <!-- Fin FOOTER -->
-  </div>
+</header>
+<main class="container main_admin">
+    <section class="container_form_admin">
+        <h2 class="admin_form_title">Crear un proyecto</h2>
+        <form class="form_admin" action="" method="post" enctype="multipart/form-data">
+            <section>
+                <label for="">
+                    Categoria:
+                    <select name="" id="">
+                        <option value="">Seleccione una categoria</option>
+                        <option value="">Diseño</option>
+                        <option value="">Programación</option>
+                        <option value="">Marketing</option>
+                    </select>
+                </label>
+                <label for="">
+                    Tipo:
+                    <select name="" id="">
+                        <option value="">Seleccione un tipo</option>
+                        <option value="">Web</option>
+                        <option value="">Aplicación</option>
+                        <option value="">Móvil</option>
+                    </select>
+                </label>
+            </section>
+            <section>
+                <label for="name_project"
+                >Nombre del proyecto</label>
+                    <input id="name_project" type="text"/>
 
-  </body>
+            </section>
+            <section>
+          <textarea
+                  placeholder="Descripcion del proyecto"
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+          ></textarea>
+
+                <label for="">
+                    Precio
+                    <input type="text"/>
+                </label>
+                <label for="">
+                    Stock
+                    <input type="text"/>
+                </label>
+
+                <label for="">
+                    Imágenes
+                    <input type="file"/>
+                </label>
+            </section>
+            <section>
+                <button>Agregar proyecto</button>
+                <button>Limpiar</button>
+            </section>
+        </form>
+    </section>
+</main>
+<footer class="container_footer container_custom">
+    <div class="footer_section_links">
+        <ul>
+            <li class="admin_links"><a href="./login.html">Login</a></li>
+            <li class="admin_links"><a href="./register.html">Register</a></li>
+            <li class="admin_links"><a href="./edit.html">Edit</a></li>
+            <li class="admin_links"><a href="./create.html">Create</a></li>
+        </ul>
+    </div>
+    <p class="copy"> &copy; Copyright {eMMe} <span id="year"></span> - <span>v 1.0</span></p>
+</footer>
+<!-- Fin FOOTER -->
+
+</body>
 </html>
