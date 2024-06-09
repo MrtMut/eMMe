@@ -28,9 +28,9 @@
     <link rel="shortcut icon" href="../assets/favicon/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="../css/all.css"/>
 </head>
-<body class="body">
+<body class="body body_admin">
 
-<header id="headerId" class="header header_admin container_custom">
+<header id="headerId" class="header header_admin ">
 
     <!--NavBar--------------------------------------------------------------->
     <div class="container_nav container_nav_admin">
@@ -52,11 +52,12 @@
         </nav>
     </div>
 </header>
+
 <main class="container main_admin">
     <section class="container_form_admin">
         <h2 class="admin_form_title">Crear un proyecto</h2>
         <form class="form_admin" action="" method="post" enctype="multipart/form-data">
-            <section>
+            <fieldset>
                 <label for="">
                     Categoria:
                     <select name="" id="">
@@ -75,20 +76,20 @@
                         <option value="">Móvil</option>
                     </select>
                 </label>
-            </section>
-            <section>
+            </fieldset>
+            <fieldset>
                 <label for="name_project"
                 >Nombre del proyecto</label>
                     <input id="name_project" type="text"/>
 
-            </section>
-            <section>
+            </fieldset>
+            <fieldset>
           <textarea
                   placeholder="Descripcion del proyecto"
                   name=""
                   id=""
                   cols="30"
-                  rows="10"
+                  rows="4"
           ></textarea>
 
                 <label for="">
@@ -104,11 +105,11 @@
                     Imágenes
                     <input type="file"/>
                 </label>
-            </section>
-            <section>
+            </fieldset>
+            <fieldset>
                 <button>Agregar proyecto</button>
                 <button>Limpiar</button>
-            </section>
+            </fieldset>
         </form>
     </section>
 </main>
@@ -121,9 +122,11 @@
             <li class="admin_links"><a href="./create.html">Create</a></li>
         </ul>
     </div>
-    <p class="copy"> &copy; Copyright {eMMe} <span id="year"></span> - <span>v 1.0</span></p>
+    <p class="copy"> &copy; Copyright {eMMe} <span id="year"></span> - <span id="version"> </span></p>
 </footer>
 <!-- Fin FOOTER -->
+
+<script src="../js/version.js"></script>
 
 </body>
 </html>

@@ -28,10 +28,10 @@
     <link rel="shortcut icon" href="../assets/favicon/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="../css/all.css"/>
 </head>
-<body class="body">
+<body class="body body_admin">
 
 <!-- HEADER -->
-<header id="headerId" class="header header_admin container_custom">
+<header id="headerId" class="header header_admin ">
 
     <!--NavBar--------------------------------------------------------------->
     <div class="container_nav container_nav_admin">
@@ -71,7 +71,7 @@
             </span>
 
                 <label for="descripcion"></label>
-                <textarea name="descripcion" id="descripcion" cols="70%" rows="6" placeholder="Descripcion"></textarea>
+                <textarea name="descripcion" id="descripcion" cols="30" rows="4" placeholder="Descripcion"></textarea>
             </fieldset>
             <fieldset class="edit-img__container">
             <span>
@@ -96,9 +96,11 @@
             <li class="admin_links"><a href="./create.html">Create</a></li>
         </ul>
     </div>
-    <p class="copy"> &copy; Copyright {eMMe} <span id="year"></span> - <span>v 1.0</span></p>
+    <p class="copy"> &copy; Copyright {eMMe} <span id="year"></span> - <span id="version"> </span></p>
 </footer>
 <!-- Fin FOOTER -->
+
+<script src="../js/version.js"></script>
 
 </body>
 </html>

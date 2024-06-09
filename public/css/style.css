@@ -7,7 +7,7 @@ html {
     background: var(--color-background);
     color: var(--color-body);
     font-family: var(--font-roboto), sans-serif;
-    font-weight: 100;
+    font-weight: 400;
     letter-spacing: 0.03rem;
     line-height: 1.5;
     font-size: 2rem;
@@ -47,13 +47,14 @@ h1{
     border-radius: 20px;
     font-family: var(--font-roboto-mono), monospace;
     font-size: 3.5rem;
+    font-weight: 400;
     padding: 0 5px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
 }
 
 h2{
-    font-weight: 100;
+    font-weight: 400;
     font-size: 2.8rem;
 }
 h3{
@@ -68,12 +69,13 @@ h4{
 }
 h5{
     font-family: var(--font-roboto-mono), monospace;
-    font-weight: 100;
+    font-weight: 700;
     font-size: 1.4rem;
 }
 h6{
     text-transform: uppercase;
     font-size: 1.2rem;
+    font-weight: 700;
 }
 
 section {

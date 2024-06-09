@@ -1,5 +1,5 @@
-body {
-    min-height: 100vh;
+.body_admin {
+    max-width: 866px;
 }
 
 .header_admin {
@@ -17,4 +17,12 @@ body {
 .container_nav_admin {
     width: auto;
     gap: 20px;
+}
+
+.anchor_admin::before {
+    content: "";
+    display: block;
+    height: 60px;
+    margin-top: -60px;
+    visibility: hidden;
 }

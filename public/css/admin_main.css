@@ -1,14 +1,28 @@
 .main_admin {
     background: #f2f2f2;
+    width: 70%;
+    margin: 0 auto;
+    padding: 1%;
 }
 
 section {
     opacity: 1;
+    transform: translateY(0);
 }
 
 .admin_form_title {
     color: #333;
 }
-.form_admin {
 
+.form_admin {
+    display: flex;
+    gap: 10px;
+    width: 50%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5px 5px;
+    flex-direction: column;
+}
+
+textarea {
+    border-color: black;
 }

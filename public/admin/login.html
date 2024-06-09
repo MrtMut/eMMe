@@ -28,9 +28,10 @@
     <link rel="shortcut icon" href="../assets/favicon/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="../css/all.css"/>
 </head>
-<body class="body">
 
-<header id="headerId" class="header header_admin container_custom">
+<body class="body body_admin">
+
+<header id="headerId" class="header header_admin">
 
     <!--NavBar--------------------------------------------------------------->
     <div class="container_nav container_nav_admin">
@@ -52,29 +53,34 @@
         </nav>
     </div>
 </header>
-<main class="container main_admin">
+
+<!-- Main -->
+
+<main class="main_admin">
     <section class="container_form_admin">
         <h2 class="admin_form_title">Ingresar a mi cuenta</h2>
         <form action="" method="POST" class="form_admin" enctype="multipart/form-data">
-            <section class="section-top-form">
-                <label for=""> Email
+            <fieldset class="section-top-form">
+                <label for=""> Email:
                     <input type="email" placeholder="asd123@gmail.com">
                 </label>
                 <label for=""> Contraseña:
                     <input type="password" placeholder="******">
                 </label>
-            </section>
-            <section class="section-down-form">
+            </fieldset>
+            <fieldset class="section-down-form">
                 <button>Ingresar</button>
-                <input class="input-radio" id="" name="" type="checkbox"> Recordarme
-            </section>
-            <a class="a-form" href="">Olvide mi contraseña</a>
+                <label for="remember-me"> Recordarme </label>
+                <input class="input-radio" id="remember-me" name="remember-me" type="checkbox">
+            </fieldset>
+            <div>
+            <a class="a-form" href="">Olvide mi contraseña</a></div>
         </form>
     </section>
 </main>
 
 <!-- FOOTER -->
-<footer class="container_footer container_custom">
+<footer class="container_footer">
     <div class="footer_section_links">
         <ul>
             <li class="admin_links"><a href="./login.html">Login</a></li>
@@ -83,9 +89,11 @@
             <li class="admin_links"><a href="./create.html">Create</a></li>
         </ul>
     </div>
-    <p class="copy"> &copy; Copyright {eMMe} <span id="year"></span> - <span>v 1.0</span></p>
+    <p class="copy"> &copy; Copyright {eMMe} <span id="year"></span> - <span id="version"> </span></p>
 </footer>
 <!-- Fin FOOTER -->
+
+<script src="../js/version.js"></script>
 
 </body>
 </html>
