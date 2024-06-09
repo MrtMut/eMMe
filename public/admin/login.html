@@ -11,7 +11,6 @@
     <meta name="REPLY-TO" content=""/>
     <meta name="distribution" content="Global"/>
     <meta name="Revisit-after" content="1 days"/>
-    <title>Login</title>
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png"/>
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png"/>
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png"/>
@@ -27,6 +26,7 @@
           rel="stylesheet">
     <link rel="shortcut icon" href="../assets/favicon/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="../css/all.css"/>
+    <title>Login</title>
 </head>
 
 <body class="body body_admin">
@@ -43,13 +43,8 @@
                 <h1 class="title_h1 title_h1_admin">{eMMe}</h1>
             </a>
         </div>
-        <nav class="nav_menu">
-            <ul class="nav_menu_items">
-                <li class="nav_menu_item"><a class="nav_menu_link nav_menu_link_admin" href="./login.html">Login</a></li>
-                <li class="nav_menu_item"><a class="nav_menu_link nav_menu_link_admin" href="./register.html">Register</a></li>
-                <li class="nav_menu_item"><a class="nav_menu_link nav_menu_link_admin" href="./edit.html">Edit</a></li>
-                <li class="nav_menu_item"><a class="nav_menu_link nav_menu_link_admin" href="./create.html">Create</a></li>
-            </ul>
+        <nav class="nav_menu" id="nav_menu_admin">
+
         </nav>
     </div>
 </header>
@@ -58,42 +53,39 @@
 
 <main class="main_admin">
     <section class="container_form_admin">
-        <h2 class="admin_form_title">Ingresar a mi cuenta</h2>
         <form action="" method="POST" class="form_admin" enctype="multipart/form-data">
-            <fieldset class="section-top-form">
-                <label for=""> Email:
-                    <input type="email" placeholder="asd123@gmail.com">
+            <fieldset class="fieldset-input">
+                <h2 class="admin_form_title">Ingresar a mi cuenta</h2>
+
+                <label for="form_login_name">
+                    <input type="email" placeholder="email" id="form_login_name">
                 </label>
-                <label for=""> Contraseña:
-                    <input type="password" placeholder="******">
+                <label>
+                    <input type="password" placeholder="Contraseña">
                 </label>
-            </fieldset>
-            <fieldset class="section-down-form">
                 <button>Ingresar</button>
-                <label for="remember-me"> Recordarme </label>
-                <input class="input-radio" id="remember-me" name="remember-me" type="checkbox">
+                <label for="remember-me" class="label-remember-me"> Recordarme
+                    <input class="input-radio" id="remember-me" name="remember-me" type="checkbox">
+                </label>
+                <div>
+                    <a class="a-form" href="">Olvide mi contraseña</a>
+                </div>
             </fieldset>
-            <div>
-            <a class="a-form" href="">Olvide mi contraseña</a></div>
+
         </form>
     </section>
 </main>
 
 <!-- FOOTER -->
-<footer class="container_footer">
-    <div class="footer_section_links">
-        <ul>
-            <li class="admin_links"><a href="./login.html">Login</a></li>
-            <li class="admin_links"><a href="./register.html">Register</a></li>
-            <li class="admin_links"><a href="./edit.html">Edit</a></li>
-            <li class="admin_links"><a href="./create.html">Create</a></li>
-        </ul>
-    </div>
-    <p class="copy"> &copy; Copyright {eMMe} <span id="year"></span> - <span id="version"> </span></p>
+<footer class="container_footer" id="admin_footer">
+
 </footer>
 <!-- Fin FOOTER -->
 
+<script src="../js/admin_footer.js"></script>
 <script src="../js/version.js"></script>
+<script src="../js/admin_nav_menu_admin.js"></script>
+
 
 </body>
 </html>

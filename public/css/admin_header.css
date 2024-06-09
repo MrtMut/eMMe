@@ -1,0 +1,21 @@
+.header_admin {
+    height: 60px;
+}
+
+.title_h1_admin {
+    font-size: 3rem;
+    border-radius: 0;
+}
+
+.nav_menu_link_admin {
+    padding: 5px 15px;
+}
+
+.nav_menu_link_admin.log_reg_color {
+    background-color: var(--color-coquenicot-800);
+}
+
+.container_nav_admin {
+    width: 100%;
+    gap: 20px;
+}

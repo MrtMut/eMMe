@@ -1,22 +1,5 @@
 .body_admin {
-    max-width: 866px;
-}
-
-.header_admin {
-    height: 60px;
-}
-
-.title_h1_admin {
-    font-size: 3rem;
-}
-
-.nav_menu_link_admin {
-    padding: 5px 15px;
-}
-
-.container_nav_admin {
-    width: auto;
-    gap: 20px;
+    max-width: 960px;
 }
 
 .anchor_admin::before {

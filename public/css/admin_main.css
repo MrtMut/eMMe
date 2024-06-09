@@ -1,6 +1,6 @@
 .main_admin {
     background: #f2f2f2;
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
     padding: 1%;
 }
@@ -11,16 +11,47 @@ section {
 }
 
 .admin_form_title {
+    display: flex;
     color: #333;
+    font-size: 2.4rem;
+    justify-content: flex-start;
+}
+
+.admin_form_title + p {
+    display: flex;
+    color: #333;
+    font-size: 2rem;
+    justify-content: flex-start;
 }
 
 .form_admin {
     display: flex;
     gap: 10px;
-    width: 50%;
+    margin: 0 auto;
+    width: 90%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 5px 5px;
     flex-direction: column;
+}
+
+.fieldset-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 auto;
+    font-size: 1.6rem;
+}
+
+.fieldset-input > button {
+    width: 100px;
+}
+
+.fieldset-input > div > a {
+    font-size: 1.3rem;
+}
+
+.label-remember-me {
+    width: 13ch;
 }
 
 textarea {
