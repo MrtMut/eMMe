@@ -26,12 +26,13 @@
           rel="stylesheet">
     <link rel="shortcut icon" href="../assets/favicon/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="../css/all.css"/>
-    <title>Register</title>
+    <title>Login</title>
 </head>
 
 <body class="body body_admin">
 
-<header id="headerId" class="header header_admin ">
+<header id="headerId" class="header header_admin">
+
     <!--NavBar--------------------------------------------------------------->
     <div class="container_nav container_nav_admin">
         <input type="checkbox" id="menu-input"/>
@@ -48,37 +49,29 @@
     </div>
 </header>
 
+<!-- Main -->
+
 <main class="main_admin">
     <section class="container_form_admin">
-
-        <form id="limpiar" class="form_admin" action="" method="post" enctype="multipart/form-data">
+        <form action="" method="POST" class="form_admin" enctype="multipart/form-data">
             <fieldset class="fieldset-input">
-                <h2 class="admin_form_title">Crea tu cuenta</h2>
-                <P>Completa el formulario</P>
+                <h2 class="admin_form_title">Ingresar a mi cuenta</h2>
 
-                <label for="nombre">
-                    <input id="nombre" type="text" name="nombre" placeholder="Ingresar nombre">
+                <label for="form_login_name">
+                    <input type="email" placeholder="email" id="form_login_name">
                 </label>
-                <label for="apellido">
-                    <input id="apellido" type="text" name="apellido" placeholder="Ingresar apellido">
+                <label>
+                    <input type="password" placeholder="Contraseña">
                 </label>
-                <label for="email">
-                    <input id="email" type="email" name="email" placeholder="Ingresar email">
+                <button class="btn btn-danger" type="submit">Ingresar</button>
+                <label for="remember-me" class="label-remember-me"> Recordarme
+                    <input class="input-radio" id="remember-me" name="remember-me" type="checkbox">
                 </label>
-                <label for="password">
-                    <input id="password" type="password" name="password" placeholder="Contraseña">
-                </label>
-                <label for="password_repeat">
-                    <input id="password_repeat" type="password" name="password2" placeholder="Repita Contraseña">
-                </label>
-                <div class="contenedor-registrar">
-                    <div class="register_terms">
-                        <label for="checkbox"></label><input id="checkbox" type="checkbox" name="checkbox">
-                        <label for="acepto">Acepto <a href="#" id="acepto">Términos y Condiciones</a></label>
-                    </div>
+                <div>
+                    <a class="a-form" href="">Olvide mi contraseña</a>
                 </div>
-                <button id="submit_register" class="enviarForm" type="submit" value="Registrarse">Registrarse</button>
             </fieldset>
+
         </form>
     </section>
 </main>
