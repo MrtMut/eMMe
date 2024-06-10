@@ -65,12 +65,8 @@ textarea {
 }
 
 .container_proyectos {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
     max-width: 100%;
 }
-
 
 .container_title {
     display: flex;
@@ -79,18 +75,24 @@ textarea {
     width: 100%;
 }
 
+/* Table_proyectos */
 .table_proyectos {
-    border: 1px solid #ddd;
+    overflow-x: auto;
 }
-
-.header_table_proyectos {
+.table-bordered {
+    border: 3px solid #aaa;
+}
+thead {
+    border: 3px solid #aaa;
     font-weight: bold;
-}
 
-.row_table_proyectos {
-    border: 1px solid #ddd;
 }
-
-.row_table_proyectos > div.col {
-    border: 1px solid #ddd;
+thead > tr > th.th {
+    border: 2px solid #aaa;
+}
+tbody {
+    border: 2px solid #aaa;
+}
+tbody > tr > td.td {
+    border: 2px solid #aaa;
 }
