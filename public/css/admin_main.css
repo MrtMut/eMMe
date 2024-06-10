@@ -57,3 +57,40 @@ section {
 textarea {
     border-color: black;
 }
+
+/* Project List*/
+.section_proyectos {
+    display: flex;
+    flex-direction: column;
+}
+
+.container_proyectos {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    max-width: 100%;
+}
+
+
+.container_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.table_proyectos {
+    border: 1px solid #ddd;
+}
+
+.header_table_proyectos {
+    font-weight: bold;
+}
+
+.row_table_proyectos {
+    border: 1px solid #ddd;
+}
+
+.row_table_proyectos > div.col {
+    border: 1px solid #ddd;
+}

@@ -53,7 +53,10 @@
         <h2 class="admin_form_title">Crear un proyecto</h2>
         <form class="form_admin" action="" method="post" enctype="multipart/form-data">
             <fieldset>
-                <label for="">
+                <label class="create_project_id">ID:
+                    <input class="create_project_id__input" type="text" name="id" id="id" value="" autofocus>
+                </label>
+                <label for="" class="create_project_category">
                     Categoria:
                     <select name="" id="">
                         <option value="">Seleccione una categoria</option>
@@ -62,20 +65,15 @@
                         <option value="">Marketing</option>
                     </select>
                 </label>
-                <label for="">
-                    Tipo:
-                    <select name="" id="">
-                        <option value="">Seleccione un tipo</option>
-                        <option value="">Web</option>
-                        <option value="">Aplicación</option>
-                        <option value="">Móvil</option>
-                    </select>
+                <label for="" class="create_project_codigo">
+                     Codigo:
+                        <input class="create_project_codigo__input" type="text" name="id" id="id" value="">
                 </label>
             </fieldset>
             <fieldset>
-                <label for="name_project"
-                >Nombre del proyecto</label>
-                    <input id="name_project" type="text"/>
+                <label for="create_project_name" class="create_project_name"
+                >Nombre:</label>
+                    <input id="create_project_name" type="text"/>
 
             </fieldset>
             <fieldset>
@@ -87,23 +85,22 @@
                   rows="4"
           ></textarea>
 
-                <label for="">
+                <label for="" class="create_project_price">
                     Precio
                     <input type="text"/>
                 </label>
-                <label for="">
-                    Stock
+                <label for="" class="create_project_sales">
+                    Vendidos
                     <input type="text"/>
                 </label>
 
-                <label for="">
+                <label for="" class="create_project_images">
                     Imágenes
                     <input type="file"/>
                 </label>
             </fieldset>
             <fieldset>
-                <button>Agregar proyecto</button>
-                <button>Limpiar</button>
+                <button class="create_project_btn_add btn btn-danger">Agregar</button>
             </fieldset>
         </form>
     </section>
