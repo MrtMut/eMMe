@@ -1,0 +1,15 @@
+.container_projects {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-grisoscuro);
+    padding-bottom: 1rem;
+    height: auto;
+}
+
+.projects-title {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 3rem;
+    font-family: var(--font-roboto-mono), serif;
+    font-weight: bold;
+}
