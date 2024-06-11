@@ -34,9 +34,9 @@
     color: rgb(240, 248, 255);
     padding: 5px;
     font-size: 3rem;
-    border-right: 5px solid black; 
+    font-family: var(--font-roboto-mono), sans-serif;
+    border-right: 5px solid black;
     font-weight: bold;
-    font-style: italic;
     text-shadow: 0 0 25px rgb(0, 0, 0);
     animation: blink-caret 0.75s step-end infinite;
     display: inline-block;
@@ -55,6 +55,7 @@
     margin-left: 10px;
     color: var(--color-verde);
     letter-spacing: 3px;
+    font-family: var(--font-roboto-mono), sans-serif;
 }
 
 .contact_suscribe{
@@ -125,7 +126,7 @@
     display: block;
     width: 67%;
     border-radius: 10px;
-    font-family: var(--font-roboto-mono);
+    font-family: var(--font-roboto-mono), serif;
     font-size: 1.6rem;
     color: var(--color-grisclaro);
 }

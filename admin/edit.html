@@ -52,8 +52,9 @@
 
 <main class="main_admin">
     <section class="container_form_admin section_admin">
-        <h2 class="admin_form_title">Editar proyecto</h2>
         <form class="form_admin" action="" method="post" enctype="multipart/form-data">
+            <h2 class="admin_form_title">Editar proyecto</h2>
+
             <fieldset>
                  <label class="delete_project_id">
                     <input class="delete_project_id__input" type="text" placeholder=" ID" name="id"
@@ -70,27 +71,21 @@
                 </label>
             </fieldset>
             <fieldset>
-            <span class="edit_project_name__container">
                 <label class="edit_project_name" for="name">
                 <input class="edit_project_name__input" type="text" placeholder=" Nombre" name="name" id="name">
                     </label>
-            </span>
                 <label for="" class="create_project_codigo">
                     <input class="create_project_codigo__input" type="text" placeholder=" Código" name="id" value="">
                 </label>
             </fieldset>
             <fieldset>
-                <label>
                     <textarea name="descripcion" cols="30" rows="4"
                               placeholder="Descripcion"></textarea>
-                </label>
             </fieldset>
             <fieldset class="edit_project_image__container">
-            <span>
-                <label class="edit_project_image" for="imagenes">Imagenes:
-                    <input class="edit_project_image__input" type="file" name="imagenes" id="imagenes" value="imagenes">
-                </label>
-            </span>
+                <label class="edit_project_image" for="imagenes">Imagen:</label>
+
+                <input class="edit_project_image__input" type="file" name="imagenes" id="imagenes" value="imagenes">
             </fieldset>
             <fieldset class="edit_project_submit">
                 <button type="submit" class="edit_project_submit__button btn btn-danger" value="Modificar">Modificar</button>

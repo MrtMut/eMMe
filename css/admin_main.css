@@ -1,8 +1,9 @@
 .main_admin {
     background: #f2f2f2;
     width: 100%;
+    min-height: 65vh;
     margin: 0 auto;
-    padding: 1%;
+    padding: 0 1%;
 }
 
 .section_admin {
@@ -13,11 +14,13 @@
     align-items: center;
 }
 
-.admin_form_title {
+.admin_form_title, .title_h2_admin {
     display: flex;
     color: #333;
     font-size: 2.4rem;
+    font-weight: bold;
     justify-content: flex-start;
+    margin-bottom: 24px;
 }
 
 .admin_form_title + p {
@@ -42,6 +45,36 @@
     flex-direction: column;
 }
 
+.form_admin > fieldset > label > select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 34px;
+    cursor: pointer;
+    padding: 0 10px;
+    outline: none;
+    overflow: hidden;
+    font-weight: 400;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.form_admin > fieldset > label > input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+
 .fieldset-input {
     display: flex;
     flex-direction: column;
@@ -50,20 +83,21 @@
     font-size: 1.6rem;
 }
 
-.fieldset-input > button {
-    width: 100px;
-}
+
 
 .fieldset-input > div > a {
     font-size: 1.3rem;
 }
 
 .label-remember-me {
+    display: flex;
     width: 13ch;
+    gap: 10px;
 }
 
 textarea {
     border-color: black;
+    width: 62.5%;
 }
 
 /* Project List*/
@@ -81,6 +115,11 @@ textarea {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+}
+
+.create_project_images, .edit_project_image {
+    font-size: 1.6rem;
+    margin: 1rem 0;
 }
 
 /* Table_proyectos */
@@ -103,4 +142,10 @@ tbody {
 }
 tbody > tr > td.td {
     border: 2px solid #aaa;
+}
+
+.btn {
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    font-size: 1.6rem;
 }

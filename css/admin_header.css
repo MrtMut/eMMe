@@ -7,6 +7,10 @@
     border-radius: 0;
 }
 
+.nav_menu_items {
+    top: 60px;
+}
+
 .nav_menu_link_admin {
     padding: 5px 15px;
 }
@@ -17,5 +21,4 @@
 
 .container_nav_admin {
     width: 100%;
-    gap: 20px;
 }
