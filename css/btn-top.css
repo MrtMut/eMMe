@@ -18,11 +18,17 @@
   color: rgb(255, 255, 255);
   border-radius: 40%;
 }
+
 .goTop:not(.visible) {
   pointer-events: none;
   opacity: 0;
   transform: translateY(-2rem);
 }
+
+.goTop:hover {
+  transform: rotate(360deg);
+}
+
 .goTop svg {
   stroke-width: 5px;
   stroke: currentColor;

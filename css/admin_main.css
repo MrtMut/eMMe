@@ -5,9 +5,12 @@
     padding: 1%;
 }
 
-section {
+.section_admin {
+    display: flex;
     opacity: 1;
     transform: translateY(0);
+    flex-direction: column;
+    align-items: center;
 }
 
 .admin_form_title {
@@ -27,10 +30,15 @@ section {
 .form_admin {
     display: flex;
     gap: 10px;
-    margin: 0 auto;
-    width: 90%;
+    margin: 3rem auto;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 5px 5px;
+    flex-direction: column;
+}
+
+.form_admin > fieldset {
+    display: flex;
+    align-items: flex-start;
     flex-direction: column;
 }
 

@@ -1,18 +1,18 @@
 .footer_section_links {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+    display: flex;
     background: transparent;
+    height: 100%;
     padding: 10px;
     font-size: 14px;
     font-weight: 500;
-    text-align: center;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .admin_links {
-    display: inline-flex;
-    align-items: center;
+    display: flex;
     border-radius: 0;
+    width: 100%;
 }
 
 .admin_links a {
@@ -28,4 +28,13 @@
     text-decoration: none;
     border-bottom: 3px solid var(--color-verde);
     border-top: 3px solid var(--color-verde);
+}
+
+.footer_links_left {
+    display: flex;
+    justify-content: space-between;}
+
+.footer_links_right {
+    display: flex;
+    justify-content: space-between;
 }

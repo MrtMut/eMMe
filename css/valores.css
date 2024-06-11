@@ -48,12 +48,11 @@
 }
 
 .valoresTitle{
-    color: rgb(24, 24, 24, 0.7);
+    color: rgb(24, 24, 24, 1);
     font-size: 3rem;
     text-align: center;
     font-weight: bold;
-    font-style: italic;
-    margin-bottom: 1rem;
+    font-family: var(--font-roboto-mono), sans-serif;
 }
 
 .valoresText{

@@ -1,7 +1,7 @@
 .container_footer{
     display: flex;
     align-items: center;
-    padding: 5px;
+    padding: 5px 5px 20px 5px;
     background: var(--gradient);
     flex-direction: column;
 }
@@ -48,7 +48,7 @@
 
 .admin_link {
     position: absolute;
-    bottom: 5px;
+    bottom: 1%;
     right: 5px;
     font-size: 14px;
     background: var(--color-gris-modal);
@@ -76,7 +76,7 @@
     }
 
     .admin_link {
-        bottom: 0;
+        bottom: 3.45rem;
         right: 0;
         padding: 3px 10px;
     }

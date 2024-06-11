@@ -11,7 +11,6 @@
     <meta name="REPLY-TO" content=""/>
     <meta name="distribution" content="Global"/>
     <meta name="Revisit-after" content="1 days"/>
-    <title>Edit</title>
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png"/>
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png"/>
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png"/>
@@ -27,6 +26,7 @@
           rel="stylesheet">
     <link rel="shortcut icon" href="../assets/favicon/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="../css/all.css"/>
+    <title>Edit</title>
 </head>
 <body class="body body_admin">
 
@@ -51,16 +51,16 @@
 <!-- Fin HEADER -->
 
 <main class="main_admin">
-    <section class="container_form_admin">
+    <section class="container_form_admin section_admin">
         <h2 class="admin_form_title">Editar proyecto</h2>
         <form class="form_admin" action="" method="post" enctype="multipart/form-data">
             <fieldset>
-            <span class="edit_project_id">
-                 <label class="delete_project_id">ID:
-                    <input class="delete_project_id__input" type="text" name="id" id="id" value="" autofocus>
+                 <label class="delete_project_id">
+                    <input class="delete_project_id__input" type="text" placeholder=" ID" name="id"
+                           value="" autofocus>
                 </label>
                  <label class="edit_project_id">
-                    Categoria:
+
                     <select name="" id="">
                         <option value="">Seleccione una categoria</option>
                         <option value="">Diseño</option>
@@ -68,16 +68,15 @@
                         <option value="">Marketing</option>
                     </select>
                 </label>
-            </span>
             </fieldset>
             <fieldset>
             <span class="edit_project_name__container">
-                <label class="edit_project_name" for="name">Nombre:</label>
-                <input class="edit_project_name__input" type="text" name="name" id="name">
+                <label class="edit_project_name" for="name">
+                <input class="edit_project_name__input" type="text" placeholder=" Nombre" name="name" id="name">
+                    </label>
             </span>
                 <label for="" class="create_project_codigo">
-                    Codigo:
-                    <input class="create_project_codigo__input" type="text" name="id" id="id" value="">
+                    <input class="create_project_codigo__input" type="text" placeholder=" Código" name="id" value="">
                 </label>
             </fieldset>
             <fieldset>
@@ -101,9 +100,8 @@
 
 </main>
 
-<footer class="container_footer" id="admin_footer">
-
-</footer>
+<!-- FOOTER -->
+<footer class="container_footer" id="admin_footer"></footer>
 <!-- Fin FOOTER -->
 
 <script src="../js/admin_footer.js"></script>

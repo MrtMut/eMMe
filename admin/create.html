@@ -11,7 +11,6 @@
     <meta name="REPLY-TO" content=""/>
     <meta name="distribution" content="Global"/>
     <meta name="Revisit-after" content="1 days"/>
-    <title>Create</title>
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png"/>
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png"/>
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png"/>
@@ -27,6 +26,7 @@
           rel="stylesheet">
     <link rel="shortcut icon" href="../assets/favicon/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="../css/all.css"/>
+    <title>Create</title>
 </head>
 <body class="body body_admin">
 
@@ -49,32 +49,31 @@
 </header>
 
 <main class="main_admin">
-    <section class="container_form_admin">
+    <section class="container_form_admin section_admin">
         <h2 class="admin_form_title">Crear un proyecto</h2>
         <form class="form_admin" action="" method="post" enctype="multipart/form-data">
             <fieldset>
-                <label class="create_project_id">ID:
-                    <input class="create_project_id__input" type="text" name="id" id="id" value="" autofocus>
+                <label class="create_project_id">
+                    <input class="create_project_id__input" type="text" name="id" id="id" value=""
+                           placeholder=" ID del proyecto" required autofocus>
                 </label>
                 <label for="" class="create_project_category">
-                    Categoria:
-                    <select name="" id="">
+                    <select name="" >
                         <option value="">Seleccione una categoria</option>
                         <option value="">Diseño</option>
                         <option value="">Programación</option>
                         <option value="">Marketing</option>
                     </select>
                 </label>
-                <label for="" class="create_project_codigo">
-                     Codigo:
-                        <input class="create_project_codigo__input" type="text" name="id" id="id" value="">
-                </label>
             </fieldset>
             <fieldset>
-                <label for="create_project_name" class="create_project_name"
-                >Nombre:</label>
-                    <input id="create_project_name" type="text"/>
-
+                <label for="create_project_name" class="create_project_name">
+                    <input id="create_project_name" placeholder=" Nombre" type="text"/>
+                </label>
+                <label for="codigo" class="create_project_codigo">
+                    <input class="create_project_codigo__input" placeholder=" Código" type="text"
+                           name="id" id="codigo" value="">
+                </label>
             </fieldset>
             <fieldset>
           <textarea
@@ -84,6 +83,9 @@
                   cols="30"
                   rows="4"
           ></textarea>
+            </fieldset>
+
+            <fieldset>
 
                 <label for="" class="create_project_price">
                     Precio
@@ -96,8 +98,10 @@
 
                 <label for="" class="create_project_images">
                     Imágenes
-                    <input type="file"/>
+                    <input type="file" id="images" accept="image/*" multiple       />
                 </label>
+                </fieldset>
+
             </fieldset>
             <fieldset>
                 <button class="create_project_btn_add btn btn-danger">Agregar</button>
@@ -107,9 +111,7 @@
 </main>
 
 <!-- FOOTER -->
-<footer class="container_footer" id="admin_footer">
-
-</footer>
+<footer class="container_footer" id="admin_footer"></footer>
 <!-- Fin FOOTER -->
 
 <script src="../js/admin_footer.js"></script>

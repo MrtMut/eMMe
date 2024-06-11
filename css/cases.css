@@ -9,9 +9,9 @@
 
 .cases-title {
   color: var(--color-background);
-  font-style: italic;
   font-size: 3rem;
   font-weight: bold;
+  font-family: var(--font-roboto-mono), sans-serif;
   margin-bottom: -2rem;
   margin-top: 2rem;
 }
