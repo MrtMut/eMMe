@@ -1,15 +1,27 @@
 .container_projects {
-    display: flex;
-    flex-direction: column;
     background-color: var(--color-grisoscuro);
-    padding-bottom: 1rem;
-    height: auto;
+    padding: 1rem;
+    visibility: visible;
 }
 
 .projects-title {
     text-align: center;
-    margin-top: 1.5rem;
     font-size: 3rem;
+    padding-top: 1rem;
     font-family: var(--font-roboto-mono), serif;
     font-weight: bold;
 }
+
+/* Responsive design for mobile devices */
+@media only screen and (max-width: 600px) {
+    .container_projects {
+        background-color: var(--color-grisoscuro);
+        padding-bottom: 1rem;
+        visibility: visible;
+    }
+
+    .cards_projects {
+        height: auto;
+    }
+}
+

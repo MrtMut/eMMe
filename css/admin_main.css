@@ -41,7 +41,7 @@
 
 .form_admin > fieldset {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
 }
 
@@ -97,7 +97,8 @@
 
 textarea {
     border-color: black;
-    width: 62.5%;
+    width: 86.5%;
+    font-size: 1.3rem;
 }
 
 /* Project List*/
@@ -123,6 +124,7 @@ textarea {
 }
 
 /* Table_proyectos */
+
 .table_proyectos {
     overflow-x: auto;
 }

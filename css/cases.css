@@ -29,7 +29,6 @@
 
 .cases-slider {
   display: flex;
-  overflow-x: scroll;
   overscroll-behavior-x: contain;
   scroll-snap-type: x proximity;
   justify-content: space-evenly;

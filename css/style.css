@@ -80,7 +80,7 @@ section {
     width: 100%;
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(100px);
   }
   
   section.in-view {
