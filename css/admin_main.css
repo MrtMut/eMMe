@@ -128,6 +128,7 @@ textarea {
 }
 .table-bordered {
     border: 3px solid #aaa;
+    font-size: 1.2rem;
 }
 thead {
     border: 3px solid #aaa;
@@ -148,4 +149,5 @@ tbody > tr > td.td {
     padding: 0.8rem 1rem;
     border-radius: 10px;
     font-size: 1.6rem;
+    margin: 1rem 0;
 }

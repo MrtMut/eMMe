@@ -102,6 +102,7 @@ li > a{
     display: flex;
     justify-content: flex-end;
     transition: 0.5s all ease;
+    top: 70px;
 }
 
 .anchor::before {
@@ -212,7 +213,7 @@ li > a{
     }
 
     .nav_menu_item {
-        width: 17ch;
+        width: 50%;
         margin: 0;
         border: 1px solid rgb(55, 55, 55, 0.6);
         transition: all 0.7s ease-in-out;
