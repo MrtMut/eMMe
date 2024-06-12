@@ -7,14 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
       if (index < text.length) {
         typewriterElement.textContent += text.charAt(index);
         index++;
-        setTimeout(type, 150);
+        setTimeout(type, 200);
       } else {
         
         setTimeout(() => {
           typewriterElement.textContent = '';
           index = 0;
           type();
-        }, 2000); 
+        }, 5000);
       }
     }
 
