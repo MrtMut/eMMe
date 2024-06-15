@@ -50,59 +50,63 @@
 
 <main class="main_admin">
     <section class="container_form_admin section_admin">
-        <form class="form_admin" action="" method="post" enctype="multipart/form-data">
+        <form class="form_admin" id="form_admin_post" action="http://127.0.0.1:5005/proyectos" method="post" >
             <h2 class="admin_form_title">Crear un proyecto</h2>
 
             <fieldset>
-                <label class="create_project_id">
+               <!-- <label for="id" class="create_project_id">
                     <input class="create_project_id__input" type="text" name="id" id="id" value=""
-                           placeholder=" ID del proyecto" required autofocus>
-                </label>
-                <label for="" class="create_project_category">
-                    <select name="" >
+                           placeholder=" ID del proyecto" autofocus>
+                </label>-->
+                <!--<label for="category" class="create_project_category">
+                    <input class="create_project_category__input" type="text" name="category" id="category" value="">-->
+
+                   <!-- <select name="" >
                         <option value="">Seleccione una categoria</option>
                         <option value="">Diseño</option>
                         <option value="">Programación</option>
                         <option value="">Marketing</option>
-                    </select>
+                    </select>-->
+<!--
                 </label>
+-->
             </fieldset>
             <fieldset>
-                <label for="create_project_name" class="create_project_name">
-                    <input id="create_project_name" placeholder=" Nombre" type="text"/>
+                <label for="name" class="create_project_name">
+                    <input id="name" name="name" placeholder=" Nombre" type="text"/>
                 </label>
-                <label for="codigo" class="create_project_codigo">
-                    <input class="create_project_codigo__input" placeholder=" Código" type="text"
-                           name="id" id="codigo" value="">
+                <label for="category" class="create_project_codigo">
+                    <input name="category" id="category" placeholder=" Categoria" type="text" value="">
                 </label>
             </fieldset>
             <fieldset>
                   <textarea
                           placeholder="Descripcion del proyecto"
-                          name=""
+                          name="description"
                           id=""
                           cols="30"
                           rows="4"
+                          type="text"
                   ></textarea>
             </fieldset>
 
             <fieldset>
 
-                <label for="" class="create_project_price">
-
-                    <input type="text" placeholder=" Precio"/>
-                </label>
-                <label for="" class="create_project_sales">
-
-                    <input type="text" placeholder=" Vendidos"/>
+                <label for="price" class="create_project_price">
+                    <input type="number" name="price" id="price" placeholder=" Precio"/>
                 </label>
 
-                <label for="" class="create_project_images">Imagen: </label>
-                    <input type="file" id="images"/>
+                <label for="client" class="create_project_sales">
+                    <input type="text" name="client" id="client"  placeholder=" Clientes"/>
+                </label>
+
+                <label for="image" class="create_project_images">Imagen:
+                    <input type="text" id="image" name="image"/>
+                </label>
                 </fieldset>
 
             <fieldset>
-                <button class="create_project_btn_add btn btn-danger">Agregar</button>
+                <button class="create_project_btn_add btn btn-danger">Crear</button>
             </fieldset>
         </form>
     </section>
@@ -115,6 +119,7 @@
 <script src="../js/admin_footer.js"></script>
 <script src="../js/version.js"></script>
 <script src="../js/admin_nav_menu_admin.js"></script>
+<script src="./formData.js"></script>
 
 </body>
 </html>

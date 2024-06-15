@@ -3,6 +3,7 @@ const { createApp, ref, onMounted } = Vue;
 createApp({
   setup() {
     const url = "https://randomuser.me/api/?results=6&nat=es&inc=gender,name,dob,picture&noinfo";
+    const apiUrlPost = "https://jsonplaceholder.typicode.com/posts";
     const datos = ref([]);
     const error = false;
     const caseText = [
@@ -54,7 +55,11 @@ createApp({
       } catch (error) {
         console.error(error);
       }
-    };
+    }
+
+    
+
+    ;
 
     onMounted(fetchData);
 
