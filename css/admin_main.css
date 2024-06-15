@@ -107,7 +107,7 @@ textarea {
     flex-direction: column;
 }
 
-.container_proyectos {
+.container_projects {
     max-width: 100%;
 }
 
@@ -125,7 +125,7 @@ textarea {
 
 /* Table_proyectos */
 
-.table_proyectos {
+.table_projects {
     overflow-x: auto;
 }
 .table-bordered {
