@@ -1,7 +1,6 @@
 .main_admin {
     background: #f2f2f2;
     width: 100%;
-    min-height: 65vh;
     margin: 0 auto;
     padding: 0 1%;
 }
@@ -20,7 +19,6 @@
     font-size: 2.4rem;
     font-weight: bold;
     justify-content: center;
-    margin-bottom: 1.5rem;
 }
 
 .title_h2_admin {
@@ -32,18 +30,8 @@
     margin-left: 10px;
 }
 
-.admin_form_title + p {
-    display: flex;
-    color: #333;
-    font-size: 2rem;
-    justify-content: center;
-    margin-top: -20px;
-}
-
 .form_admin {
-    flex-direction: column;
-    gap: 10px;
-    margin: 3rem auto;
+    margin: 1rem auto;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 5px 5px;
     max-width: 300px;
@@ -74,7 +62,7 @@
     outline: none;
     overflow: hidden;
     font-weight: 400;
-    border: 2px solid rgb(113, 113, 226);
+    border: 4px solid rgb(113, 113, 226);
     border-radius: 5px;
     transition: all 0.3s ease;
 }
@@ -93,6 +81,14 @@
     gap: 10px;
     margin: 0 auto;
     font-size: 1.6rem;
+}
+
+.fieldset-input > p {
+    display: flex;
+    color: #333;
+    font-size: 2rem;
+    justify-content: center;
+    margin-top: -11px;
 }
 
 .fieldset-input > div > a {
@@ -134,24 +130,43 @@ textarea {
 
 .container_title {
     display: flex;
-    justify-content: space-between;
+    position: relative;
+    justify-content: center;
+    margin-top: 1rem;
     align-items: center;
     width: 100%;
 }
+
+.container_title > .btn {
+    position: absolute;
+    right: 2px;
+}
+
+.container_title a svg {
+    transform: scale(1.2);
+
+}
+
 
 .create_project_images, .edit_project_image {
     font-size: 1.6rem;
     margin: 1rem 0;
 }
 
-/* Table_proyectos */
-
-.table_projects {
+/* Table_proyectos =========================================== */
+.container_projects_admin {
+    background-color: var(--color-grisoscuro);
+    padding: 0;
     overflow-x: auto;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 2rem;
 }
+
 .table-bordered {
     border: 3px solid #aaa;
     font-size: 1.2rem;
+    margin: 0;
 }
 thead {
     border: 3px solid #aaa;
@@ -160,13 +175,17 @@ thead {
 }
 thead > tr > th.th {
     border: 2px solid #aaa;
+    text-align: center;
 }
 tbody {
     border: 2px solid #aaa;
 }
 tbody > tr > td.td {
     border: 2px solid #aaa;
+    text-align: center;
 }
+
+
 
 .btn {
     padding: 0.8rem 1rem;

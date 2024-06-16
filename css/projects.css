@@ -1,6 +1,6 @@
 .container_projects {
     background-color: var(--color-grisoscuro);
-    padding: 1rem;
+    padding: 0;
     visibility: visible;
 }
 
