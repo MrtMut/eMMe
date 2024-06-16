@@ -55,12 +55,16 @@
         <form class="form_admin" action="" method="post" enctype="multipart/form-data">
             <h2 class="admin_form_title">Editar proyecto</h2>
 
-            <fieldset>
-                 <label class="delete_project_id">
+            <fieldset class="fieldset-input">
+                <label class="delete_project_id">
                     <input class="delete_project_id__input" type="text" placeholder=" ID" name="id"
                            value="" autofocus>
                 </label>
-                 <label class="edit_project_id">
+                <label class="edit_project_name" for="name">
+                    <input class="edit_project_name__input" type="text" placeholder=" Nombre" name="name" id="name">
+                </label>
+
+                <label class="edit_project_id">
 
                     <select name="" id="">
                         <option value="">Seleccione una categoria</option>
@@ -69,26 +73,29 @@
                         <option value="">Marketing</option>
                     </select>
                 </label>
-            </fieldset>
-            <fieldset>
-                <label class="edit_project_name" for="name">
-                <input class="edit_project_name__input" type="text" placeholder=" Nombre" name="name" id="name">
-                    </label>
-                <label for="" class="create_project_codigo">
-                    <input class="create_project_codigo__input" type="text" placeholder=" Código" name="id" value="">
-                </label>
-            </fieldset>
-            <fieldset>
-                    <textarea name="descripcion" cols="30" rows="4"
-                              placeholder="Descripcion"></textarea>
-            </fieldset>
-            <fieldset class="edit_project_image__container">
-                <label class="edit_project_image" for="imagenes">Imagen:</label>
 
-                <input class="edit_project_image__input" type="file" name="imagenes" id="imagenes" value="imagenes">
-            </fieldset>
-            <fieldset class="edit_project_submit">
-                <button type="submit" class="edit_project_submit__button btn btn-danger" value="Modificar">Modificar</button>
+                <textarea
+                        placeholder="Descripción del proyecto"
+                        name="description"
+                        id=""
+                        cols="30"
+                        rows="4"
+                        type="text"
+                ></textarea>
+
+                <label for="price" class="edit_project_price">
+                    <input type="number" name="price" id="price" placeholder=" Precio"/>
+                </label>
+
+                <label for="client" class="edit_project_sales">
+                    <input type="text" name="client" id="client" placeholder=" Cliente"/>
+                </label>
+
+                <label class="edit_project_image" for="imagenes">Imagen:
+                    <input class="edit_project_image__input" type="file" name="imagenes" id="imagenes" value="imagenes">
+                </label>
+                <button type="submit" class="edit_project_submit__button btn btn-danger" value="Modificar">Modificar
+                </button>
             </fieldset>
         </form>
     </section>

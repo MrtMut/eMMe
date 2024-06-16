@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
         e.preventDefault();
         let formData = new FormData(this);
         let jsonData = {};
-        for (var [k, v] of formData) {
+        for (let [k, v] of formData) {
             jsonData[k] = v;
         }
 
