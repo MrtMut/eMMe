@@ -156,7 +156,7 @@ textarea {
 /* Table_proyectos =========================================== */
 .container_projects_admin {
     background-color: var(--color-grisoscuro);
-    padding: 0;
+    padding: 1px 0;
     overflow-x: auto;
     width: 100%;
     max-width: 100%;
