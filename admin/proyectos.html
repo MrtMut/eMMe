@@ -66,7 +66,6 @@
                         <th class="th name_project">Nombre</th>
                         <th class="th category_project">Categoría</th>
                         <th class="th description_project">Descripción</th>
-                        <th class="th price_project">Precio</th>
                         <th class="th client_project">Cliente</th>
                         <th class="th image_project">Imagen</th>
                         <th class="th edit_project" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -83,23 +82,22 @@
                         </svg></th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody >
                     <tr v-for="elemento in datos_apiGet">
-                        <td class="td id_project">{{elemento.id}}</td>
-                        <td class="td name_project">{{elemento.name}}</td>
-                        <td class="td category_project">{{elemento.category}}</td>
-                        <td class="td description_project">{{elemento.description}}</td>
-                        <td class="td price_project">{{elemento.price}}</td>
-                        <td class="td client_project">{{elemento.client}}</td>
-                        <td class="td image_project"><img :src="elemento.image" alt="Imagen del proyecto"></td>
-                        <td class="td edit_project"><a href="edit.html">
+                        <td class="td_class id_project">{{elemento.id}}</td>
+                        <td class="td_class name_project">{{elemento.name}}</td>
+                        <td class="td_class category_project">{{elemento.category}}</td>
+                        <td class="td_class description_project">{{elemento.description}}</td>
+                        <td class="td_class client_project">{{elemento.client}}</td>
+                        <td class="td_class image_project"><img :src="elemento.image" alt="Imagen del proyecto"></td>
+                        <td class="td_class edit_project"><a href="edit.html">
                             <svg xmlns="http://www.w3.org/2000/svg"  width="16" height="16" fill="currentColor"
                                  class="bi bi-pencil-square" viewBox="0 0 16 16">
                                 <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
                                 <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
                             </svg>
                         </a></td>
-                        <td class="td delete_project"><a href="delete.html"><svg xmlns="http://www.w3.org/2000/svg"
+                        <td class="td_class delete_project"><a href="delete.html"><svg xmlns="http://www.w3.org/2000/svg"
                                                                                  width="16" height="16" fill="currentColor" class="bi bi-trash text-danger" viewBox="0 0 16 16">
                             <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
                             <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
