@@ -363,7 +363,7 @@ var Vue = (function (exports) {
     return (
       // Symbol.description in es2019+ so we need to cast here to pass
       // the lib: es2016 check
-      isSymbol(v) ? `Symbol(${(_a = v.description) != null ? _a : i})` : v
+      isSymbol(v) ? `Symbol(${(_a = v.textarea_description_create) != null ? _a : i})` : v
     );
   };
 

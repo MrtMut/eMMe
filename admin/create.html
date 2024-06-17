@@ -58,8 +58,8 @@
                 <label for="name" class="create_project_name">
                     <input id="name" name="name" placeholder=" Nombre" type="text"/>
                 </label>
-                <label for="select_category" class="create_project_category">
-                    <select name="category" id="select_category" class="select_category" type="text">
+                <label for="select_category_create" class="select_category_create">
+                    <select name="category" id="select_category_create" class="select_category_create" type="text">
                         <option value="Categoría">Seleccione una categoría</option>
                         <option value="Diseño">Diseño</option>
                         <option value="Programación">Programación</option>
@@ -68,8 +68,8 @@
                 </label>
                 <textarea
                         placeholder="Descripción del proyecto"
-                        name="description"
-                        id=""
+                        name="textarea_description_create"
+                        id="textarea_description_create"
                         cols="30"
                         rows="4"
                         type="text"
@@ -86,6 +86,9 @@
                 <label for="image" class="create_project_images">Imagen:
                     <input type="text" id="image" name="image"/>
                 </label>
+                <picture class="create_project_picture">
+                    <img src="" alt="Imagen del proyecto" id="preview_image_create_project">
+                </picture>
             </fieldset>
 
             <fieldset>
