@@ -55,8 +55,6 @@ createApp({
             }
         }
 
-
-
         onMounted(fetchData_randomUser);
 
         return {

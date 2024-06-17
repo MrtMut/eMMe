@@ -1,3 +1,4 @@
+const {createApp, ref, onMounted} = Vue;
 
 createApp({
     setup() {
@@ -27,4 +28,4 @@ createApp({
             fetchData_apiGet
         };
     }
-}).mount('#app2');
+}).mount('#app3');

@@ -1,23 +1,4 @@
-// GETS =================================================================================
-document.addEventListener("DOMContentLoaded", function (e) {
 
-
-        const fetchDataGet = async (jsonData) => {
-            await fetch("http://127.0.0.1:5005/proyectos", {
-                method: "GET", // or 'PUT'
-                headers: {
-                    "Content-Type": "application/json",
-                },
-
-                mode: "cors",
-            })
-                .then((res) => res.json())
-                .catch((error) => console.log("Error al enviar los datos:", error))
-                .then((response) => console.log("Exitoso:", response));
-        }
-        fetchDataGet(jsonData);
-
-});
 
 
 // POST =================================================================================
