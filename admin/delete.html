@@ -56,9 +56,15 @@
                 <label class="delete_project_id">
                     <input class="delete_project_id__input" type="text" placeholder=" ID" name="id" value="" autofocus>
                 </label>
+                <div id="app2">
+                    {{datos_apiGet.value.data.id = 1}}
+                    {{datos_apiGet.value.data.name}}
 
-                <label class="delete_project_name" for="name">
-                    <input class="delete_project_name__input" type="text" placeholder=" Nombre" name="name" id="name">
+                </div>
+
+                <label id="" class="delete_project_name" for="name">
+                    <input class="delete_project_name__input" type="text" placeholder=" Nombre" name="name" id="name"
+                           value="casa" readonly>
                 </label>
 
                 <button class="delete_project_submit__button btn btn-danger" type="submit">Eliminar</button>
@@ -78,7 +84,8 @@
 <script src="../js/version.js"></script>
 <script src="../js/admin_nav_menu_admin.js"></script>
 <script src="./formData.js"></script>
-
+<script src="../js/vue.global.js"></script>
+<script src="../js/vueProjects.js"></script>
 
 </body>
 </html>

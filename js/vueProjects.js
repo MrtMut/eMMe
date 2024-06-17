@@ -1,3 +1,4 @@
+const {createApp, ref, onMounted} = Vue;
 
 createApp({
     setup() {
