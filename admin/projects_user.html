@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="language" content="Spanish"/>
+    <meta name="description" content="Sitio de desarrollo web"/>
+    <meta name="keywords" content="dev, web, web development"/>
+    <meta name="author" content="Otros"/>
+    <meta name="robots" content="All"/>
+    <meta name="REPLY-TO" content=""/>
+    <meta name="distribution" content="Global"/>
+    <meta name="Revisit-after" content="1 days"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png"/>
+    <link rel="manifest" href="../assets/favicon/site.webmanifest"/>
+    <link rel="mask-icon" href="../assets/favicon/safari-pinned-tab.svg" color="#5bbad5"/>
+    <meta name="msapplication-TileImage" content="../assets/favicon/mstile-150x150.png"/>
+    <meta name="msapplication-config" content="../assets/favicon/browserconfig.xml"/>
+    <meta name="msapplication-TileColor" content="#da532c"/>
+    <meta name="theme-color" content="#ffffff"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/favicon/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="../css/all.css"/>
+    <title>Projects</title>
+</head>
+<body class="body body_admin">
+<header id="headerId" class="header header_admin ">
+    <!--NavBar--------------------------------------------------------------->
+    <div class="container_nav container_nav_admin">
+        <input type="checkbox" id="menu-input"/>
+        <label class="menu-burguer" for="menu-input">&#9776;</label>
+        <label class="menu-equ" for="menu-input">X</label>
+        <div class="title_container">
+            <a href="../index.html">
+                <h1 class="title_h1 title_h1_admin">{eMMe}</h1>
+            </a>
+        </div>
+        <nav class="nav_menu" id="nav_menu_admin">
+
+        </nav>
+    </div>
+</header>
+<main class="main_admin">
+    <section class="section_proyectos section_admin">
+        <!-- Titulo de la seccion -->
+        <div class="container_title">
+            <h2 class="title_h2 title_h2_admin" >Proyectos</h2>
+            <a href="create.html" class="btn btn-success">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                     class="bi bi-plus-circle " viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                </svg>
+            </a>
+        </div>
+        <div class="container mt-4 container_projects_admin">
+            <table id="app3" class="table table-bordered" data-v-app>
+                <thead>
+                <tr >
+                    <th class="th id_project">ID</th>
+                    <th class="th name_project">Nombre</th>
+                    <th class="th category_project">Categoría</th>
+                    <th class="th description_project">Descripción</th>
+                    <th class="th client_project">Cliente</th>
+                    <th class="th image_project">Imagen</th>
+                    <th class="th edit_project" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                      fill="currentColor" class="bi bi-pencil-square"
+                                                      viewBox="0 0 16 16">
+                        <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                        <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                    </svg></th>
+                    <th class="th delete_project"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                       fill="currentColor" class="bi bi-trash"
+                                                       viewBox="0 0 16 16">
+                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+                        <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+                    </svg></th>
+                </tr>
+                </thead>
+                <tbody >
+                <tr v-for="elemento in datos_apiGet">
+                    <td class="td_class id_project">{{elemento.id}}</td>
+                    <td class="td_class name_project">{{elemento.name}}</td>
+                    <td class="td_class category_project">{{elemento.category}}</td>
+                    <td class="td_class description_project">{{elemento.description}}</td>
+                    <td class="td_class client_project">{{elemento.client}}</td>
+                    <td class="td_class image_project"><img :src="elemento.image" alt="Imagen del proyecto"></td>
+                    <td class="td_class edit_project"><a href="edit.html">
+                        <svg xmlns="http://www.w3.org/2000/svg"  width="16" height="16" fill="currentColor"
+                             class="bi bi-pencil-square" viewBox="0 0 16 16">
+                            <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                            <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                        </svg>
+                    </a></td>
+                    <td class="td_class delete_project"><a href="delete.html"><svg xmlns="http://www.w3.org/2000/svg"
+                                                                                   width="16" height="16" fill="currentColor" class="bi bi-trash text-danger" viewBox="0 0 16 16">
+                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+                        <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+                    </svg></a></td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="container_footer" id="">
+    <div class="footer_section_links">
+        <p class="copy"> &copy; Copyright {eMMe} <span id="year"></span> - <span id="version"></span> </p>
+    </div>
+</footer>
+<!-- Fin FOOTER -->
+
+<script src="../js/admin_footer.js"></script>
+<script src="../js/version.js"></script>
+<script src="../js/admin_nav_menu_admin.js"></script>
+<script src="./formData.js"></script>
+<script src="../js/vue.global.js"></script>
+<script src="../js/vueProjects_admin.js"></script>
+
+
+</body>
+</html>
