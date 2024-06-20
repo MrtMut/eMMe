@@ -50,16 +50,16 @@
 
 <main class="main_admin">
     <section class="container_form_admin section_admin">
-        <form id="limpiar" class="form_admin" action="" method="post" enctype="multipart/form-data">
+        <form id="form_data_register" class="form_admin" action="http://127.0.0.1:5005/register" method="post" enctype="multipart/form-data">
             <fieldset class="fieldset-input">
                 <h2 class="admin_form_title">Crea tu cuenta</h2>
                 <p>Completa el formulario</p>
 
-                <label for="nombre">
-                    <input id="nombre" type="text" name="nombre" placeholder="Ingresar nombre">
+                <label for="name">
+                    <input id="nombre" type="text" name="name" placeholder="Ingresar nombre">
                 </label>
-                <label for="apellido">
-                    <input id="apellido" type="text" name="apellido" placeholder="Ingresar apellido">
+                <label for="lastName">
+                    <input id="apellido" type="text" name="lastName" placeholder="Ingresar apellido">
                 </label>
                 <label for="email">
                     <input id="email" type="email" name="email" placeholder="Ingresar email">
@@ -67,8 +67,8 @@
                 <label for="password">
                     <input id="password" type="password" name="password" placeholder="Contraseña">
                 </label>
-                <label for="password_repeat">
-                    <input id="password_repeat" type="password" name="password2" placeholder="Repita Contraseña">
+                <label for="repassword">
+                    <input id="repassword" type="password" name="repassword" placeholder="Repita Contraseña">
                 </label>
                 <div class="contenedor-registrar">
                     <div class="register_terms">
@@ -92,7 +92,7 @@
 <script src="../js/admin_footer.js"></script>
 <script src="../js/version.js"></script>
 <script src="../js/admin_nav_menu_admin.js"></script>
-<script src="./formData.js"></script>
+<script src="./register.js"></script>
 
 
 

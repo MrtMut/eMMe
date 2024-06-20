@@ -1,7 +1,6 @@
-// POST =================================================================================
 document.addEventListener("DOMContentLoaded", function (e) {
 
-    let form_admin = document.getElementById('form_data_register');
+    let form_admin = document.getElementById('form_admin_login');
 
     if (form_admin) {
         form_admin.onsubmit = function (e) {
@@ -12,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
             for (let [k, v] of formData) {
                 jsonData[k] = v;
             }
-            console.log('Formulario enviado');
+            console.log('inicio de session');
 
             const fetchDataPost = async (jsonData) => {
                 await fetch(form_admin.action, {
