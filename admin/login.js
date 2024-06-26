@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function (e) {
 
     let form_admin = document.getElementById('form_admin_login');
-
+     console.log(form_admin)
     if (form_admin) {
         form_admin.onsubmit = function (e) {
             e.preventDefault();

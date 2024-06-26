@@ -2,7 +2,7 @@ const {createApp, ref, onMounted} = Vue;
 
 createApp({
     setup() {
-        const apiUrlPost = "http://127.0.0.1:5005/proyectos";
+        const apiUrlPost = "http://127.0.0.1:5005/projects";
         const datos_apiGet = ref([]);
         const error = false;
 

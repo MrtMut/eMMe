@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
 
             const fetchDataDelete = async (jsonData) => {
-                await fetch(`http://127.0.0.1:5005/proyectos/${id_del}`, {
+                await fetch(`http://127.0.0.1:5005/projects/${id_del}`, {
                     method: "DELETE", // or 'PUT'
                     headers: {
                         "Content-Type": "application/json",
