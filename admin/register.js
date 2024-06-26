@@ -22,10 +22,20 @@ document.addEventListener("DOMContentLoaded", function (e) {
                     mode: "cors",
                 })
                 .then((res) => res.json())
-                .catch((error) => console.log("Error al enviar los datos:", error))
-                .then((response) => console.log("Exitoso:", response));
+                .then((response) => {console.log("success:", response)
+                 if (response){
+                    window.location.href = '/eMMe/admin/login.html'
+                 }else {
+                    console.error('Registration failed:', response.message);
+                    alert('Error en el registro: ' + response.message);
+                }
+             })
+                .catch((error) => console.log("Error al enviar los datos del registro:", error));
+                
             }
             fetchDataPost(jsonData);
         };
     }
 });
+
+
