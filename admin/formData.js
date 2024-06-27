@@ -35,6 +35,8 @@ document.addEventListener("DOMContentLoaded", function (e) {
 });
 
 
+
+
 // PUT =================================================================================
 document.addEventListener("DOMContentLoaded", function (e) {
 
@@ -53,15 +55,22 @@ document.addEventListener("DOMContentLoaded", function (e) {
         delete jsonData.id;
 
         const fetchDataPut = async (jsonData) => {
-            await fetch(`http://127.0.0.1:5005/proyectos/${id_put}`, {
-                method: "PUT", // or 'PUT'
+            await fetch(`http://127.0.0.1:5005/projects/${id_put}`, {
+                method: "PATCH", // or 'PUT'
                 headers: {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify(jsonData), // data can be `string` or {object}!
                 mode: "cors",
             })
-                .then((res) => res.json())
+                .then((res) => {res.json()
+                    document.getElementById('name').value = res.name;
+                    document.getElementById('select_category_create').value = res.category;
+                    document.getElementById('textarea_description_create').value = res.description;
+                    document.getElementById('client').value = res.client;
+                    document.getElementById('image').value = res.image;
+                    document.getElementById('preview_image_create_project').src = res.image;
+                })
                 .catch((error) => console.log("Error al enviar los datos:", error))
                 .then((response) => console.log("Exitoso:", response));
         }
@@ -78,40 +87,24 @@ document.addEventListener("DOMContentLoaded", function (e) {
     if (form_admin_delete) {
         form_admin_delete.onsubmit = function (e) {
             e.preventDefault();
-            let formData = new FormData(this);
-            let jsonData = {};
-            for (let [k, v] of formData) {
-                jsonData[k] = v;
-            }
+            let form_id_delete = document.querySelector('.delete_project_id__input').value;
+            console.log(form_id_delete)
+            let id_del = form_id_delete
 
-            console.log("DELETE", jsonData.id)
-            console.log("ACTION", form_admin_delete.action)
-
-            let id_del = jsonData.id;
-
-            console.log("ID", id_del)
-            console.log("JSON DATA", jsonData)
-
-
-            delete jsonData.id;
-
-            console.log("JSON DATA", jsonData)
-
-
-            const fetchDataDelete = async (jsonData) => {
+            const fetchDataDelete = async () => {
                 await fetch(`http://127.0.0.1:5005/projects/${id_del}`, {
                     method: "DELETE", // or 'PUT'
                     headers: {
                         "Content-Type": "application/json",
                     },
-                    body: JSON.stringify(jsonData), // data can be `string` or {object}!
                     mode: "cors",
                 })
                     .then((res) => res.json())
-                    .catch((error) => console.log("Error al enviar los datos:", error))
-                    .then((response) => console.log("Exitoso:", response));
+                    .then((response) => console.log("Exitoso:", response))
+                    .catch((error) => console.log("Error al enviar los datos:", error));
+                    
             }
-            fetchDataDelete(jsonData);
+            fetchDataDelete();
         }
     }
 });
