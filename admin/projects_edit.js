@@ -41,7 +41,7 @@ if (id) {
 
         let data = new FormData(form);
         let project = {
-            name: data.get("name"),
+            name: data.get("name_project"),
             category: data.get("category"),
             description: data.get("description"),
             client: data.get("client"),
@@ -58,7 +58,7 @@ if (id) {
             fetch(url, options)
                 .then((response) => response.json())
                 .then((data) => {
-                    data.name = project.name;
+                    data.name_project = project.name_project;
                     data.category = project.category;
                     data.description = project.description;
                     data.client = project.client;
