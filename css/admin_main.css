@@ -30,7 +30,7 @@
     margin-left: 10px;
 }
 
-.form_admin {
+.form_admin_put {
     margin: 1rem auto;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 5px 5px;
@@ -38,7 +38,7 @@
     width: 100%;
 }
 
-.form_admin > fieldset {
+.form_admin_put > fieldset {
     display: flex;
     align-items: stretch;
     flex-direction: column;
@@ -47,7 +47,7 @@
 
 }
 
-.form_admin > fieldset > label > select {
+.form_admin_put > fieldset > label > select {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,7 +67,7 @@
     transition: all 0.3s ease;
 }
 
-.form_admin > fieldset > label > input {
+.form_admin_put > fieldset > label > input {
     width: 100%;
     height: 35px;
     border-radius: 5px;
