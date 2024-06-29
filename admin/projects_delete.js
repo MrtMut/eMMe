@@ -18,13 +18,9 @@ if (id) {
             .then((response) => response.json())
             .then((data) => {
                 console.log("DATA", data);
-                let form = document.getElementById('form_admin_put')
+                let form = document.getElementById('form_admin_delete')
                 form.id.value = id;
                 form.name_project.value = data.name_project;
-                form.category.value = data.category;
-                form.description.value = data.description;
-                form.client.value = data.user_id;
-                form.image.value = data.image;
             })
             .catch((err) => {
                 console.error(err);
@@ -35,10 +31,10 @@ if (id) {
 
 
 
-// Edit Project ---------------------------------------------------------------
+// Delete Project ---------------------------------------------------------------
     addEventListener("submit", (e) => {
         e.preventDefault();
-        let form = document.getElementById('form_admin_put')
+        let form = document.getElementById('form_admin_delete')
 
         let data = new FormData(form);
         let project = {
@@ -49,31 +45,27 @@ if (id) {
             image: data.get("image"),
         };
 
-        function modificar() {
+        function deleteProject() {
             var options = {
                 body: JSON.stringify(project),
-                method: "PUT",
+                method: "DELETE",
                 headers: { "Content-Type": "application/json" },
                 redirect: "follow",
             };
             fetch(url, options)
                 .then((response) => response.json())
                 .then((data) => {
-                    data.name_project = project.name_project;
-                    data.category = project.category;
-                    data.description = project.description;
-                    data.client = project.client;
-                    data.image = project.image;
+                    data.id = project.id;
                     console.log(data);
-                    alert("Registro modificado");
+                    alert("Registro Eliminado");
                     window.location.href = "./projects_admin.html"; // navega a productos.html
                 })
                 .catch((err) => {
                     console.error(err);
-                    alert("Error al Modificar");
+                    alert("Error al Eliminar");
                 });
         }
-        modificar();
+        deleteProject();
     });
 }
 if (id == null) {

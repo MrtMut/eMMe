@@ -47,24 +47,23 @@
 </header>
 <main class="main_admin">
     <section  class="container_form_admin section_admin">
-        <form class="form_admin_put" id="form_admin_delete" action="" method="DELETE"
-              enctype="multipart/form-data">
+        <form class="form_admin_delete" id="form_admin_delete" action="http://127.0.0.1:5005/proyectos" method="DELETE">
 
             <fieldset class="fieldset-input">
                 <h2 class="admin_form_title">Eliminar proyecto</h2>
 
                 <label class="delete_project_id">
-                    <input class="delete_project_id__input" type="number" placeholder="ID" name="id" value="" autofocus>
+                    <input class="delete_project_id__input" type="number" placeholder="ID" name="id" autofocus>
                 </label>
-                <div id="app2" >
-                    <h1>{{datos_apiGet.value.data.id = 1}}</h1>
-                    {{datos_apiGet.value.data.name}}
+<!--                <div id="app2" >-->
+<!--                    <h1>{{datos_apiGet.value.data.id = 1}}</h1>-->
+<!--                    {{datos_apiGet.value.data.name}}-->
 
-                </div>
+<!--                </div>-->
 
                 <label id="" class="delete_project_name" for="name">
-                    <input class="delete_project_name__input" type="text" placeholder=" Nombre" name="name" id="name"
-                           value="casa" readonly>
+                    <input class="delete_project_name__input" type="text" placeholder=" Nombre" name="name_project" id="name"
+                           readonly>
                 </label>
 
                 <button class="delete_project_submit__button btn btn-danger" type="submit">Eliminar</button>
@@ -86,6 +85,7 @@
 <script src="./formData.js"></script>
 <script src="../js/vue.global.js"></script>
 <script src="../js/vueProjects.js"></script>
+<script src="./projects_delete.js"></script>
 
 </body>
 </html>
