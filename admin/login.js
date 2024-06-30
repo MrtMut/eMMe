@@ -2,7 +2,10 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
     let form_admin_login = document.getElementById('form_admin_login');
     console.log(form_admin_login)
+
     if (form_admin_login) {
+
+
         form_admin_login.onsubmit = function (e) {
             e.preventDefault();
             // Lógica del formulario
@@ -11,8 +14,13 @@ document.addEventListener("DOMContentLoaded", function (e) {
             for (let [k, v] of formData) {
                 jsonData[k] = v;
             }
-            console.log('inicio de session');
-            console.log(jsonData)
+            let remember = document.getElementById('remember-me');
+            if (remember.checked) {
+                jsonData['remember-me'] = true;
+            } else {
+                jsonData['remember-me'] = false;
+            }
+            console.log("DATASO", jsonData)
             const fetchDataPost = async (jsonData) => {
                 await fetch(form_admin_login.action, {
                     method: "POST",
