@@ -1,8 +1,8 @@
 // POST =================================================================================
 document.addEventListener("DOMContentLoaded", function (e) {
-    let form_admin = document.getElementById('limpiar');
-    if (form_admin) {
-        form_admin.onsubmit = function (e) {
+    let form_register = document.getElementById('form_register');
+    if (form_register) {
+        form_register.onsubmit = function (e) {
             e.preventDefault();
             // Lógica del formulario
             let formData = new FormData(this);
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
             console.log(formData)
             console.log(jsonData)
             const fetchDataPost = async (jsonData) => {
-                await fetch(form_admin.action, {
+                await fetch(form_register.action, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
                 .then((res) => res.json())
                 .then((response) => {console.log("success:", response)
                  if (response){
-                    window.location.href = '/eMMe/admin/login.html'
+                    window.location.href = './login.html'
                  }else {
                     console.error('Registration failed:', response.message);
                     alert('Error en el registro: ' + response.message);

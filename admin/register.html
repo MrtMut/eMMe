@@ -50,19 +50,23 @@
 
 <main class="main_admin">
     <section class="container_form_admin section_admin">
-        <form id="limpiar" class="form_admin_put" action="http://127.0.0.1:5005/register" method="post" enctype="multipart/form-data">
+        <form id="form_register" class="form_admin_put" action="http://127.0.0.1:5005/register" method="post" enctype="multipart/form-data">
             <fieldset class="fieldset-input">
                 <h2 class="admin_form_title">Crea tu cuenta</h2>
                 <p>Completa el formulario</p>
 
                 <label for="name">
-                    <input id="name" type="text" name="name" placeholder="Ingresar nombre">
+                    <input id="name" type="text" name="name" placeholder="Ingresa Nombre">
                 </label>
-                <label for="lastName">
-                    <input id="lastName" type="text" name="lastName" placeholder="Ingresar apellido">
-                </label>
+
                 <label for="email">
-                    <input id="email" type="email" name="email" placeholder="Ingresar email">
+                    <input id="email" type="email" name="email" placeholder="Ingresa email">
+                </label>
+                <label for="image">
+                    <input id="image" type="text" name="image" placeholder="Link de Avatar">
+                </label>
+                <label for="user_name">
+                    <input id="user_name" type="text" name="user_name" placeholder="Elegí Usuario">
                 </label>
                 <label for="password">
                     <input id="password" type="password" name="password" placeholder="Contraseña">

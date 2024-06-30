@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function (e) {
 
-    let form_admin = document.getElementById('form_admin_login');
-    console.log(form_admin)
-    if (form_admin) {
-        form_admin.onsubmit = function (e) {
+    let form_admin_login = document.getElementById('form_admin_login');
+    console.log(form_admin_login)
+    if (form_admin_login) {
+        form_admin_login.onsubmit = function (e) {
             e.preventDefault();
             // Lógica del formulario
             let formData = new FormData(this);
@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", function (e) {
             console.log('inicio de session');
             console.log(jsonData)
             const fetchDataPost = async (jsonData) => {
-                await fetch(form_admin.action, {
-                    method: "POST", // or 'PUT'
+                await fetch(form_admin_login.action, {
+                    method: "POST",
                     headers: {
                         "Content-Type": "application/json",
                     },
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
                         if (res.status === 401) {
                             throw new Error('aca no entraaaaa ajaj');
                         }else  if (res.status === 200){
-                           window.location.href = '/eMMe/admin/projects_admin.html'
+                           //window.location.href = './projects_admin.html'
                         }
                     })
                     .catch((error) => console.log("Error al enviar los datos:", error));
@@ -35,6 +35,4 @@ document.addEventListener("DOMContentLoaded", function (e) {
             fetchDataPost(jsonData);
         };
     }
-
-
 });
