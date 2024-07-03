@@ -55,8 +55,8 @@ document.addEventListener("DOMContentLoaded", function (e) {
         delete jsonData.id;
 
         const fetchDataPut = async (jsonData) => {
-            await fetch(`http://127.0.0.1:5005/projects/${id_put}`, {
-                method: "PATCH", // or 'PUT'
+            await fetch(`http://127.0.0.1:5000/projects/${id_put}`, {
+                method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
                 },
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
             let id_del = form_id_delete
 
             const fetchDataDelete = async () => {
-                await fetch(`http://127.0.0.1:5005/projects/${id_del}`, {
+                await fetch(`http://127.0.0.1:5000/projects/${id_del}`, {
                     method: "DELETE", // or 'PUT'
                     headers: {
                         "Content-Type": "application/json",
