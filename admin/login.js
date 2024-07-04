@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", function (e) {
     console.log(form_admin_login)
 
     if (form_admin_login) {
+        const btn_close_modal_login = document.querySelector(".btn_close_modal_login")
+        const loginModal = new bootstrap.Modal(document.getElementById("loginModal"));
+        loginModal._config.backdrop = true;
 
 
         form_admin_login.onsubmit = function (e) {
@@ -33,8 +36,13 @@ document.addEventListener("DOMContentLoaded", function (e) {
                     .then((res) =>{
                         if (res.status === 401) {
                             return res.json().then((data) => {
-                                console.log("DATA message===", data.message);
+                                loginModal.show();
                                 document.querySelector('.error_message').innerHTML = data.message;
+
+
+
+                               /* console.log("DATA message===", data.message);
+                                document.querySelector('.error_message').innerHTML = data.message;*/
                             });
                             //location.href = './login.html';
                             //throw new Error('aca no entraaaaa ajaj');
@@ -52,5 +60,9 @@ document.addEventListener("DOMContentLoaded", function (e) {
             }
             fetchDataPost(jsonData);
         };
+        btn_close_modal_login.addEventListener("click", () => {
+            loginModal.hide();
+            location.reload();
+        })
     }
 });
