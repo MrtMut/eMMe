@@ -118,6 +118,12 @@ textarea {
     text-align: center;
 }
 
+.error_message {
+    color: red;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+
 /* Project List*/
 .section_proyectos {
     display: flex;

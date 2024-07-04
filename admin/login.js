@@ -30,15 +30,25 @@ document.addEventListener("DOMContentLoaded", function (e) {
                     body: JSON.stringify(jsonData), // data can be `string` or {object}!
                     mode: "cors",
                 })
-                    .then((res) =>{ res.json()
+                    .then((res) =>{
                         if (res.status === 401) {
-                            throw new Error('aca no entraaaaa ajaj');
-                        }else  if (res.status === 200){
-                           //window.location.href = './projects_admin.html'
+                            return res.json().then((data) => {
+                                console.log("DATA message===", data.message);
+                                document.querySelector('.error_message').innerHTML = data.message;
+                            });
+                            //location.href = './login.html';
+                            //throw new Error('aca no entraaaaa ajaj');
+                        }  if (res.status === 200){
+                            return res.json().then((data) => {
+                                console.log("DATA message===", data.message);
+                                document.querySelector('.error_message').innerHTML = data.message;
+                            });
+                            //location.href = './login.html';
+                            //throw new Error('aca no entraaaaa ajaj');
                         }
                     })
                     .catch((error) => console.log("Error al enviar los datos:", error));
-                    
+
             }
             fetchDataPost(jsonData);
         };
