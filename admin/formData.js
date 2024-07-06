@@ -1,8 +1,6 @@
 // POST =================================================================================
 document.addEventListener("DOMContentLoaded", function (e) {
-
     let form_admin_post = document.getElementById('form_admin_post');
-
     if (form_admin_post) {
         form_admin_post.onsubmit = function (e) {
             e.preventDefault();
@@ -35,13 +33,9 @@ document.addEventListener("DOMContentLoaded", function (e) {
 });
 
 
-
-
 // PUT =================================================================================
 document.addEventListener("DOMContentLoaded", function (e) {
-
     let form_admin_put = document.getElementById('form_admin_put');
-
     if (form_admin_put) {
     form_admin_put.onsubmit = function (e) {
         e.preventDefault();
@@ -88,7 +82,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
         form_admin_delete.onsubmit = function (e) {
             e.preventDefault();
             let form_id_delete = document.querySelector('.delete_project_id__input').value;
-            console.log(form_id_delete)
             let id_del = form_id_delete
 
             const fetchDataDelete = async () => {

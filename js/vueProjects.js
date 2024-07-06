@@ -1,7 +1,7 @@
 const {createApp, ref, onMounted} = Vue;
 createApp({
     setup() {
-        const apiUrlPost = "http://127.0.0.1:5005/projects";
+        const apiUrlPost = "http://127.0.0.1:5000/projects";
         const datos_apiGet = ref([]);
         const error = false;
 
@@ -9,10 +9,9 @@ createApp({
             try {
                 const response = await fetch(apiUrlPost);
                 if (!response.ok) {
-                    throw new Error('Error al obtener los datos_randomUser');
+                    new Error('Error al obtener los datos_randomUser');
                 }
-                const jsonDataApiGet = await response.json();
-                datos_apiGet.value = jsonDataApiGet;
+                datos_apiGet.value = await response.json();
             } catch (error) {
                 console.error(error);
             }

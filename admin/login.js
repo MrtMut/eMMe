@@ -46,11 +46,16 @@ document.addEventListener("DOMContentLoaded", function (e) {
                             return res.json().then((data) => {
                                 console.log("DATA message===", data.message);
                                 console.log("loginSuccess", data.loginStatus);
+                                console.log("USER", data.username)
                                 document.querySelector(".error_message").innerHTML = data.message;
-                                if (data.loginStatus === "success") {
+                                if (data.loginStatus === "success" && data.username === "admin") {
                                     localStorage.setItem("loggedIn", true);
+                                    location.href = "./projects_admin.html";
+                                } else if (data.loginStatus === "success") {
+                                    localStorage.setItem("loggedIn", true);
+                                    location.href = "./projects_user.html";
+
                                 }
-                                location.href = "./projects_admin.html";
                             });
 
                             //throw new Error('aca no entraaaaa ajaj');
@@ -67,20 +72,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
     }
 });
 
-/* function checkLoginStatus() {
-    fetch('http://127.0.0.1:5000/check_login')
-        .then(response => response.json())
-        .then(data => {
-            console.log("DATA ", data.logged_in)
-            if (data.logged_in) {
-                document.getElementById('message').textContent = 'Already logged in as ' + data.username;
-                localStorage.setItem('loggedIn', true);
-                location.href = './projects_admin.html';
-            } else {
-                localStorage.setItem('loggedIn', false);
-            }
-        });
-} */
 
 async function checkLoginStatus() {
     try {
@@ -91,12 +82,12 @@ async function checkLoginStatus() {
         const data = await response.json();
         console.log("DATA", data);
         console.log("DATA logged_in", data.logged_in);
-        if (data.logged_in) {
-            //document.getElementById("message").textContent = "Already logged in as " + data.username;
-            location.href = "./projects_admin.html";
+        if (data.logged_in === "success" && data.username === "admin") {
             localStorage.setItem("loggedIn", true);
-        } else {
-            localStorage.setItem("loggedIn", false);
+            location.href = "./projects_admin.html";
+        } else if (data.logged_in === "success") {
+            localStorage.setItem("loggedIn", true);
+            location.href = "./projects_user.html";
         }
     } catch (error) {
         console.error("Error checking login status:", error);

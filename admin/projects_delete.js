@@ -1,11 +1,8 @@
-console.log("LOCATION", location.search); // lee los argumentos pasados a este formulario
 let queryString = location.search; // producto_update.html?id=1
 
 let params = new URLSearchParams(queryString);
-console.log("PARAMS", params); // lee los argumentos pasados a este formulario
 
 let id = params.get("id");
-console.log("ID", id);
 
 let url;
 
@@ -17,7 +14,6 @@ if (id) {
         return fetch(url)
             .then((response) => response.json())
             .then((data) => {
-                console.log("DATA", data);
                 let form = document.getElementById('form_admin_delete')
                 form.id.value = id;
                 form.name_project.value = data.name_project;

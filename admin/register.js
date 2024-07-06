@@ -10,8 +10,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
             for (let [k, v] of formData.entries()) {
                 jsonData[k] = v;
             }
-            console.log(formData)
-            console.log(jsonData)
             const fetchDataPost = async (jsonData) => {
                 await fetch(form_register.action, {
                     method: "POST",
@@ -22,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
                     mode: "cors",
                 })
                 .then((res) => res.json())
-                .then((response) => {console.log("success:", response)
+                .then((response) => {
                  if (response){
                     window.location.href = './login.html'
                  }else {
@@ -38,4 +36,5 @@ document.addEventListener("DOMContentLoaded", function (e) {
     }
 });
 
+checkLoginStatus()
 
