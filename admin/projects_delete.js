@@ -48,10 +48,10 @@ if (id) {
         };
 
         function deleteProject() {
-            var options = {
+            let options = {
                 body: JSON.stringify(project),
                 method: "DELETE",
-                headers: { "Content-Type": "application/json" },
+                headers: {"Content-Type": "application/json"},
                 redirect: "follow",
                 credentials: "include",
             };

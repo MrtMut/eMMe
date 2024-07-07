@@ -48,7 +48,7 @@ const url_update = `http://127.0.0.1:5000/projects/${id_update}`;
             image: data.get("image"),
         };
         function modificar() {
-            var options = {
+            let options = {
                 body: JSON.stringify(project),
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
