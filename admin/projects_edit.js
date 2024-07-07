@@ -1,18 +1,24 @@
 let queryString_update = location.search; // producto_update.html?id=1
-
 let params_update = new URLSearchParams(queryString_update);
-
 let id_update = params_update.get("id");
-
-let url_update;
-
 if (id_update) {
-    url_update = "http://127.0.0.1:5000/projects/" + id_update;
+const url_update = `http://127.0.0.1:5000/projects/${id_update}`;
 
 // Get Project -----------------------------
     function getProject() {
-        return fetch(url_update)
-            .then((response) => response.json())
+        return fetch(url_update, {
+            method: "GET", // or 'PUT'
+            headers: {"Content-Type": "application/json"},
+            mode: "cors",
+            credentials: "include"
+            })
+            .then((response) => {
+                    
+                if (response.status === 401) {
+                    window.location.href = "./login.html"; // Redirige a la página de inicio de sesión
+                }
+                return (response.json())})
+
             .then((data) => {
                 let form = document.getElementById('form_admin_put')
                 form.id.value = id_update;
@@ -29,30 +35,35 @@ if (id_update) {
     }
     getProject(id_update);
 
-
 // Edit Project ---------------------------------------------------------------
     addEventListener("submit", (e) => {
         e.preventDefault();
         let form = document.getElementById('form_admin_put')
         let data = new FormData(form);
         let project = {
-            name: data.get("name_project"),
+            name_project: data.get("name_project"),
             category: data.get("category"),
             description: data.get("description"),
             client: data.get("client"),
             image: data.get("image"),
         };
-
         function modificar() {
             var options = {
                 body: JSON.stringify(project),
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
-                redirect: "follow",
+                credentials: "include",
+                mode: 'cors'
             };
             fetch(url_update, options)
-                .then((response) => response.json())
+                .then((response) => {
+                    
+                    if (response.status === 401) {
+                        window.location.href = "./login.html"; // Redirige a la página de inicio de sesión
+                    }
+                    return (response.json())})
                 .then((data) => {
+                    console.log("DTA", data);
                     data.name_project = project.name_project;
                     data.category = project.category;
                     data.description = project.description;

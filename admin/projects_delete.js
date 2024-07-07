@@ -12,7 +12,13 @@ if (id) {
 // Get Project -----------------------------
     function getProject() {
         return fetch(url)
-            .then((response) => response.json())
+            .then((response) => {
+                    
+                    if (response.status === 401) {
+                        window.location.href = "./login.html"; // Redirige a la página de inicio de sesión
+                    }
+                    return (response.json())})
+
             .then((data) => {
                 let form = document.getElementById('form_admin_delete')
                 form.id.value = id;
@@ -47,13 +53,21 @@ if (id) {
                 method: "DELETE",
                 headers: { "Content-Type": "application/json" },
                 redirect: "follow",
+                credentials: "include",
             };
             fetch(url, options)
-                .then((response) => response.json())
+                .then((response) => {
+                    
+                    if (response.status === 401) {
+                        window.location.href = "./login.html"; // Redirige a la página de inicio de sesión
+                    }
+                    return (response.json())})
+
                 .then((data) => {
                     data.id = project.id;
-                    console.log(data);
+                    console.log("DELETEdata", data);
                     alert("Registro Eliminado");
+                    if (data.status === 200) {}
                     window.location.href = "./projects_admin.html"; // navega a productos.html
                 })
                 .catch((err) => {

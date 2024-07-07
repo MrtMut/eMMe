@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
                         "Content-Type": "application/json",
                     },
                     body: JSON.stringify(jsonData),
+                    credentials: "include", // Include credentials such as cookies, authorization headers, etc.
                     mode: "cors",
                 })
                 .then((res) => res.json())
@@ -35,6 +36,3 @@ document.addEventListener("DOMContentLoaded", function (e) {
         };
     }
 });
-
-checkLoginStatus()
-

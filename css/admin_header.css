@@ -7,7 +7,7 @@
     border-radius: 0;
 }
 
-.nav_menu_items_admin {
+.nav_menu_items_admin, .nav_menu_items_user {
     display: flex;
     justify-content: flex-end;
     transition: 0.5s all ease;
@@ -24,6 +24,20 @@
 
 .container_nav_admin {
     width: 100%;
+}
+
+.nav_menu_username {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgb(255, 56, 0, 0.3);
+    width: 20ch;
+    text-align: center;
+    color: aliceblue;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
 @media only screen and (max-width: 861px) {

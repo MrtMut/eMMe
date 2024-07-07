@@ -48,8 +48,13 @@
 
 .admin_link {
     font-size: 14px;
+    display: inline-flex;
+    width: 7ch;
+    margin: 0 auto;
     color: black;
+    justify-content: center;
 }
+
 .admin_link:hover{
     cursor: pointer;
     background: rgb(128, 128, 128);

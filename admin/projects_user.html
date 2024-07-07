@@ -1,99 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="language" content="Spanish"/>
-    <meta name="description" content="Sitio de desarrollo web"/>
-    <meta name="keywords" content="dev, web, web development"/>
-    <meta name="author" content="Otros"/>
-    <meta name="robots" content="All"/>
-    <meta name="REPLY-TO" content=""/>
-    <meta name="distribution" content="Global"/>
-    <meta name="Revisit-after" content="1 days"/>
-    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png"/>
-    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png"/>
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png"/>
-    <link rel="manifest" href="../assets/favicon/site.webmanifest"/>
-    <link rel="mask-icon" href="../assets/favicon/safari-pinned-tab.svg" color="#5bbad5"/>
-    <meta name="msapplication-TileImage" content="../assets/favicon/mstile-150x150.png"/>
-    <meta name="msapplication-config" content="../assets/favicon/browserconfig.xml"/>
-    <meta name="msapplication-TileColor" content="#da532c"/>
-    <meta name="theme-color" content="#ffffff"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-          rel="stylesheet">
-    <link rel="shortcut icon" href="../assets/favicon/favicon.ico" type="image/x-icon"/>
-    <link rel="stylesheet" href="../css/all.css"/>
-    <title>Projects</title>
-</head>
-<body class="body body_admin">
-<header id="headerId" class="header header_admin ">
-    <!--NavBar--------------------------------------------------------------->
-    <div class="container_nav container_nav_admin">
-        <input type="checkbox" id="menu-input"/>
-        <label class="menu-burguer" for="menu-input">&#9776;</label>
-        <label class="menu-equ" for="menu-input">X</label>
-        <div class="title_container">
-            <a href="../index.html">
-                <h1 class="title_h1 title_h1_admin">{eMMe}</h1>
-            </a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="language" content="Spanish" />
+        <meta name="description" content="Sitio de desarrollo web" />
+        <meta name="keywords" content="dev, web, web development" />
+        <meta name="author" content="Otros" />
+        <meta name="robots" content="All" />
+        <meta name="REPLY-TO" content="" />
+        <meta name="distribution" content="Global" />
+        <meta name="Revisit-after" content="1 days" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+        <link rel="mask-icon" href="../assets/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileImage" content="../assets/favicon/mstile-150x150.png" />
+        <meta name="msapplication-config" content="../assets/favicon/browserconfig.xml" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="shortcut icon" href="../assets/favicon/favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="../css/all.css" />
+        <title>Projects</title>
+    </head>
+    <body class="body body_admin">
+
+        <!-- SPINNER -->
+    <div class="container mt-5">
+        <div id="spinner-container" class="d-flex justify-content-center" style="display: none;">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Cargando...</span>
+            </div>
         </div>
-        <nav class="nav_menu" id="nav_menu_user">
-        </nav>
     </div>
-</header>
-<main class="main_admin">
-    <section class="section_proyectos section_admin">
-        <!-- Titulo de la seccion -->
-        <div class="container_title">
-            <h2 class="title_h2 title_h2_admin" >Proyectos</h2>
+    <!-- END SPINNER -->
+     <!-- HEADER -->
+        <header id="headerId" class="header header_admin">
+            <!--NavBar--------------------------------------------------------------->
+            <div class="container_nav container_nav_admin">
+                <input type="checkbox" id="menu-input" />
+                <label class="menu-burguer" for="menu-input">&#9776;</label>
+                <label class="menu-equ" for="menu-input">X</label>
+                <div class="title_container">
+                    <a href="../index.html">
+                        <h1 class="title_h1 title_h1_admin">{eMMe}</h1>
+                    </a>
+                </div>
+                <nav class="nav_menu" id="nav_menu_user"></nav>
+            </div>
+        </header>
+        <main class="main_admin">
+            <section class="section_proyectos section_admin">
+                <!-- Titulo de la seccion -->
+                <div class="container_title">
+                    <h2 class="title_h2 title_h2_admin">Proyectos</h2>
+                </div>
+                <div class="container mt-4 container_projects_admin">
+                    <table id="app3" class="table table-bordered" data-v-app>
+                        <thead>
+                            <tr>
+                                <th class="th id_project">ID</th>
+                                <th class="th name_project">Nombre</th>
+                                <th class="th category_project">Categoría</th>
+                                <th class="th description_project">Descripción</th>
+                                <th class="th client_project">Cliente</th>
+                                <th class="th image_project">Imagen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="elemento in datos_apiGet">
+                                <td class="td_class id_project">{{elemento.id}}</td>
+                                <td class="td_class name_project">{{elemento.name_project}}</td>
+                                <td class="td_class category_project">{{elemento.category}}</td>
+                                <td class="td_class description_project">{{elemento.description}}</td>
+                                <td class="td_class client_project">{{elemento.user_id}}</td>
+                                <td class="td_class image_project">
+                                    <img :src="elemento.image" alt="Imagen del proyecto" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
 
-        </div>
-        <div class="container mt-4 container_projects_admin">
-            <table id="app3" class="table table-bordered" data-v-app>
-                <thead>
-                <tr >
-                    <th class="th id_project">ID</th>
-                    <th class="th name_project">Nombre</th>
-                    <th class="th category_project">Categoría</th>
-                    <th class="th description_project">Descripción</th>
-                    <th class="th client_project">Cliente</th>
-                    <th class="th image_project">Imagen</th>
-                </tr>
-                </thead>
-                <tbody >
-                <tr v-for="elemento in datos_apiGet">
-                    <td class="td_class id_project">{{elemento.id}}</td>
-                    <td class="td_class name_project">{{elemento.name_project}}</td>
-                    <td class="td_class category_project">{{elemento.category}}</td>
-                    <td class="td_class description_project">{{elemento.description}}</td>
-                    <td class="td_class client_project">{{elemento.user_id}}</td>
-                    <td class="td_class image_project"><img :src="elemento.image" alt="Imagen del proyecto"></td>
-                </tr>
+        <!-- FOOTER -->
+        <footer class="container_footer" id="">
+            <div class="footer_section_links">
+                <p class="copy">&copy; Copyright {eMMe} <span id="year"></span> - <span id="version"></span></p>
+            </div>
+        </footer>
+        <!-- Fin FOOTER -->
 
-                </tbody>
-            </table>
-        </div>
-    </section>
-</main>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script src="../js/admin_footer.js"></script>
+        <script src="../js/version.js"></script>
+        <script src="../js/admin_nav_menu_admin.js"></script>
+        <script src="./formData.js"></script>
+        <script src="../js/vue.global.js"></script>
+        <script src="vueProjects_admin.js"></script>
+        <script src="./logout.js"></script>
 
-<!-- FOOTER -->
-<footer class="container_footer" id="">
-    <div class="footer_section_links">
-        <p class="copy"> &copy; Copyright {eMMe} <span id="year"></span> - <span id="version"></span> </p>
-    </div>
-</footer>
-<!-- Fin FOOTER -->
-
-<script src="../js/admin_footer.js"></script>
-<script src="../js/version.js"></script>
-<script src="../js/admin_nav_menu_admin.js"></script>
-<script src="./formData.js"></script>
-<script src="../js/vue.global.js"></script>
-<script src="vueProjects_admin.js"></script>
-
-
-</body>
+    </body>
 </html>

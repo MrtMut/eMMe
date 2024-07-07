@@ -20,8 +20,15 @@ document.addEventListener("DOMContentLoaded", function (e) {
                     },
                     body: JSON.stringify(jsonData), // data can be `string` or {object}!
                     mode: "cors",
+                    credentials: "include"
                 })
-                    .then((res) => res.json())
+                    .then((response) => {
+                    
+                            if (response.status === 401) {
+                                window.location.href = "./login.html"; // Redirige a la página de inicio de sesión
+                            }
+                            return (response.json())})
+
                     .catch((error) => console.log("Error al enviar los datos:", error))
                     .then((response) => console.log("Exitoso:", response));
             }
@@ -33,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
 });
 
 
-// PUT =================================================================================
+/* // PUT =================================================================================
 document.addEventListener("DOMContentLoaded", function (e) {
     let form_admin_put = document.getElementById('form_admin_put');
     if (form_admin_put) {
@@ -51,19 +58,20 @@ document.addEventListener("DOMContentLoaded", function (e) {
         const fetchDataPut = async (jsonData) => {
             await fetch(`http://127.0.0.1:5000/projects/${id_put}`, {
                 method: "PUT",
-                headers: {
-                    "Content-Type": "application/json",
-                },
+                headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(jsonData), // data can be `string` or {object}!
-                mode: "cors",
+                credentials: "include",
+                mode: 'cors'
             })
-                .then((res) => {res.json()
-                    document.getElementById('name').value = res.name;
+                .then((res) => {
+                    res.json()
+                    console.log("DATA:", data);
+                    formUpdated = document.getElementById("form_admin_put");
+                    document.getElementById('name').value = res.name_project;
                     document.getElementById('select_category_create').value = res.category;
                     document.getElementById('textarea_description_create').value = res.description;
-                    document.getElementById('client').value = res.client;
                     document.getElementById('image').value = res.image;
-                    document.getElementById('preview_image_create_project').src = res.image;
+                    //document.getElementById('preview_image_create_project').src = res.image;
                 })
                 .catch((error) => console.log("Error al enviar los datos:", error))
                 .then((response) => console.log("Exitoso:", response));
@@ -71,9 +79,10 @@ document.addEventListener("DOMContentLoaded", function (e) {
         fetchDataPut(jsonData);
     }
     }
-});
+}); */
 
 
+/*
 // DELETE =================================================================================
 document.addEventListener("DOMContentLoaded", function (e) {
 
@@ -91,6 +100,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
                         "Content-Type": "application/json",
                     },
                     mode: "cors",
+                    credentials: "include"
                 })
                     .then((res) => res.json())
                     .then((response) => console.log("Exitoso:", response))
@@ -100,4 +110,4 @@ document.addEventListener("DOMContentLoaded", function (e) {
             fetchDataDelete();
         }
     }
-});
+});*/
