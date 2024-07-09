@@ -11,13 +11,21 @@ if (id) {
 
 // Get Project -----------------------------
     function getProject() {
-        return fetch(url)
+        return fetch(url, {
+            method: "GET", // or 'PUT'
+            headers: {"Content-Type": "application/json"},
+            mode: "cors",
+            credentials: "include"
+            })
             .then((response) => {
+
+                console.log("Delete-Response", response);
                     
                     if (response.status === 401) {
                         window.location.href = "./login.html"; // Redirige a la página de inicio de sesión
                     }
                     return (response.json())})
+
 
             .then((data) => {
                 let form = document.getElementById('form_admin_delete')
@@ -32,7 +40,6 @@ if (id) {
     getProject(id);
 
 
-
 // Delete Project ---------------------------------------------------------------
     addEventListener("submit", (e) => {
         e.preventDefault();
@@ -40,7 +47,7 @@ if (id) {
 
         let data = new FormData(form);
         let project = {
-            name: data.get("name_project"),
+            name_project: data.get("name_project"),
             category: data.get("category"),
             description: data.get("description"),
             client: data.get("client"),
@@ -53,7 +60,7 @@ if (id) {
                 method: "DELETE",
                 headers: {"Content-Type": "application/json"},
                 redirect: "follow",
-                credentials: "include",
+                credentials: "include"
             };
             fetch(url, options)
                 .then((response) => {
@@ -66,8 +73,8 @@ if (id) {
                 .then((data) => {
                     data.id = project.id;
                     console.log("DELETEdata", data);
-                    alert("Registro Eliminado");
                     if (data.status === 200) {}
+                    alert("Registro Eliminado");
                     window.location.href = "./projects_admin.html"; // navega a productos.html
                 })
                 .catch((err) => {
@@ -77,6 +84,7 @@ if (id) {
         }
         deleteProject();
     });
-}
-if (id == null) {
+}else {
+    // Manejar caso donde no hay id en la URL
+    console.log("No ID found in URL");
 }

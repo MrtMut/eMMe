@@ -42,15 +42,21 @@ async function logOut () {
             method: "GET",
             credentials: "include", // Ensure cookies are sent with the request
         });
+
+        if (response.status === 401){
+            window.location.href = './login.html';
+        }
+
         const data = await response.json();
 
         console.log("DATA", data);
         console.log("DATA logged_in", data.logged_in);
-
+        console.log('dataSTATUS', data.status);
+        
         if (data.logoutStatus === 'success') {
             localStorage.setItem("loggedIn", false);
             localStorage.setItem("username", ''); // Guardar nombre de usuario
-            location.href = './login.html';
+            window.location.href = './login.html';
         }
     } catch (error) {
         console.error("Error checking login status:", error);

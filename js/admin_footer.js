@@ -1,3 +1,4 @@
+// This file is used to add the footer section to the admin page.
 
 let admin_footer = document.getElementById("admin_footer");
 admin_footer.innerHTML = `<div class="footer_section_links">      

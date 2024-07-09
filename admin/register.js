@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
                 .then((res) => res.json())
                 .then((response) => {
                  if (response){
+                    alert("Usuario registrado correctamente");
                     window.location.href = './login.html'
                  }else {
                     console.error('Registration failed:', response.message);

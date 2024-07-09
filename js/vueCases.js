@@ -4,7 +4,7 @@ createApp({
     setup() {
         const url = "https://randomuser.me/api/?results=6&nat=es&inc=gender,name,dob,picture&noinfo";
         const datos_randomUser = ref([]);
-        const error = false;
+        const error = ref(false);
         const caseText = [
             '"Equipo de trabajo muy responsable y comprometido con el proyecto. Diseño muy bueno, la experiencia del usuario es excelente y el producto es de calidad."',
             '"El equipo de eMMe es muy cálido. Diseño, experiencia de usuario fenomenal y el producto es de' +

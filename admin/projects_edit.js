@@ -57,13 +57,15 @@ const url_update = `http://127.0.0.1:5000/projects/${id_update}`;
             };
             fetch(url_update, options)
                 .then((response) => {
-                    
+
+                    console.log('RES', response)
+
                     if (response.status === 401) {
                         window.location.href = "./login.html"; // Redirige a la página de inicio de sesión
                     }
                     return (response.json())})
                 .then((data) => {
-                    console.log("DTA", data);
+                    //console.log("DTA", data);
                     data.name_project = project.name_project;
                     data.category = project.category;
                     data.description = project.description;

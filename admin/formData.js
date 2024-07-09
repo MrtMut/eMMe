@@ -10,7 +10,15 @@ document.addEventListener("DOMContentLoaded", function (e) {
             for (let [k, v] of formData) {
                 jsonData[k] = v;
             }
-            console.log('Formulario enviado');
+
+            if (jsonData.name_project == "" || jsonData.category == "" || jsonData.description == "" || jsonData.image == "") { 
+                //form_admin_post.setValue();
+                alert("Todos los campos son obligatorios");
+                return false;
+            }
+
+
+            console.log('Formulario enviado', jsonData.name_project);
 
             const fetchDataPost = async (jsonData) => {
                 await fetch(form_admin_post.action, {
@@ -30,7 +38,10 @@ document.addEventListener("DOMContentLoaded", function (e) {
                             return (response.json())})
 
                     .catch((error) => console.log("Error al enviar los datos:", error))
-                    .then((response) => console.log("Exitoso:", response));
+                    .then((response) => {
+                        console.log("response:", response)
+                        alert("Se ha creado el proyecto correctamente");
+                    });
             }
             fetchDataPost(jsonData);
         };

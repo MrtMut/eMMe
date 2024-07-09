@@ -1,6 +1,13 @@
 document.addEventListener("DOMContentLoaded", function (e) {
     let form_admin_login = document.getElementById("form_admin_login");
 
+    let countSessions = 0;
+    if (localStorage.getItem("countSessions")) {
+        countSessions = localStorage.getItem("countSessions");
+    }
+    countSessions++;
+    localStorage.setItem("countSessions", countSessions);
+
     if (form_admin_login) {
         const btn_close_modal_login = document.querySelector(".btn_close_modal_login");
         const loginModal = new bootstrap.Modal(document.getElementById("loginModal"));
@@ -38,21 +45,20 @@ document.addEventListener("DOMContentLoaded", function (e) {
                     const data = await res.json();
 
                     if (res.status === 401) {
-                        //window.location.href = "./login.html";
                         //const data = await res.json();
-                        loginModal.show();
+                        //window.location.href = "./login.html";
                         document.querySelector(".error_message").innerHTML = data.message;
+                        loginModal.show();
 
                     } else if (res.status === 200) {
 
-                        console.log("DATAlog", data);
+                        //console.log("DATAlog", data);
 
                         document.querySelector(".error_message").innerHTML = data.message;
                         if (data.loginStatus === "success") {
                             localStorage.setItem("loggedIn", true);
                             localStorage.setItem("username", data.username); // Guardar nombre de usuario
-                            location.href =
-                                data.username === "admin" ? "./projects_admin.html" : "./projects_user.html";
+                            location.href = data.username === "admin" ? "./projects_admin.html" : "./projects_user.html";
                         }
 
                     }
@@ -70,6 +76,10 @@ document.addEventListener("DOMContentLoaded", function (e) {
         });
     }
 
+    statusSession = localStorage.getItem("loggedIn");
+
+    if (statusSession === "true") {
+
     async function checkLoginStatus() {  
         showSpinner();
     
@@ -77,11 +87,15 @@ document.addEventListener("DOMContentLoaded", function (e) {
             const response = await fetch("http://127.0.0.1:5000/check_login", {
                 method: "GET",
                 credentials: "include", // Ensure cookies are sent with the request
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                mode: "cors",
             });
             const data = await response.json();
 
-            console.log("DATA", data);
-            console.log("DATA logged_in", data.logged_in);
+            //console.log("DATA", data);
+            //console.log("DATA logged_in", data.logged_in);
 
             if (data.logged_in === true) {
                 localStorage.setItem("loggedIn", true);
@@ -95,8 +109,8 @@ document.addEventListener("DOMContentLoaded", function (e) {
         }
     }
     checkLoginStatus();  
+}
 });
-
 
 function showSpinner() {
     document.getElementById("spinner-container").style.display = "flex";

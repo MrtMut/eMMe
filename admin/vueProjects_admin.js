@@ -1,4 +1,8 @@
+
+function initializeApp(containerId) {
+
 const {createApp, ref, onMounted} = Vue;
+
 
 createApp({
     setup() {
@@ -13,20 +17,23 @@ createApp({
                     headers: {"Content-Type": "application/json"},
                     credentials: "include", // Include credentials such as cookies, authorization headers, etc.
                     mode: "cors",
-                });  
+                });
+
                 if (response.status === 401) {
-                    window.location.href = "./login.html"; // Redirige a la página de inicio de sesión
-                } else 
-                if (!response.ok) {
+                    //window.location.href = "./login.html"; // Redirige a la página de inicio de sesión
+                } else if (!response.ok) {
                     throw new Error('Error al obtener los datos de proyectos');
                 }
-
-                
+               
                 const dataApiGet = await response.json();
 
-                console.log("USERNAME", dataApiGet.username);                
+                console.log("dataApiGet", dataApiGet.result);
+                console.log("response", response);  
               
-                datos_apiGet.value = dataApiGet.result;    
+                datos_apiGet.value = dataApiGet.result;  
+                
+                console.log("datos_apiGet", dataApiGet.result);
+
 
                 //return (response.json());
 
@@ -45,4 +52,10 @@ createApp({
             fetchData_apiGet
         };
     }
-}).mount('#app3');
+}).mount(containerId);
+}
+
+// Monta la aplicación en múltiples contenedores
+initializeApp('#app1');
+initializeApp('#app2');
+//initializeApp('#app3');

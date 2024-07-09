@@ -1,432 +1,466 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="language" content="Spanish"/>
-    <meta name="description" content="Sitio de desarrollo web"/>
-    <meta name="keywords" content="dev, web, web development"/>
-    <meta name="author" content="Otros"/>
-    <meta name="robots" content="All"/>
-    <meta name="REPLY-TO" content=""/>
-    <meta name="distribution" content="Global"/>
-    <meta name="Revisit-after" content="1 days"/>
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png"/>
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png"/>
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png"/>
-    <link rel="manifest" href="assets/favicon/site.webmanifest"/>
-    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5"/>
-    <meta name="msapplication-TileImage" content="./assets/favicon/mstile-150x150.png"/>
-    <meta name="msapplication-config" content="./assets/favicon/browserconfig.xml"/>
-    <meta name="msapplication-TileColor" content="#da532c"/>
-    <meta name="theme-color" content="#ffffff"/>
-    <title>eMMe</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-          rel="stylesheet">
-    <link rel="shortcut icon" href="assets/favicon/favicon.ico" type="image/x-icon"/>
-    <link rel="stylesheet" href="css/all.css"/>
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="language" content="Spanish" />
+        <meta name="description" content="Sitio de desarrollo web" />
+        <meta name="keywords" content="dev, web, web development" />
+        <meta name="author" content="Otros" />
+        <meta name="robots" content="All" />
+        <meta name="REPLY-TO" content="" />
+        <meta name="distribution" content="Global" />
+        <meta name="Revisit-after" content="1 days" />
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="assets/favicon/site.webmanifest" />
+        <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileImage" content="./assets/favicon/mstile-150x150.png" />
+        <meta name="msapplication-config" content="./assets/favicon/browserconfig.xml" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+        <title>eMMe</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="shortcut icon" href="assets/favicon/favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="css/all.css" />
+    </head>
 
-<body class="body">
-<div class="container_all">
-    <!--Button goTop------------------------------------------------------>
-    <div class="container_button_goTop">
-        <button title="goTop" class="goTop" id="goTop">
-            <svg viewBox="0 0 24 24">
-                <path d="m4 16 8-8 8 8"></path>
-            </svg>
-        </button>
-    </div>
-    <!--Header------------------------------------------------------------------------------------------------>
-    <a class="anchor" id="inicio"></a>
-    <header id="headerId" class="header container_custom">
-
-        <!--NavBar--------------------------------------------------------------->
-        <div class="container_nav">
-            <input type="checkbox" id="menu-input"/>
-            <label class="menu-burguer" for="menu-input">&#9776;</label>
-            <label class="menu-equ" for="menu-input">X</label>
-            <div class="title_container">
-                <a href="#inicio">
-                    <h1 class="title_h1">{eMMe}</h1>
-                </a>
+    <body class="body">
+        <div class="container_all">
+            <!--Button goTop------------------------------------------------------>
+            <div class="container_button_goTop">
+                <button title="goTop" class="goTop" id="goTop">
+                    <svg viewBox="0 0 24 24">
+                        <path d="m4 16 8-8 8 8"></path>
+                    </svg>
+                </button>
             </div>
-            <nav class="nav_menu">
-                <ul class="nav_menu_items">
-                    <li
-                            class="nav_menu_item nav_menu_item_admin"><a class="nav_menu_link" href="#tecnos">Tecnologías</a>
-                    </li>
-                    <li class="nav_menu_item "><a class="nav_menu_link" href="#navEquipo">Team</a></li>
-                    <li class="nav_menu_item "><a class="nav_menu_link" href="#cases">Exitos</a></li>
-                    <li class="nav_menu_item "><a class="nav_menu_link" href="#projects">Proyectos</a></li>
-                    <li class="nav_menu_item "><a class="nav_menu_link" href="#contacto">Contactanos</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!--Main----------------------------------------------------------------------------------------------------->
-    <main class="container_custom">
-
-        <!--   Hero   --------------------------------------------------------------------->
-
-        <!--   Valores   ------------------------------------------------------------------------>
-
-        <a class="anchor" id="navValores"></a>
-        <section class="valores">
-            <div class="valoresImage">
-                <img class="imgValoresImage" src="assets/img/computadoras.png" alt=""/>
-            </div>
-            <div class="valores-container">
-                <h2 class="valoresTitle">Valores {eMMe}</h2>
-                <h4 class="valoresText">Transformamos <span class="valores_gradient">negocios con soluciones digitales
-                        poderosas, modernas y adaptables</span> que satisfacen las
-                    necesidades de hoy, desbloqueando las oportunidades del
-                    mañana.
-                </h4>
-                <p class="text2">Creamos productos digitales para una amplia variedad de
-                    necesidades aplicando el método ágil de desarrollo de
-                    software. Buscamos las herramientas, y
-                    tecnología adecuada para cada proyecto, con el objetivo de
-                    desarrollar soluciones confiables, sostenibles, y eficientes.
-                </p>
-            </div>
-        </section>
-
-        <!-- Tecnologias  ------------------------------------------------------------------------>
-        <a class="anchor" id="tecnos"></a>
-        <section class="tecno_container">
-
-            <div class="tecno_title_container">
-                <h2 class="tecno_title">Tecnologías </h2>
-            </div>
-
-            <div class="tecnos">
-                <div class="tecno">
-                    <div class="circle">
-                        <img class="image_user" src="assets/logos/html-5.png" alt="html"/>
+            <!--Header------------------------------------------------------------------------------------------------>
+            <a class="anchor" id="inicio"></a>
+            <header id="headerId" class="header container_custom">
+                <!--NavBar--------------------------------------------------------------->
+                <div class="container_nav">
+                    <input type="checkbox" id="menu-input" />
+                    <label class="menu-burguer" for="menu-input">&#9776;</label>
+                    <label class="menu-equ" for="menu-input">X</label>
+                    <div class="title_container">
+                        <a href="#inicio">
+                            <h1 class="title_h1">{eMMe}</h1>
+                        </a>
                     </div>
+                    <nav class="nav_menu">
+                        <ul class="nav_menu_items">
+                            <li class="nav_menu_item nav_menu_item_admin">
+                                <a class="nav_menu_link" href="#tecnos">Tecnologías</a>
+                            </li>
+                            <li class="nav_menu_item"><a class="nav_menu_link" href="#navEquipo">Team</a></li>
+                            <li class="nav_menu_item"><a class="nav_menu_link" href="#cases">Exitos</a></li>
+                            <li class="nav_menu_item"><a class="nav_menu_link" href="#projects">Proyectos</a></li>
+                            <li class="nav_menu_item"><a class="nav_menu_link" href="#contacto">Contactanos</a></li>
+                        </ul>
+                    </nav>
                 </div>
+            </header>
 
-                <div class="tecno">
-                    <div class="circle">
-                        <img class="image_user" src="assets/logos/social.png" alt="social"/>
+            <!--Main----------------------------------------------------------------------------------------------------->
+            <main class="container_custom">
+                <!--   Hero   --------------------------------------------------------------------->
+
+                <!--   Valores   ------------------------------------------------------------------------>
+
+                <a class="anchor" id="navValores"></a>
+                <section class="valores">
+                    <div class="valoresImage">
+                        <img class="imgValoresImage" src="assets/img/computadoras.png" alt="" />
                     </div>
-                </div>
-
-                <div class="tecno">
-                    <div class="circle">
-                        <img class="image_user" src="assets/logos/js_icn_code.png" alt="html"/>
+                    <div class="valores-container">
+                        <h2 class="valoresTitle">Valores {eMMe}</h2>
+                        <h4 class="valoresText">
+                            Transformamos
+                            <span class="valores_gradient"
+                                >negocios con soluciones digitales poderosas, modernas y adaptables</span
+                            >
+                            que satisfacen las necesidades de hoy, desbloqueando las oportunidades del mañana.
+                        </h4>
+                        <p class="text2">
+                            Creamos productos digitales para una amplia variedad de necesidades aplicando el método ágil
+                            de desarrollo de software. Buscamos las herramientas, y tecnología adecuada para cada
+                            proyecto, con el objetivo de desarrollar soluciones confiables, sostenibles, y eficientes.
+                        </p>
                     </div>
-                </div>
+                </section>
 
-                <div class="tecno">
-                    <div class="circle">
-                        <img class="image_user" src="assets/logos/piton.png" alt="html"/>
+                <!-- Tecnologias  ------------------------------------------------------------------------>
+                <a class="anchor" id="tecnos"></a>
+                <section class="tecno_container">
+                    <div class="tecno_title_container">
+                        <h2 class="tecno_title">Tecnologías</h2>
                     </div>
-                </div>
 
-                <div class="tecno">
-                    <div class="circle">
-                        <img class="image_user" src="assets/logos/nodejs.png" alt="html"/>
+                    <div class="tecnos">
+                        <div class="tecno">
+                            <div class="circle">
+                                <img class="image_user" src="assets/logos/html-5.png" alt="html" />
+                            </div>
+                        </div>
+
+                        <div class="tecno">
+                            <div class="circle">
+                                <img class="image_user" src="assets/logos/social.png" alt="social" />
+                            </div>
+                        </div>
+
+                        <div class="tecno">
+                            <div class="circle">
+                                <img class="image_user" src="assets/logos/js_icn_code.png" alt="html" />
+                            </div>
+                        </div>
+
+                        <div class="tecno">
+                            <div class="circle">
+                                <img class="image_user" src="assets/logos/piton.png" alt="html" />
+                            </div>
+                        </div>
+
+                        <div class="tecno">
+                            <div class="circle">
+                                <img class="image_user" src="assets/logos/nodejs.png" alt="html" />
+                            </div>
+                        </div>
+
+                        <div class="tecno">
+                            <div class="circle">
+                                <img class="image_user" src="assets/logos/vue_logo.png" alt="html" />
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </section>
 
-                <div class="tecno">
-                    <div class="circle">
-                        <img class="image_user" src="assets/logos/vue_logo.png" alt="html"/>
+                <!--TEAM------------------------------------------------------------------------->
+                <a class="anchor" id="navEquipo"></a>
+                <section class="equipo">
+                    <h2>{eMMe} team</h2>
+                    <div class="contImagenesEquipo">
+                        <div class="equipo-img-container">
+                            <img class="img_equipo" src="assets/img/equipo-alison.png" alt="Equipo Alison" />
+                            <h6 class="nosotros">ALFA</h6>
+                            <p class="actividad">Manager/Developer</p>
+                        </div>
+                        <div class="equipo-img-container">
+                            <img class="img_equipo" src="assets/img/equipo-caro.png" alt="Equipo Carolina" />
+                            <h6 class="nosotros">OMEGA</h6>
+                            <p class="actividad">Estratega/Developer</p>
+                        </div>
+                        <div class="equipo-img-container">
+                            <img class="img_equipo" src="assets/img/equipo-martin.png" alt="Equipo Martin" />
+                            <h6 class="nosotros">YIN</h6>
+                            <p class="actividad">Diseño/Developer</p>
+                        </div>
+                        <div class="equipo-img-container">
+                            <img class="img_equipo" src="assets/img/equipo-sebastian.png" alt="Equipo Sebastián" />
+                            <h6 class="nosotros">YANG</h6>
+                            <p class="actividad">Testing/Developer</p>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
+                </section>
 
-        <!--TEAM------------------------------------------------------------------------->
-        <a class="anchor" id="navEquipo"></a>
-        <section class="equipo">
-            <h2>{eMMe} team</h2>
-            <div class="contImagenesEquipo">
-                <div class="equipo-img-container">
-                    <img class="img_equipo" src="assets/img/equipo-alison.png" alt="Equipo Alison"/>
-                    <h6 class="nosotros">ALFA</h6>
-                    <p class="actividad">Manager/Developer</p>
-                </div>
-                <div class="equipo-img-container">
-                    <img class="img_equipo" src="assets/img/equipo-caro.png" alt="Equipo Carolina"/>
-                    <h6 class="nosotros">OMEGA</h6>
-                    <p class="actividad">Estratega/Developer</p>
-                </div>
-                <div class="equipo-img-container">
-                    <img class="img_equipo" src="assets/img/equipo-martin.png" alt="Equipo Martin"/>
-                    <h6 class="nosotros">YIN</h6>
-                    <p class="actividad">Diseño/Developer</p>
-                </div>
-                <div class="equipo-img-container">
-                    <img class="img_equipo" src="assets/img/equipo-sebastian.png" alt="Equipo Sebastián"/>
-                    <h6 class="nosotros">YANG</h6>
-                    <p class="actividad">Testing/Developer</p>
-                </div>
+                <!-- Success cases SLIDER ------------------------------------------------------------------------->
+                <a class="anchor" id="cases"></a>
+                <section class="cases-success-container">
+                    <h2 class="cases-title">Nos eligen</h2>
+                    <article id="app" class="cases-container" data-v-app>
+                        <div v-for="elemento in datos_randomUser" class="cases-slider">
+                            <div v-for="(items, index) in elemento" class="case-card">
+                                <img :src="items.picture.large" alt="imagen de caso de exito" class="case-item" />
+                                <p class="case-item-name">{{items.name.first + ' ' + items.name.last}}</p>
+                                <p class="case-item-text">{{caseText[index]}}</p>
+                            </div>
+                        </div>
+                        <div class="container_cases_more_clients">
+                            <button class="cases_more_clients" @click="fetchData_randomUser(url)">
+                                &#10094;&#10094; Mas casos de éxitos &#10095;&#10095;
+                            </button>
+                        </div>
+                    </article>
+                    <button class="scroll-button left-button">◄</button>
+                    <button class="scroll-button right-button">►</button>
+                </section>
 
-            </div>
-        </section>
-
-        <!-- Success cases SLIDER ------------------------------------------------------------------------->
-        <a class="anchor" id="cases"></a>
-        <section class="cases-success-container">
-            <h2 class="cases-title">Nos eligen</h2>
-            <article id="app" class="cases-container" data-v-app>
-                <div v-for="elemento in datos_randomUser" class="cases-slider">
-                    <div v-for="(items, index) in elemento" class="case-card">
-                        <img :src="items.picture.large" alt="imagen de caso de exito" class="case-item">
-                        <p class="case-item-name">{{items.name.first + ' ' + items.name.last}}</p>
-                        <p class="case-item-text">{{caseText[index]}}</p>
-                    </div>
-                </div>
-                <div class="container_cases_more_clients">
-                    <button class="cases_more_clients" @click="fetchData_randomUser(url)">&#10094;&#10094; Mas casos de
-                        éxitos
-                        &#10095;&#10095;
-                    </button>
-                </div>
-            </article>
-            <button class="scroll-button left-button">◄</button>
-            <button class="scroll-button right-button">►</button>
-        </section>
-
-        <!-- Projects  -----------------------------------------------------------------------------------------
+                <!-- Projects  -----------------------------------------------------------------------------------------
         ----------------------------------------------------------------------------------------------------------------------->
-        <a class="anchor" id="projects"></a>
-        <section class="container_projects">
-            <h2 class="projects-title">Proyectos</h2>
-            <div id="app2" class="container container_cards mt-4" data-v-app>
-                <div class="row">
-                    <div v-for="elemento in datos_apiGet" class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                        <div class="card cards_projects">
-                            <img :src="elemento.image" class="card-img-top"
-                                 alt="Imagen 1">
-                            <div class="card-body">
-                                <h5 class="card_projects_name">{{elemento.name}}</h5>
-                                <p class="card_projects_category">{{elemento.category}}</p>
-                                <p class="cards_projects_description">{{elemento.description}}</p>
-                                <p class="cards_projects_cliente">{{elemento.client}}</p>
+                <a class="anchor" id="projects"></a>
+                <section class="container_projects">
+                    <h2 class="projects-title">Proyectos</h2>
+                    <div id="app1" class="container container_cards mt-4" data-v-app>
+                        <div class="row">
+                            <div v-for="elemento in datos_apiGet" class="card cards_projects col-lg-3 col-md-4 col-sm-6 mb-4">
+                                    <div class="card-body">
+                                        <img :src="elemento.image" class="card-img-top" alt="Imagen 1" />
+                                        <h5 class="card_projects_name">{{elemento.name_project}}</h5>
+                                        <p class="card_projects_category">{{elemento.category}}</p>
+                                        <p class="cards_projects_description">{{elemento.description}}</p>
+                                        <p class="cards_projects_cliente">{{elemento.client}}</p>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SHARE - Buttons, Copy this to your Page Article ------------------------------------------->
+                <section class="share-buttons-container">
+                    <h5>Compartí en:</h5>
+                    <!-- Buttons, Copy this to your Page Article -->
+                    <div class="share-buttons-row">
+                        <!--Facebook's Button -->
+                        <div class="share-fb"></div>
+                        <!--Twitter's Button -->
+                        <div class="share-twitter"></div>
+                        <!--Linkedin's Button -->
+                        <div class="share-linkedin"></div>
+                        <!--Pinterest's Button -->
+                        <div class="share-pinterest"></div>
+                        <!--Tumblr's Button -->
+                        <div class="share-tumblr"></div>
+                    </div>
+                </section>
+
+                <!--Form ------------------------------------------------------------------------->
+                <a class="anchor" id="contacto"></a>
+                <section class="section_contact">
+                    <div class="form_container_options">
+                        <h2 class="contact_title typewriter" id="typewriter"></h2>
+                    </div>
+
+                    <form class="form" id="contactForm" action="#" enctype="application/x-www-form-urlencoded">
+                        <div class="contact_container">
+                            <div class="contact_group contact_group_name">
+                                <label class="contact_label form-label" for="completeName"></label>
+                                <input
+                                    class="contact_input form-control input-radius"
+                                    type="text"
+                                    name="completeName"
+                                    id="completeName"
+                                    placeholder="Nombre"
+                                />
+                            </div>
+
+                            <div class="error name">
+                                <h5>Entre 4 y 30 caracteres</h5>
+                            </div>
+
+                            <div class="contact_group">
+                                <label class="contact_label" for="email"></label>
+                                <input
+                                    class="contact_input form-control input-radius"
+                                    type="text"
+                                    name="email"
+                                    id="email"
+                                    placeholder="Email"
+                                />
+                            </div>
+
+                            <div class="error email">
+                                <h5>Ingrese un email valido</h5>
+                            </div>
+
+                            <div class="contact_group">
+                                <label class="contact_label" for="phone"></label>
+                                <input
+                                    class="contact_input input-radius form-control"
+                                    type="number"
+                                    name="phone"
+                                    id="phone"
+                                    placeholder="Teléfono"
+                                />
+                            </div>
+
+                            <div class="error phone">
+                                <h5>Mínimo 7 caracteres</h5>
+                            </div>
+
+                            <div class="content-select">
+                                <label class="contact_label" for="contact_select"></label>
+                                <select class="contact_select_input" id="contact_select" name="subject">
+                                    <option value="consulta">< Selecciona ></option>
+                                    <option value="disenio">Diseño</option>
+                                    <option value="desarrollo">Desarrollo</option>
+                                    <option value="mantenimiento">Mantenimiento</option>
+                                </select>
+                            </div>
+
+                            <div class="contact_group contact_group_message">
+                                <label class="contact_label_message" for="message"></label>
+                                <textarea
+                                    class="contact_textarea input-radius form-control contact_input"
+                                    cols="22"
+                                    rows="4"
+                                    name="message"
+                                    id="message"
+                                    placeholder="Ingrese su consulta"
+                                ></textarea>
+                            </div>
+                            <div class="contact_check_accept">
+                                <label for="accept_terms" class="contact_suscribe"
+                                    >Acepto los
+                                    <a
+                                        class="contact_link_terms"
+                                        href=""
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#form_terms_modal"
+                                        >términos y condiciones</a
+                                    ></label
+                                >
+                                <label>
+                                    <input id="accept_terms" class="contact_checkbox" type="checkbox" />
+                                </label>
+                            </div>
+                            <div class="error errorForm-check">
+                                <h5>Debe aceptar los términos</h5>
+                            </div>
+                            <div class="contact_check_suscribe">
+                                <label for="suscribe_news" class="contact_suscribe"
+                                    >Quiero suscribirme al newsletter</label
+                                >
+                                <label>
+                                    <input id="suscribe_news" class="contact_checkbox" type="checkbox" />
+                                </label>
+                            </div>
+                            <div class="form_send_container">
+                                <button class="form_send" type="submit">
+                                    Enviar
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        fill="currentColor"
+                                        class="form_send_img"
+                                        viewBox="0 0 16 16"
+                                    >
+                                        <path
+                                            d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z"
+                                        />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- Modal_Terms ------------------------------------------------------------------------------->
+                <div class="modal fade" id="form_terms_modal" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content modal-terms-content">
+                            <div class="modal-header modal-terms-header">
+                                <button
+                                    type="button"
+                                    class="btn-close btn-close-terms"
+                                    data-bs-dismiss="modal"
+                                    aria-label="Close"
+                                ></button>
+                            </div>
+                            <div class="modal-body modal-terms-body modal-terms-text">
+                                <h4>Términos y condiciones</h4>
+                                <br />
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel
+                                    tincidunt malesuada, velit turpis malesuada velit, vel ultricies velit sapien eu
+                                    velit. Sed euismod, mauris vel tincidunt malesuada, velit turpis malesuada velit,
+                                    vel ultricies velit sapien eu velit. Sed euismod, mauris vel tincidunt malesuada,
+                                    velit turpis malesuada velit, vel ultricies velit sapien eu velit. Sed euismod,
+                                    mauris vel tincidunt malesuada, velit turpis malesuada velit, vel ultricies velit
+                                    sapien eu velit. Sed euismod, mauris vel tincidunt malesuada, velit turpis malesuada
+                                    velit, vel ultricies velit sapien eu velit.
+                                </p>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel
+                                    tincidunt malesuada, velit turpis malesuada velit, vel ultricies velit sapien eu
+                                    velit. Sed euismod, mauris vel tincidunt malesuada, velit turpis malesuada velit,
+                                    vel ultricies velit sapien eu velit. Sed euismod, mauris vel tincidunt malesuada,
+                                    velit turpis malesuada velit, vel ultricies velit sapien eu velit. Sed euismod,
+                                    mauris vel tincidunt malesuada, velit turpis malesuada velit, vel ultricies velit
+                                    sapien eu velit. Sed euismod, mauris vel tincidunt malesuada, velit turpis malesuada
+                                    velit, vel ultricies velit sapien eu velit.
+                                </p>
+                            </div>
+                            <div class="modal-footer modal-terms-footer">
+                                <button
+                                    type="button"
+                                    class="btn btn-secondary btn-terms-close mx-auto"
+                                    data-bs-dismiss="modal"
+                                >
+                                    Cerrar
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- SHARE - Buttons, Copy this to your Page Article ------------------------------------------->
-        <section class="share-buttons-container">
-            <h5>Compartí en:</h5>
-            <!-- Buttons, Copy this to your Page Article -->
-            <div class="share-buttons-row">
-                <!--Facebook's Button -->
-                <div class="share-fb"></div>
-                <!--Twitter's Button -->
-                <div class="share-twitter"></div>
-                <!--Linkedin's Button -->
-                <div class="share-linkedin"></div>
-                <!--Pinterest's Button -->
-                <div class="share-pinterest"></div>
-                <!--Tumblr's Button -->
-                <div class="share-tumblr"></div>
-            </div>
-        </section>
-
-        <!--Form ------------------------------------------------------------------------->
-        <a class="anchor" id="contacto"></a>
-        <section class="section_contact">
-            <div class="form_container_options">
-                <h2 class="contact_title typewriter" id="typewriter"></h2>
-            </div>
-
-            <form class="form" id="contactForm" action="#" enctype="application/x-www-form-urlencoded">
-                <div class="contact_container">
-                    <div class="contact_group contact_group_name">
-                        <label class="contact_label form-label" for="completeName"></label>
-                        <input
-                                class="contact_input form-control input-radius"
-                                type="text"
-                                name="completeName"
-                                id="completeName"
-                                placeholder="Nombre"
-                        />
-                    </div>
-
-                    <div class="error name">
-                        <h5>Entre 4 y 30 caracteres</h5>
-                    </div>
-
-                    <div class="contact_group">
-                        <label class="contact_label" for="email"></label>
-                        <input
-                                class="contact_input form-control input-radius"
-                                type="text"
-                                name="email"
-                                id="email"
-                                placeholder="Email"
-                        />
-                    </div>
-
-                    <div class="error email">
-                        <h5>Ingrese un email valido</h5>
-                    </div>
-
-                    <div class="contact_group">
-                        <label class="contact_label" for="phone"></label>
-                        <input class="contact_input input-radius form-control" type="number" name="phone" id="phone"
-                               placeholder="Teléfono"/>
-                    </div>
-
-                    <div class="error phone">
-                        <h5>Mínimo 7 caracteres</h5>
-                    </div>
-
-                    <div class="content-select">
-                        <label class="contact_label" for="contact_select"></label>
-                        <select class="contact_select_input" id="contact_select" name="subject">
-                            <option value="consulta"> < Selecciona ></option>
-                            <option value="disenio">Diseño</option>
-                            <option value="desarrollo">Desarrollo</option>
-                            <option value="mantenimiento">Mantenimiento</option>
-                        </select>
-                    </div>
-
-                    <div class="contact_group contact_group_message">
-                        <label class="contact_label_message" for="message"></label>
-                        <textarea
-                                class="contact_textarea input-radius form-control contact_input" cols="22" rows="4"
-                                name="message"
-                                id="message"
-                                placeholder="Ingrese su consulta"
-                        ></textarea>
-                    </div>
-                    <div class="contact_check_accept">
-                        <label for="accept_terms" class="contact_suscribe">Acepto los
-                            <a class="contact_link_terms" href="" data-bs-toggle="modal"
-                               data-bs-target="#form_terms_modal">términos y condiciones</a></label>
-                        <label>
-                            <input id="accept_terms" class="contact_checkbox" type="checkbox">
-                        </label>
-                    </div>
-                    <div class="error errorForm-check">
-                        <h5>Debe aceptar los términos</h5>
-                    </div>
-                    <div class="contact_check_suscribe">
-                        <label for="suscribe_news" class="contact_suscribe">Quiero suscribirme al newsletter</label>
-                        <label>
-                            <input id="suscribe_news" class="contact_checkbox" type="checkbox">
-                        </label>
-                    </div>
-                    <div class="form_send_container">
-                        <button class="form_send" type="submit">Enviar
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                 class="form_send_img" viewBox="0 0 16 16">
-                                <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z"/>
-                            </svg>
-                        </button>
+                <!-- Modal_Form_submit ------------------------------------------------------------------------------->
+                <div class="modal fade" id="formModal" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content modal-terms-content">
+                            <div class="modal-header modal-terms-header">
+                                <button
+                                    type="button"
+                                    class="btn-close btn_close_modal_form"
+                                    data-bs-dismiss="modal"
+                                    aria-label="Close"
+                                ></button>
+                            </div>
+                            <div class="modal-body text-center modal-terms-body modal-submit-text">
+                                <p>Gracias por contactarnos, en breve nos comunicaremos con usted.</p>
+                                <br />
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </form>
+            </main>
 
-
-        </section>
-
-        <!-- Modal_Terms ------------------------------------------------------------------------------->
-        <div class="modal fade" id="form_terms_modal" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content modal-terms-content">
-                    <div class="modal-header modal-terms-header">
-                        <button type="button" class="btn-close btn-close-terms" data-bs-dismiss="modal"
-                                aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body modal-terms-body modal-terms-text">
-                        <h4>Términos y condiciones</h4>
-                        <br>
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel tincidunt
-                            malesuada, velit turpis malesuada velit, vel ultricies velit sapien eu velit. Sed euismod,
-                            mauris
-                            vel tincidunt malesuada, velit turpis malesuada velit, vel ultricies velit sapien eu velit.
-                            Sed
-                            euismod, mauris vel tincidunt malesuada, velit turpis malesuada velit, vel ultricies velit
-                            sapien
-                            eu velit. Sed euismod, mauris vel tincidunt malesuada, velit turpis malesuada velit, vel
-                            ultricies velit sapien eu velit. Sed euismod, mauris vel tincidunt malesuada, velit turpis
-                            malesuada velit, vel ultricies velit sapien eu velit.
-                        </p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel tincidunt
-                            malesuada, velit turpis malesuada velit, vel ultricies velit sapien eu velit. Sed euismod,
-                            mauris
-                            vel tincidunt malesuada, velit turpis malesuada velit, vel ultricies velit sapien eu velit.
-                            Sed
-                            euismod, mauris vel tincidunt malesuada, velit turpis malesuada velit, vel ultricies velit
-                            sapien
-                            eu velit. Sed euismod, mauris vel tincidunt malesuada, velit turpis malesuada velit, vel
-                            ultricies velit sapien eu velit. Sed euismod, mauris vel tincidunt malesuada, velit turpis
-                            malesuada velit, vel ultricies velit sapien eu velit.
-                        </p>
-                    </div>
-                    <div class="modal-footer modal-terms-footer">
-                        <button type="button" class="btn btn-secondary btn-terms-close mx-auto" data-bs-dismiss="modal">
-                            Cerrar
-                        </button>
-                    </div>
-                </div>
-            </div>
+            <!-- Footer ----------------------------------------------------------------------------------->
+            <footer class="container_footer container_custom">
+                <section>
+                    <!--Links a redes-->
+                    <h3 class="title_social">Buscanos en</h3>
+                    <ul class="footer_social_links">
+                        <li class="links_social">
+                            <a class="anchor_social" href="https://www.linkedin.com/" target="_blank" rel="noopener"
+                                ><img class="logo_social" src="assets/svg/linkedin.svg" alt="logo linkedin"
+                            /></a>
+                        </li>
+                        <li class="links_social">
+                            <a class="anchor_social" href="https://instagram.com/" target="_blank" rel="noopener"
+                                ><img class="logo_social" src="assets/svg/instagram.svg" alt="logo instagram"
+                            /></a>
+                        </li>
+                    </ul>
+                    <p class="copy">
+                        &copy;Copyright {eMMe} <span id="year"></span> - <span id="version"> </span
+                        ><span>
+                            |
+                            <a class="admin_link" href="admin/login.html" target="_blank" rel="noopener">Admin</a></span
+                        >
+                    </p>
+                </section>
+            </footer>
+            <script src="./js/jquery-3.7.1.min.js"></script>
+            <script src="./js/bootstrap.bundle.min.js"></script>
+            <script src="./js/vue.global.js"></script>
+            <script src="./js/onScroll_btn-top_navBar.js"></script>
+            <script src="./js/year.js"></script>
+            <script src="./js/sharedSocial.js"></script>
+            <script src="./js/cards.js"></script>
+            <script src="./js/contactValidators.js"></script>
+            <script src="./js/section_effect.js"></script>
+            <script src="./js/titleFormContact.js"></script>
+            <script src="./js/version.js"></script>
+            <script src="./js/vueCases.js"></script>
+            <script src="./admin/vueProjects_admin.js"></script>
         </div>
-
-        <!-- Modal_Form_submit ------------------------------------------------------------------------------->
-        <div class="modal fade" id="formModal" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered ">
-                <div class="modal-content modal-terms-content">
-                    <div class="modal-header modal-terms-header">
-                        <button type="button" class="btn-close btn_close_modal_form" data-bs-dismiss="modal"
-                                aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body text-center modal-terms-body modal-submit-text">
-                        <p>Gracias por contactarnos, en breve nos comunicaremos con usted.</p>
-                        <br>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </main>
-
-    <!-- Footer ----------------------------------------------------------------------------------->
-    <footer class="container_footer container_custom">
-        <section>
-            <!--Links a redes-->
-            <h3 class="title_social">Buscanos en</h3>
-            <ul class="footer_social_links">
-                <li class="links_social"><a class="anchor_social" href="https://www.linkedin.com/" target="_blank"
-                                            rel="noopener"><img class="logo_social" src="assets/svg/linkedin.svg"
-                                                                alt="logo linkedin"/></a></li>
-                <li class="links_social"><a class="anchor_social" href="https://instagram.com/" target="_blank"
-                                            rel="noopener"><img class="logo_social" src="assets/svg/instagram.svg"
-                                                                alt="logo instagram"/></a></li>
-            </ul>
-            <p class="copy"> &copy;Copyright {eMMe} <span id="year"></span> - <span id="version">
-            </span><span> | <a
-                    class="admin_link" href="admin/login.html" target="_blank" rel="noopener">Admin</a></span></p>
-        </section>
-    </footer>
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/onScroll_btn-top_navBar.js"></script>
-    <script src="js/year.js"></script>
-    <script src="js/sharedSocial.js"></script>
-    <script src="js/cards.js"></script>
-    <script src="js/contactValidators.js"></script>
-    <script src="js/section_effect.js"></script>
-    <script src="js/titleFormContact.js"></script>
-    <script src="js/version.js"></script>
-    <script src="js/vue.global.js"></script>
-    <script src="js/vueCases.js"></script>
-    <script src="js/vueProjects.js"></script>
-
-</div>
-</body>
+    </body>
 </html>
