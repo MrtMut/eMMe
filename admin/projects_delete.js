@@ -1,90 +1,95 @@
-let queryString = location.search; // producto_update.html?id=1
+const queryString2 = location.search; // producto_update.html?id=1
+let params2 = new URLSearchParams(queryString2);
+let id_delete = params2.get("id");
+const url_base_del = "http://127.0.0.1:5000"; // URL base para el envío de datos al servidor
 
-let params = new URLSearchParams(queryString);
+let url_delete;
 
-let id = params.get("id");
+if (id_delete) {
+    url_delete = `${url_base_del}/projects/${id_delete}`;
 
-let url;
-
-if (id) {
-    url = "http://127.0.0.1:5000/projects/" + id;
-
-// Get Project -----------------------------
-    function getProject() {
-        return fetch(url, {
+    // Get Project -----------------------------
+    function getUser() {
+        return fetch(url_delete, {
             method: "GET", // or 'PUT'
-            headers: {"Content-Type": "application/json"},
+            headers: { "Content-Type": "application/json" },
             mode: "cors",
-            credentials: "include"
-            })
+            credentials: "include",
+        })
             .then((response) => {
+                //console.log("Delete-Response", response);
 
-                console.log("Delete-Response", response);
-                    
-                    if (response.status === 401) {
-                        window.location.href = "./login.html"; // Redirige a la página de inicio de sesión
-                    }
-                    return (response.json())})
-
-
+                if (response.status === 401) {
+                    window.location.href = "./login.html";
+                }
+                return response.json();
+            })
             .then((data) => {
-                let form = document.getElementById('form_admin_delete')
-                form.id.value = id;
-                form.name_project.value = data.name_project;
+                let form = document.getElementById("form_admin_delete");
+                if (form) {
+                    form.id.value = id_delete;
+                    form.name_project.value = data.name_project;
+                } else {
+                    console.error("Form not found");
+                }
             })
             .catch((err) => {
                 console.error(err);
                 alert("Error al cargar el registro");
             });
     }
-    getProject(id);
+    getUser();
 
-
-// Delete Project ---------------------------------------------------------------
-    addEventListener("submit", (e) => {
+    // Delete Project ---------------------------------------------------------------
+    document.getElementById("form_admin_delete").addEventListener("submit", (e) => {
         e.preventDefault();
-        let form = document.getElementById('form_admin_delete')
+        let form = document.getElementById("form_admin_delete");
 
-        let data = new FormData(form);
-        let project = {
-            name_project: data.get("name_project"),
-            category: data.get("category"),
-            description: data.get("description"),
-            client: data.get("client"),
-            image: data.get("image"),
-        };
-
-        function deleteProject() {
-            let options = {
-                body: JSON.stringify(project),
-                method: "DELETE",
-                headers: {"Content-Type": "application/json"},
-                redirect: "follow",
-                credentials: "include"
+        if (form) {
+            let data = new FormData(form);
+            let project = {
+                name_project: data.get("name_project"),
+                category: data.get("category"),
+                description: data.get("description"),
+                client: data.get("client"),
+                image: data.get("image"),
             };
-            fetch(url, options)
-                .then((response) => {
-                    
-                    if (response.status === 401) {
-                        window.location.href = "./login.html"; // Redirige a la página de inicio de sesión
-                    }
-                    return (response.json())})
 
-                .then((data) => {
-                    data.id = project.id;
-                    console.log("DELETEdata", data);
-                    if (data.status === 200) {}
-                    alert("Registro Eliminado");
-                    window.location.href = "./projects_admin.html"; // navega a productos.html
-                })
-                .catch((err) => {
-                    console.error(err);
-                    alert("Error al Eliminar");
-                });
+            function deleteProject() {
+                let options = {
+                    body: JSON.stringify(project),
+                    method: "DELETE",
+                    headers: { "Content-Type": "application/json" },
+                    redirect: "follow",
+                    credentials: "include",
+                };
+                fetch(url_delete, options)
+                    .then((response) => {
+                        if (response.status === 401) {
+                            alert("Usuario no autenticado");
+                            window.location.href = "./login.html"; 
+                        }
+                        console.log("DELETE-Response", response);
+                        if (response.status === 200) 
+                            {                        
+                                alert("Registro Eliminado");
+                                window.location.href = "./projects_admin.html"; 
+                            } else {
+                                alert("Error al Eliminar");
+                            }
+                        return response.json();
+                    })     
+                    .catch((err) => {
+                        console.error(err);
+                        alert("Error al Eliminar");
+                    });
+            }
+            deleteProject();
+        } else {
+            console.error("Form not found");
         }
-        deleteProject();
     });
-}else {
+} else {
     // Manejar caso donde no hay id en la URL
-    console.log("No ID found in URL");
+    //console.log("No ID encontrada in URL");
 }

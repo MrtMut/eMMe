@@ -1,8 +1,13 @@
 let queryString_update = location.search; // producto_update.html?id=1
 let params_update = new URLSearchParams(queryString_update);
 let id_update = params_update.get("id");
+const url_base = "http://127.0.0.1:5000";
+
+let url_update;
+
 if (id_update) {
-const url_update = `http://127.0.0.1:5000/projects/${id_update}`;
+
+    url_update = `${url_base}/projects/${id_update}`;
 
 // Get Project -----------------------------
     function getProject() {
@@ -58,14 +63,16 @@ const url_update = `http://127.0.0.1:5000/projects/${id_update}`;
             fetch(url_update, options)
                 .then((response) => {
 
-                    console.log('RES', response)
+                    console.log('RES', response.status)
 
-                    if (response.status === 401) {
+                    if (response.status === 401) {                  
+                        alert("Usuario no autenticado");
                         window.location.href = "./login.html"; // Redirige a la página de inicio de sesión
                     }
-                    return (response.json())})
+                    //return (response.json())
+                    })
                 .then((data) => {
-                    //console.log("DTA", data);
+                    console.log("DTA", data.status);
                     data.name_project = project.name_project;
                     data.category = project.category;
                     data.description = project.description;
@@ -76,7 +83,6 @@ const url_update = `http://127.0.0.1:5000/projects/${id_update}`;
                 })
                 .catch((err) => {
                     console.error(err);
-                    alert("Error al Modificar");
                 });
         }
         modificar();

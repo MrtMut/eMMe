@@ -1,12 +1,7 @@
 document.addEventListener("DOMContentLoaded", function (e) {
     let form_admin_login = document.getElementById("form_admin_login");
 
-    let countSessions = 0;
-    if (localStorage.getItem("countSessions")) {
-        countSessions = localStorage.getItem("countSessions");
-    }
-    countSessions++;
-    localStorage.setItem("countSessions", countSessions);
+    const url_base = "http://127.0.0.1:5000"; // URL base para el envío de datos al servidor
 
     if (form_admin_login) {
         const btn_close_modal_login = document.querySelector(".btn_close_modal_login");
@@ -29,10 +24,9 @@ document.addEventListener("DOMContentLoaded", function (e) {
             console.log("DATASO", jsonData);
 
             const fetchDataPost = async (jsonData) => {             
-                showSpinner();
 
                 try {
-                    const res = await fetch(form_admin_login.action, {
+                    const res = await fetch(`${url_base}/login`, {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json",
@@ -65,7 +59,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
                 } catch (error) {
                     console.log("Error al enviar los datos:", error);
                 } finally {
-                    hideSpinner();
                 }
             };
             fetchDataPost(jsonData);
@@ -76,15 +69,11 @@ document.addEventListener("DOMContentLoaded", function (e) {
         });
     }
 
-    statusSession = localStorage.getItem("loggedIn");
-
-    if (statusSession === "true") {
 
     async function checkLoginStatus() {  
-        showSpinner();
     
         try {
-            const response = await fetch("http://127.0.0.1:5000/check_login", {
+            const response = await fetch(`${url_base}/check_login`, {
                 method: "GET",
                 credentials: "include", // Ensure cookies are sent with the request
                 headers: {
@@ -105,17 +94,8 @@ document.addEventListener("DOMContentLoaded", function (e) {
         } catch (error) {
             console.error("Error checking login status:", error);
         } finally {
-            hideSpinner();
         }
     }
     checkLoginStatus();  
 }
-});
-
-function showSpinner() {
-    document.getElementById("spinner-container").style.display = "flex";
-}
-
-function hideSpinner() {
-    document.getElementById("spinner-container").style.display = "none";
-}
+);

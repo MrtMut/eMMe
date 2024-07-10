@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,9 +26,11 @@
           rel="stylesheet">
     <link rel="shortcut icon" href="../assets/favicon/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="../css/all.css"/>
-    <title>Projects</title>
+    <title>User Manager</title>
 </head>
+
 <body class="body body_admin">
+
 <header id="headerId" class="header header_admin ">
     <!--NavBar--------------------------------------------------------------->
     <div class="container_nav container_nav_admin">
@@ -41,73 +43,87 @@
             </a>
         </div>
         <nav class="nav_menu" id="nav_menu_admin">
+
         </nav>
     </div>
 </header>
+
 <main class="main_admin">
-    <section class="section_proyectos section_admin">
-        <!-- Titulo de la seccion -->
-        <div class="container_title">
-            <h2 class="title_h2 title_h2_admin" >Proyectos</h2>
-            <a href="create.html" class="btn btn-success">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                     class="bi bi-plus-circle " viewBox="0 0 16 16">
-                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
-                </svg>
-            </a>
-        </div>
+    <section class="container_form_admin section_admin">
+
         <div class="container mt-4 container_projects_admin">
-            <table id="app2" class="table table-bordered" data-v-app>
+            <table id="" class="table table-bordered table-responsive table_admin_user">
                 <thead>
                     <tr >
-                        <th class="th id_project">ID</th>
-                        <th class="th name_project">Nombre</th>
-                        <th class="th category_project">Categoría</th>
-                        <th class="th description_project">Descripción</th>
-                        <th class="th client_project">Cliente</th>
-                        <th class="th image_project">Imagen</th>
-                        <th class="th edit_project"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        <th class="th user_id">ID</th>
+                        <th class="th user_username">Username</th>
+                        <th class="th user_is_admin">Admin</th>
+                        <th class="th user_edit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                          fill="currentColor" class="bi bi-pencil-square"
                                                          viewBox="0 0 16 16">
                             <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
                             <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
-                        </svg></th>
-                        <th class="th delete_project"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            </svg>
+                        </th>
+                        <!-- <th class="th user_delete"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                            fill="currentColor" class="bi bi-trash"
                                                            viewBox="0 0 16 16">
                             <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
                             <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
-                        </svg></th>
+                            </svg>
+                        </th> -->
                     </tr>
                 </thead>
-                <tbody >
-                    <tr v-for="elemento in datos_apiGet">
-                        <td class="td_class id_project">{{elemento.id}}</td>
-                        <td class="td_class name_project">{{elemento.name_project}}</td>
-                        <td class="td_class category_project">{{elemento.category}}</td>
-                        <td class="td_class description_project">{{elemento.description}}</td>
-                        <td class="td_class client_project">{{elemento.user_id}}</td>
-                        <td class="td_class image_project"><img :src="elemento.image" alt="Imagen del proyecto"></td>
-                        <td class="td_class edit_project"><a :href="'./edit.html?id=' + elemento.id">
+                <tbody id="tbody_user_manager">
+                <!-- <tr >
+                    <td class="td_class user_id"></td>
+                    <td class="td_class user_username"></td>
+                    <td class="td_class user_is_admin"></td>
+                    <td class="td_class user_edit"><a href="'./edit.html?id=' + elemento.id">
 
-                            <svg xmlns="http://www.w3.org/2000/svg"  width="16" height="16" fill="currentColor"
-                                 class="bi bi-pencil-square" viewBox="0 0 16 16">
-                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
-                            </svg>
-                        </a></td>
-                        <td class="td_class delete_project"><a :href="'./delete.html?id=' + elemento.id"><svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                                                                 width="16" height="16" fill="currentColor" class="bi bi-trash text-danger" viewBox="0 0 16 16">
-                            <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
-                            <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
-                        </svg></a></td>
-                    </tr>
+                        <svg xmlns="http://www.w3.org/2000/svg"  width="16" height="16" fill="currentColor"
+                             class="bi bi-pencil-square" viewBox="0 0 16 16">
+                            <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                            <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                        </svg>
+                    </a></td>
+                    <td class="td_class user_delete"><a href="'./delete.html?id=' + elemento.id"><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" fill="currentColor" class="bi bi-trash text-danger" viewBox="0 0 16 16">
+                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+                        <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+                    </svg></a></td>
+                </tr> -->
 
                 </tbody>
             </table>
         </div>
+
+
+        <form id="form_user_manager" class="form_user_manager" action="http://127.0.0.1:5000/user_manager" method="post"
+              enctype="multipart/form-data">
+            <fieldset class="fieldset-input">
+                <h2 class="admin_form_title">Usuarios</h2>
+
+                <label for="id">
+                    <input id="id_userManager" type="text" name="id" placeholder="ID" disabled>
+                </label>   
+             
+                <label for="username">
+                    <input id="username" type="text" name="username" placeholder="Nombre de Usuario">
+                </label>
+
+                <label for="is_admin" class="is_admin">
+                    <select name="is_admin" id="is_admin" class="is_admin" type="text">
+                        <option value="true">ADMIN</option>
+                        <option value="false">USUARIO</option>
+                    </select>
+                </label>
+
+                <button id="submit_user_is_admin" class="btn btn-danger" type="submit" value="user_is_admin">Modificar</button>
+
+            </fieldset>
+        </form>
     </section>
 </main>
 
@@ -119,13 +135,9 @@
 <script src="../js/version.js"></script>
 <script src="../js/year.js"></script>
 <script src="../js/admin_nav_menu_admin.js"></script>
-<script src="./formData.js"></script>
-<script src="./projects_edit.js"></script>
-<script src="./projects_delete.js"></script>
-<script src="./logout.js"></script>
-<script src="../js/vue.global.js"></script>
-<script src="./vueProjects_admin.js"></script>
-<script src="./projects_delete.js"></script>
+<script src="./user_manager.js"></script>
+
+
 
 </body>
 </html>

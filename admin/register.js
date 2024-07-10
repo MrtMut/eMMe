@@ -1,5 +1,8 @@
 // POST =================================================================================
 document.addEventListener("DOMContentLoaded", function (e) {
+
+    const url_base = "http://127.0.0.1:5000";
+
     let form_register = document.getElementById('form_register');
     if (form_register) {
         form_register.onsubmit = function (e) {
@@ -11,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
                 jsonData[k] = v;
             }
             const fetchDataPost = async (jsonData) => {
-                await fetch(form_register.action, {
+                await fetch(`${url_base}/register`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",

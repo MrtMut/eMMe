@@ -1,5 +1,8 @@
 // POST =================================================================================
 document.addEventListener("DOMContentLoaded", function (e) {
+
+    const url_base = "http://127.0.0.1:5000"; // URL base para el envío de datos al servidor
+
     let form_admin_post = document.getElementById('form_admin_post');
     if (form_admin_post) {
         form_admin_post.onsubmit = function (e) {
@@ -21,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
             console.log('Formulario enviado', jsonData.name_project);
 
             const fetchDataPost = async (jsonData) => {
-                await fetch(form_admin_post.action, {
+                await fetch(`${url_base}/projects`, {
                     method: "POST", // or 'PUT'
                     headers: {
                         "Content-Type": "application/json",

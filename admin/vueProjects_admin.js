@@ -3,7 +3,6 @@ function initializeApp(containerId) {
 
 const {createApp, ref, onMounted} = Vue;
 
-
 createApp({
     setup() {
         const apiUrlGet = "http://127.0.0.1:5000/projects";
@@ -12,7 +11,7 @@ createApp({
 
         const fetchData_apiGet = async () => {    
             try {
-                const response = await fetch("http://127.0.0.1:5000/projects", {
+                const response = await fetch(apiUrlGet, {
                     method: "GET",
                     headers: {"Content-Type": "application/json"},
                     credentials: "include", // Include credentials such as cookies, authorization headers, etc.
